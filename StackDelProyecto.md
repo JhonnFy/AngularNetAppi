@@ -13,29 +13,34 @@ A continuación se detallan las herramientas que se usarán para el desarrollo d
 ---
 
 ## SQL Server 2022
-Sistema de gestión de bases de datos utilizado para almacenar y gestionar la información de la aplicación de manera segura y eficiente.
-
+<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e3a00444-1a5f-4645-8202-d78b0f5d7043" />
+</figure>
 ---
 
-## Visual Studio 2022
-Entorno de desarrollo integrado (IDE) empleado para la creación de backend y servicios, ofreciendo herramientas avanzadas de depuración y diseño.
-
+## Visual Studio 2022 (Arquitectura Por Capas)
+<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/da18e3c3-ef58-41a1-838f-5469734ef192" />
+</figure>
 ---
 
 ## Node.js y npm
-Node.js proporciona un entorno de ejecución de JavaScript del lado del servidor, mientras que npm es el gestor de paquetes para instalar y gestionar dependencias del proyecto frontend.
+
 
 ---
 
 ## Angular CLI
-Interfaz de línea de comandos para Angular que permite crear, gestionar y desplegar proyectos de manera rápida y organizada.
 
 ---
 
 ## Visual Studio Code
-Editor de código ligero, multiplataforma y altamente extensible, ideal para el desarrollo del frontend de la aplicación.
-
+<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/995a07d9-8be8-439e-8476-a10e6ff1dec5" />
+</figure>
 ---
 
 ## Git
-Sistema de control de versiones distribuido que permite el manejo eficiente del código fuente y la colaboración entre desarrolladores.
+<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e8230a1f-667c-4b4b-9a9d-3a6958b06698" />
+</figure>
+
