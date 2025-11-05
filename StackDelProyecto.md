@@ -20,7 +20,7 @@ A continuación se detallan las herramientas que se usarán para el desarrollo d
 
 ## Visual Studio 2022
 <figure align="center">
-  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/da18e3c3-ef58-41a1-838f-5469734ef192" />
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e4b983df-3c81-4918-bb76-51bc6c007198" />
 </figure>
 ---
 
