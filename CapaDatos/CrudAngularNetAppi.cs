@@ -293,5 +293,43 @@ namespace CapaDatos
             }
         }
 
+        public bool CreateProfesor(ModeloProfesor nuevoProfesor)
+        {
+            try
+            {
+                using var db = conexion.ObtenerConexion();
+                db.Open();
+
+                using (var checkSql = new SqlCommand("SELECT 1 FROM Profesor WHERE id = @id", db))
+                {
+                    checkSql.Parameters.AddWithValue("@id", nuevoProfesor.id);
+                    if (checkSql.ExecuteScalar() != null)
+                    {
+                        Debug.WriteLine("[****].[INFO].[CapaDatos].[CreateProfesor].[Profesor ya registrado]");
+                        return false;
+                    }
+                }
+
+                string @create =
+                     "INSERT INTO Profesor " +
+                     "(id, nombre) " +
+                     "VALUES " +
+                    "(@id,@nombre)";
+
+                using (SqlCommand createSql = new SqlCommand(create, db))
+                {
+                    createSql.Parameters.AddWithValue("@id", nuevoProfesor.id);
+                    createSql.Parameters.AddWithValue("@nombre", nuevoProfesor.nombre ?? (object)DBNull.Value);
+
+                    int filasAfectadas = createSql.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("[****].[ERROR].[CapaDatos].[CreateProfesor]");
+                throw new Exception("[ERROR].[CapaDatos].[CreateProfesor] " + e.Message);
+            }
+        }
     }
 }
