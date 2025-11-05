@@ -1,10 +1,12 @@
 
-CREATE DATABASE AngularNetAppi
+--CREATE DATABASE AngularNetAppi
+--GO
 
 USE AngularNetAppi
+GO
 
 CREATE TABLE Estudiante (
-    idIdentity INT Identity(1,1),  
+    idIdentity INT Identity(1,1),
     id INT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL
 );
