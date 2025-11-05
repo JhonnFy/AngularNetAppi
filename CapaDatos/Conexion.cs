@@ -15,11 +15,12 @@ namespace CapaDatos
                 var cs = ConfigurationManager.ConnectionStrings["CadenaSQL"];
                 if (cs == null || string.IsNullOrEmpty(cs.ConnectionString))
                 {
-                    throw new Exception("No se encontró la cadena de conexión 'CadenaSQL' o está vacía.");
                     Debug.WriteLine("[****].[ERROR] [Capa Datos Conexion].[No se encontró la cadena de conexión 'CadenaSQL' o está vacía.]");
-
-                    cadenaConexion = cs.ConnectionString;
+                    throw new Exception("No se encontró la cadena de conexión 'CadenaSQL' o está vacía.");
                 }
+
+                // Asignar solo si cs es válido
+                cadenaConexion = cs.ConnectionString;
             }
             catch(Exception e)
             {
