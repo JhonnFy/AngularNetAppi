@@ -60,29 +60,33 @@ namespace CapaDatos
                     db.Open();
                     string @read =
                         "SELECT * FROM Estudiante " +
-                        "WHERE  Id = @id";
+                        "WHERE id = @id";
 
                     using (SqlCommand readSql = new SqlCommand(read, db))
-                    using (SqlDataReader runReadSql = readSql.ExecuteReader())
                     {
-                        while (runReadSql.Read())
-                        {
-                            var modelo = new ModeloEstudiante
-                            {
-                                idIdentity = runReadSql.GetInt32(0),
-                                id = runReadSql.GetInt32(1),
-                                nombre = runReadSql.GetString(2),
-                            };
-                            listaReadEstudiante.Add(modelo);
-                        }
+                        readSql.Parameters.AddWithValue("@id", id);
 
+                        using (SqlDataReader runReasSql = readSql.ExecuteReader())
+                        {
+
+                            if (runReasSql.Read())
+                            {
+                                var modelo = new ModeloEstudiante
+                                {
+                                    idIdentity = runReasSql.GetInt32(0),
+                                    id = runReasSql.GetInt32(1),
+                                    nombre = runReasSql.GetString(2),
+                                };
+                                listaReadEstudiante.Add(modelo);
+                            }
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                Debug.WriteLine("[****].[ERROR].[Capa CrudAngularNetAppi].[ReadEstudiante]");
-                throw new Exception("ERROR [Capa CrudAngularNetAppi].[ReadEstudiante] " + ex.Message);
+                Debug.WriteLine("[****].[ERROR].[Capa CrudAngularNetAppi].[ReadEstudianteId]");
+                throw new Exception("ERROR [Capa CrudAngularNetAppi].[ReadEstudianteId] " + ex.Message);
             }
             return listaReadEstudiante;
         }
