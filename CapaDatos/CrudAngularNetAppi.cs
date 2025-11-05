@@ -6,6 +6,7 @@ using System.Linq;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace CapaDatos
@@ -28,7 +29,7 @@ namespace CapaDatos
                     using (SqlCommand readSql = new SqlCommand(read, db))
                     using (SqlDataReader runReadSql = readSql.ExecuteReader())
                     {
-                        while(runReadSql.Read())
+                        while (runReadSql.Read())
                         {
                             var modelo = new ModeloEstudiante
                             {
@@ -36,7 +37,7 @@ namespace CapaDatos
                                 id = runReadSql.GetInt32(1),
                                 nombre = runReadSql.GetString(2),
                             };
-                         listaReadEstudiante.Add(modelo);       
+                            listaReadEstudiante.Add(modelo);
                         }
 
                     }
@@ -49,7 +50,7 @@ namespace CapaDatos
             }
             return listaReadEstudiante;
         }
-               
+
         public List<ModeloEstudiante> ReadEstudianteId(int id)
         {
             var listaReadEstudiante = new List<ModeloEstudiante>();
@@ -250,6 +251,46 @@ namespace CapaDatos
                 throw new Exception("ERROR [Capa CrudAngularNetAppi].[ReadNotaId] " + ex.Message);
             }
             return listaReadNotas;
+        }
+
+        public bool CreateEstudiante(ModeloEstudiante nuevoEstudiante)
+        {
+            try
+            {
+                using var db = conexion.ObtenerConexion();
+                db.Open();
+
+                using (var checkSql = new SqlCommand("SELECT 1 FROM Estudiante WHERE id = @id", db))
+                {
+                    checkSql.Parameters.AddWithValue("@id", nuevoEstudiante.id);
+                    if (checkSql.ExecuteScalar() != null)
+                    {
+                        Debug.WriteLine("[****].[INFO].[CapaDatos].[CreateEstudiante].[Estudiante ya registrado]");
+                        return false;
+                    }
+
+                }
+
+                string @create =
+                    "INSERT INTO Estudiante " +
+                    "(id, nombre) " +
+                    "VALUES " +
+                    "(@id,@nombre)";
+
+                using (SqlCommand createSql = new SqlCommand(create, db))
+                {
+                    createSql.Parameters.AddWithValue("@id", nuevoEstudiante.id);
+                    createSql.Parameters.AddWithValue("@nombre", nuevoEstudiante.nombre ?? (object)DBNull.Value);
+
+                    int filasAfectadas = createSql.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("[****].[ERROR].[CapaDatos].[CreateEstudiante]");
+                throw new Exception("[ERROR].[CapaDatos].[CreateEstudiante] " + e.Message);
+            }
         }
 
     }
