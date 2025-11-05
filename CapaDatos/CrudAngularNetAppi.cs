@@ -44,8 +44,8 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                Debug.WriteLine("[****].[ERROR].[Capa CrudCodigoDeBarrasOrigen].[ReadEstudiante]");
-                throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[ReadEstudiante] " + ex.Message);
+                Debug.WriteLine("[****].[ERROR].[Capa CrudAngularNetAppi].[ReadEstudiante]");
+                throw new Exception("ERROR [Capa CrudAngularNetAppi].[ReadEstudiante] " + ex.Message);
             }
             return listaReadEstudiante;
         }
@@ -80,12 +80,50 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                Debug.WriteLine("[****].[ERROR].[Capa CrudCodigoDeBarrasOrigen].[ReadProfesor]");
-                throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[ReadProfesor] " + ex.Message);
+                Debug.WriteLine("[****].[ERROR].[Capa CrudAngularNetAppi].[ReadProfesor]");
+                throw new Exception("ERROR [Capa CrudAngularNetAppi].[ReadProfesor] " + ex.Message);
             }
             return listaReadProfesor;
         }
 
+        public List<ModeloNota> ReadNota()
+        {
+            var listaReadNotas = new List<ModeloNota>();
+            try
+            {
+                using (var db = conexion.ObtenerConexion())
+                {
+                    db.Open();
+                    string @read =
+                        "SELECT * FROM Nota";
+
+                    using (SqlCommand readSql = new SqlCommand(read, db))
+                    using (SqlDataReader runReadSql = readSql.ExecuteReader())
+                    {
+                        while (runReadSql.Read())
+                        {
+                            var modelo = new ModeloNota
+                            {
+                                idIdentity = runReadSql.GetInt32(0),
+                                id = runReadSql.GetInt32(1),
+                                nombre = runReadSql.GetString(2),
+                                idProfesor = runReadSql.GetInt32(3),
+                                idEstudiante = runReadSql.GetInt32(4),
+                                valor = runReadSql.GetDecimal(5)
+                            };
+                            listaReadNotas.Add(modelo);
+                        }
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[****].[ERROR].[Capa CrudAngularNetAppi].[ReadNota]");
+                throw new Exception("ERROR [Capa CrudAngularNetAppi].[ReadNota] " + ex.Message);
+            }
+            return listaReadNotas;
+        }
 
     }
 }
