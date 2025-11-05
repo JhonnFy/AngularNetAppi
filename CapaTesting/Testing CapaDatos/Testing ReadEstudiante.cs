@@ -18,14 +18,15 @@ namespace CapaTesting.Testing_CapaDatos
             try
             {
                 CrudAngularNetAppi objReadOrigen = new CrudAngularNetAppi();
-                var varobjReadOrigen = objReadOrigen.ReadEstudiante();
+                var listaEstudiantes = objReadOrigen.ReadEstudiante();
 
-                Assert.IsNotNull(varobjReadOrigen, "El resultado no debe ser nulo.");
-                Assert.IsInstanceOfType(varobjReadOrigen, typeof(List<ModeloEstudiante>),
-    "El resultado debe ser una lista de ModeloCodigoDeBarrasOrigen.");
-                Assert.IsTrue(varobjReadOrigen.Count > 0, "La lista debe contener al menos un registro.");
 
-                Console.WriteLine($"Cantidad de registros devueltos: {varobjReadOrigen.Count}");
+                Assert.IsNotNull(listaEstudiantes, "El resultado no debe ser nulo.");
+                Assert.IsInstanceOfType(listaEstudiantes, typeof(List<ModeloEstudiante>),
+                    "El resultado debe ser una lista de ModeloEstudiante.");
+                Assert.IsTrue(listaEstudiantes.Count > 0, "La lista debe contener al menos un registro.");
+
+                Console.WriteLine($"Cantidad de registros devueltos: {listaEstudiantes.Count}");
 
             }
             catch (Exception ex)
