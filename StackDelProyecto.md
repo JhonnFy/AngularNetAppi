@@ -1,6 +1,6 @@
-# Herramientas utilizadas para el desarrollo de la App
+# StackDelProyecto
 
-A continuación se detallan las herramientas que se usarán para el desarrollo de la aplicación. Puedes hacer clic en cada herramienta para ir directamente a su sección.
+A continuación se detallan las herramientas que se usarán para el desarrollo de la aplicación.
 
 ## Tabla de Contenidos
 - [SQL Server 2022](#sql-server-2022)
