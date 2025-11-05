@@ -16,8 +16,8 @@ namespace CapaTesting.Testing_CapaDatos
 
             try
             {
-                CrudAngularNetAppi objReadOrigen = new CrudAngularNetAppi();
-                var listaNotas = objReadOrigen.ReadNota();
+                CrudAngularNetAppi objReadNota = new CrudAngularNetAppi();
+                var listaNotas = objReadNota.ReadNota();
 
 
                 Assert.IsNotNull(listaNotas, "El resultado no debe ser nulo.");
