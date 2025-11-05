@@ -49,6 +49,43 @@ namespace CapaDatos
             }
             return listaReadEstudiante;
         }
+               
+        public List<ModeloEstudiante> ReadEstudianteId(int id)
+        {
+            var listaReadEstudiante = new List<ModeloEstudiante>();
+            try
+            {
+                using (var db = conexion.ObtenerConexion())
+                {
+                    db.Open();
+                    string @read =
+                        "SELECT * FROM Estudiante " +
+                        "WHERE  Id = @id";
+
+                    using (SqlCommand readSql = new SqlCommand(read, db))
+                    using (SqlDataReader runReadSql = readSql.ExecuteReader())
+                    {
+                        while (runReadSql.Read())
+                        {
+                            var modelo = new ModeloEstudiante
+                            {
+                                idIdentity = runReadSql.GetInt32(0),
+                                id = runReadSql.GetInt32(1),
+                                nombre = runReadSql.GetString(2),
+                            };
+                            listaReadEstudiante.Add(modelo);
+                        }
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[****].[ERROR].[Capa CrudAngularNetAppi].[ReadEstudiante]");
+                throw new Exception("ERROR [Capa CrudAngularNetAppi].[ReadEstudiante] " + ex.Message);
+            }
+            return listaReadEstudiante;
+        }
 
         public List<ModeloProfesor> ReadProfesor()
         {
