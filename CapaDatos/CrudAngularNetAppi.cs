@@ -331,5 +331,50 @@ namespace CapaDatos
                 throw new Exception("[ERROR].[CapaDatos].[CreateProfesor] " + e.Message);
             }
         }
+
+        public bool CreateNota(ModeloNota nuevaNota)
+        {
+            try
+            {
+                using var db = conexion.ObtenerConexion();
+                db.Open();
+
+                using (var checkSql = new SqlCommand("SELECT 1 FROM Nota WHERE id = @id", db))
+                {
+                    checkSql.Parameters.AddWithValue("@id", nuevaNota.id);
+                    if (checkSql.ExecuteScalar() != null)
+                    {
+                        Debug.WriteLine("[****].[INFO].[CapaDatos].[CreateNota].[Nota ya registrada]");
+                        return false;
+                    }
+                }
+
+                string @create =
+                    "INSERT INTO  Nota " +
+                    "(id,nombre,idProfesor,idEstudiante,valor) " +
+                    "VALUES " +
+                    "@id,@nombre,@idProfesor,@idEstudiante,@valor";
+
+                
+                using (SqlCommand createSql = new SqlCommand(create, db))
+                {
+                    createSql.Parameters.AddWithValue("@id", nuevaNota.id);
+                    createSql.Parameters.AddWithValue("@id", nuevaNota.nombre);
+                    createSql.Parameters.AddWithValue("@id", nuevaNota.idProfesor);
+                    createSql.Parameters.AddWithValue("@id", nuevaNota.idEstudiante);
+                    createSql.Parameters.AddWithValue("@id", nuevaNota.valor);
+
+                    int filasAfectadas = createSql.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+
+                }
+
+            }
+            catch(Exception e)
+            {
+
+            }
+        }
+
     }
 }
