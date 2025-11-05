@@ -207,5 +207,50 @@ namespace CapaDatos
             return listaReadNotas;
         }
 
+        public List<ModeloNota> ReadNotaId(int id)
+        {
+            var listaReadNotas = new List<ModeloNota>();
+            try
+            {
+                using (var db = conexion.ObtenerConexion())
+                {
+                    db.Open();
+                    string @read =
+                        "SELECT * FROM Nota " +
+                        "WHERE id = @id";
+
+                    using (SqlCommand readSql = new SqlCommand(read, db))
+                    {
+                        readSql.Parameters.AddWithValue("@id", id);
+
+                        using (SqlDataReader runReasSql = readSql.ExecuteReader())
+                        {
+
+                            if (runReasSql.Read())
+                            {
+                                var modelo = new ModeloNota
+                                {
+                                    idIdentity = runReasSql.GetInt32(0),
+                                    id = runReasSql.GetInt32(1),
+                                    nombre = runReasSql.GetString(2),
+                                    idProfesor = runReasSql.GetInt32(3),
+                                    idEstudiante = runReasSql.GetInt32(4),
+                                    valor = runReasSql.GetDecimal(5)
+                                };
+                                listaReadNotas.Add(modelo);
+                            }
+                        }
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[****].[ERROR].[Capa CrudAngularNetAppi].[ReadNotaId]");
+                throw new Exception("ERROR [Capa CrudAngularNetAppi].[ReadNotaId] " + ex.Message);
+            }
+            return listaReadNotas;
+        }
+
     }
 }

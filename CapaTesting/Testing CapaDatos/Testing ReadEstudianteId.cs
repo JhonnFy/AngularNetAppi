@@ -17,11 +17,11 @@ namespace CapaTesting.Testing_CapaDatos
             try
             {
                 CrudAngularNetAppi objReadOrigen = new CrudAngularNetAppi();
-                var listaEstudiantes = objReadOrigen.ReadEstudianteId(1307);
+                var listaEstudiantes = objReadOrigen.ReadEstudianteId(1111);
 
                 Assert.IsNotNull(listaEstudiantes, "No se encontró registro con la CC proporcionada.");
                 Assert.IsTrue(listaEstudiantes.Count > 0, "La lista no debería estar vacía.");
-                Assert.AreEqual(1307, listaEstudiantes.First().id,
+                Assert.AreEqual(1111, listaEstudiantes.First().id,
                 "La CC del registro encontrado no coincide con la búsqueda.");
 
                 Console.WriteLine($"Registro Encontrado: {listaEstudiantes.First().nombre}, CC: {listaEstudiantes.First().id}");
