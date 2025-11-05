@@ -353,16 +353,16 @@ namespace CapaDatos
                     "INSERT INTO  Nota " +
                     "(id,nombre,idProfesor,idEstudiante,valor) " +
                     "VALUES " +
-                    "@id,@nombre,@idProfesor,@idEstudiante,@valor";
+                    "(@id,@nombre,@idProfesor,@idEstudiante,@valor)";
 
                 
                 using (SqlCommand createSql = new SqlCommand(create, db))
                 {
                     createSql.Parameters.AddWithValue("@id", nuevaNota.id);
-                    createSql.Parameters.AddWithValue("@id", nuevaNota.nombre);
-                    createSql.Parameters.AddWithValue("@id", nuevaNota.idProfesor);
-                    createSql.Parameters.AddWithValue("@id", nuevaNota.idEstudiante);
-                    createSql.Parameters.AddWithValue("@id", nuevaNota.valor);
+                    createSql.Parameters.AddWithValue("@nombre", nuevaNota.nombre);
+                    createSql.Parameters.AddWithValue("@idProfesor", nuevaNota.idProfesor);
+                    createSql.Parameters.AddWithValue("@idEstudiante", nuevaNota.idEstudiante);
+                    createSql.Parameters.AddWithValue("@valor", nuevaNota.valor);
 
                     int filasAfectadas = createSql.ExecuteNonQuery();
                     return filasAfectadas > 0;
@@ -372,7 +372,8 @@ namespace CapaDatos
             }
             catch(Exception e)
             {
-
+                Debug.WriteLine("[****].[ERROR].[CapaDatos].[CreateNota]");
+                throw new Exception("[ERROR].[CapaDatos].[CreateNota] " + e.Message);
             }
         }
 
