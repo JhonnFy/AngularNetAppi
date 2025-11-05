@@ -33,7 +33,9 @@ A continuación se detallan las herramientas que se usarán para el desarrollo d
 ---
 
 ## Angular CLI
-
+<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c958f7af-9fe3-4737-b6fd-9268aa3645f7" />
+</figure>
 ---
 
 ## Visual Studio Code
