@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,12 @@ namespace CapaIgu
         public AppRun()
         {
             InitializeComponent();
+        }
+
+        private void AppRun_Load(object sender, EventArgs e)
+        {
+            Debug.WriteLine("[****].[OK].[CapaIgu].[AppRun_Load].[Iniciando aplicación]");
+
         }
     }
 }

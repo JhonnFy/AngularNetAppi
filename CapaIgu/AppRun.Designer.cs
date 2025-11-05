@@ -37,6 +37,7 @@
             ClientSize = new Size(692, 318);
             Name = "AppRun";
             Text = "AppRun";
+            Load += AppRun_Load;
             ResumeLayout(false);
         }
 
