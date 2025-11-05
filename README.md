@@ -12,7 +12,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 4. [Arquitectura del Proyecto](#arquitectura-del-proyecto)  
 5. [Instalación y Configuración](#instalación-y-configuración)  
 6. [Tecnologías](#tecnologías)
-7. [Testing](#Testing)  
+7. [Testing MSTest](#Testing-MSTest)  
 ---
 
 ## Interface
@@ -56,9 +56,9 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 </figure>
 ---
 
-## Reglas De Negocio
+## Testing MSTest
 <figure align="center">
-  
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/46aca6a1-0560-45b7-907b-77fd86e77308" />
 </figure>
 
 ---
