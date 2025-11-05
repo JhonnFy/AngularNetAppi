@@ -44,6 +44,6 @@ A continuación se detallan las herramientas que se usarán para el desarrollo d
 
 ## Git
 <figure align="center">
-  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e8230a1f-667c-4b4b-9a9d-3a6958b06698" />
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4870bc7f-4dda-4fc8-b745-75419f40ba8a" />
 </figure>
 
