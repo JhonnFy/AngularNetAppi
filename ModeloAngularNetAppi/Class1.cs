@@ -1,4 +1,4 @@
-﻿namespace CapaNegocio
+﻿namespace ModeloAngularNetAppi
 {
     public class Class1
     {
