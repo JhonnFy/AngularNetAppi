@@ -22,10 +22,13 @@ A continuación se detallan las herramientas que se usarán para el desarrollo d
 <figure align="center">
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/da18e3c3-ef58-41a1-838f-5469734ef192" />
 </figure>
+
 ---
 
 ## Node.js y npm
-
+<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ee62731d-fc52-4fe9-b09c-56d7f6396f1a" />
+</figure>
 
 ---
 
