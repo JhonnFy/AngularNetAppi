@@ -12,4 +12,14 @@
     <TestingPlatformShowTestsFailure>true</TestingPlatformShowTestsFailure>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Testing CapaNegocio\" />
+    <Folder Include="Testing CapaIgu\" />
+    <Folder Include="Testing CapaControlador\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj" />
+  </ItemGroup>
+
 </Project>

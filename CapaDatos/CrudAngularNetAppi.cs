@@ -33,7 +33,7 @@ namespace CapaDatos
                             var modelo = new ModeloEstudiante
                             {
                                 idIdentity = runReadSql.GetInt32(0),
-                                id = runReadSql.GetInt64(1),
+                                id = runReadSql.GetInt32(1),
                                 nombre = runReadSql.GetString(2),
                             };
                          listaReadEstudiante.Add(modelo);       

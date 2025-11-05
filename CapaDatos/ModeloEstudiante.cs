@@ -10,7 +10,7 @@ namespace CapaDatos
     public class ModeloEstudiante
     {
         public int idIdentity { get; set; }
-        public long id { get; set; }
+        public int id { get; set; }
         public string nombre { get; set; }
 
         public ModeloEstudiante()
