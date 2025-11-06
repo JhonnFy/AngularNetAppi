@@ -150,11 +150,14 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 2. **Formato de nombres**  
    - **Estudiantes:** primer nombre en mayúscula.  
    - **Profesores:** primer nombre en mayúscula.
-
+   - **Notas:** nombre en mayúscula.
+  
 3. **Ajuste de notas**  
    Si una nota tiene un valor exacto de `4.2`, automáticamente se eleva a `5.0`.
+   Todos los nombres en la base de datos se almacenarán o mostrarán sin acentos ni caracteres especiales
+   
 
-4. **Integridad de registros**  
+5. **Integridad de registros**  
    Estudiantes, profesores y registradores de notas **no pueden ser eliminados**.
 
 ---
