@@ -143,6 +143,8 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 ---
 
 ## Reglas De Negocio
-
-
+1-Todos los nombres registrados en la base de datos deberán almacenarse o presentarse sin acentos (á, é, í, ó, ú, ñ → a, e, i, o, u, n).
+2-Primer nombre en mayúscula para estudiantes.
+3-Primer nombre en mayúscula para profesores.
+4-Si una nota tiene un valor exacto de 4.2, automáticamente se eleva a 5.0.
 ---
