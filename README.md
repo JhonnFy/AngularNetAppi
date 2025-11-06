@@ -118,7 +118,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 </figure>
 
 <figure align="center">
-
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/de77cb89-497c-48d0-ada9-0137e8e64073" />
 </figure>
 
 <figure align="center">
