@@ -28,6 +28,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 
 ## Reglas de Negocio
 
+
  
 ---
 
