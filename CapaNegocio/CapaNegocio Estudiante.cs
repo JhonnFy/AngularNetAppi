@@ -44,6 +44,7 @@ namespace CapaNegocio
             foreach (var nota in lista)
             {
                 nota.nombre = ReglasNegocioHelper.HelperNombreNota(nota.nombre);
+                nota.valor = ReglasNegocioHelper.HelperAjustarValoresNotas(nota.valor);
             }
             return lista;
         }
@@ -82,6 +83,7 @@ namespace CapaNegocio
             foreach (var notaId in lista)
             {
                 notaId.nombre = ReglasNegocioHelper.HelperNombreNota(notaId.nombre);
+                notaId.valor = ReglasNegocioHelper.HelperNombreNota(notaId.valor);
             }
 
             return lista;
