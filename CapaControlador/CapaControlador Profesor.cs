@@ -8,39 +8,38 @@ using System.Threading.Tasks;
 
 namespace CapaControlador
 {
-    public class CapaControladorProfesor
+    public class ControladorProfesor
     {
         private CapaNegocio_Profesor objNegocioProfesor;
-        
-        public CapaControladorProfesor()
+
+        public ControladorProfesor()
         {
             objNegocioProfesor = new CapaNegocio_Profesor();
         }
 
-        public List<ModeloProfesor> ConstructorReadProfesor()
+        public List<ModeloProfesor> ControladorReadProfesor()
         {
             return objNegocioProfesor.NegocioReadProfesor();
         }
 
-        public List<ModeloProfesor> ContructorReadProfesorId(int id)
+        public List<ModeloProfesor> ControladorReadProfesorId(int id)
         {
             return objNegocioProfesor.NegocioReadProfesorId(id);
         }
 
-        public bool ConstructorCreateProfesor(ModeloProfesor nuevoProfesor)
+        public bool ControladorCreateProfesor(ModeloProfesor nuevoProfesor)
         {
             return objNegocioProfesor.NegocioReadCreateProfesor(nuevoProfesor);
         }
 
-        public bool ConstructorUpdateProfesor(ModeloProfesor actualizarProfesor)
+        public bool ControladorUpdateProfesor(ModeloProfesor actualizarProfesor)
         {
             return objNegocioProfesor.NegocioUpdateProfesor(actualizarProfesor);
         }
-          
-        public bool ConstructorDeleteProfesor(int idProfesor)
+
+        public bool ControladorDeleteProfesor(int idProfesor)
         {
             return objNegocioProfesor.NegocioEliminarProfesor(idProfesor);
         }
-
     }
 }
