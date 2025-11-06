@@ -37,6 +37,9 @@ namespace CapaControlador
             return objNegocioEstudiante.NegocioUpdateEstudiante(actualizarEstudiante);
         }
 
-
+        public bool ControladorDeleteEstudiante(int idEstudiante)      
+        {
+            return objNegocioEstudiante.NegocioEliminarEstudiante(idEstudiante);
+        }
     }     
 }
