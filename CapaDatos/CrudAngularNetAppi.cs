@@ -407,5 +407,33 @@ namespace CapaDatos
             }
         }
 
+        public bool UpdateProfesor(ModeloProfesor updateProfesor)
+        {
+            try
+            {
+                using var db = conexion.ObtenerConexion();
+                db.Open();
+
+                string @update =
+                    "UPDATE Profesor " +
+                    "SET " +
+                    "nombre = @nombre " +
+                    "WHERE id = @id ";
+
+                using (SqlCommand updateSql = new SqlCommand(update, db))
+                {
+                    updateSql.Parameters.AddWithValue("@nombre", updateProfesor.nombre);
+                    updateSql.Parameters.AddWithValue("@id", updateProfesor.id);
+
+                    int filasAfectadas = updateSql.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("[****].[ERROR].[CapaDatos].[Update Profesor] " + e.Message);
+                throw new Exception("ERROR [CapaDatos].[Update Profesor] " + e.Message);
+            }
+        }
     }
 }
