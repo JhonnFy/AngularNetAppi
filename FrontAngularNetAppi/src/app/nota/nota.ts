@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-nota',
-  imports: [],
   templateUrl: './nota.html',
-  styleUrl: './nota.scss',
+  styleUrls: ['./nota.scss'], // <-- corregido
+  standalone: true
 })
-export class Nota {
-
-}
+export class NotaComponent {} // <-- nombre corregido

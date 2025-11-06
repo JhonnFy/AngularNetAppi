@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.scss - global */
+body {
+  background: linear-gradient(135deg, #eaf1ff 50%, #ffffff 50%);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.navbar-brand span {
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+.navbar {
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.card {
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  padding: 1rem 0;
+  text-align: center;
+}

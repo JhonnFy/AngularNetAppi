@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-profesor',
-  imports: [],
   templateUrl: './profesor.html',
-  styleUrl: './profesor.scss',
+  styleUrls: ['./profesor.scss'], // <-- corregido
+  standalone: true
 })
-export class Profesor {
-
-}
+export class ProfesorComponent {} // <-- nombre corregido
