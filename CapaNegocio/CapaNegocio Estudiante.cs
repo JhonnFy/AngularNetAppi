@@ -38,7 +38,7 @@ namespace CapaNegocio
             return lista;
         }
 
-        public bool CreateEstudiante(ModeloEstudiante nuevoEstudiante)
+        public bool NegocioReadCreateEstudiante(ModeloEstudiante nuevoEstudiante)
         {
             if (nuevoEstudiante == null)
                 throw new ArgumentNullException(nameof(nuevoEstudiante));
@@ -47,6 +47,17 @@ namespace CapaNegocio
             nuevoEstudiante.nombre = ReglasNegocioHelper.HelperOmitirAcentos(nuevoEstudiante.nombre);
 
             return crudDatos.CreateEstudiante(nuevoEstudiante);
+        }
+
+        public bool NegocioUpdateEstudiante(ModeloEstudiante actualizaEstudiante)
+        {
+            if (actualizaEstudiante == null)
+                throw new ArgumentException(nameof(actualizaEstudiante));
+
+            actualizaEstudiante.nombre = ReglasNegocioHelper.HelperNombresEstudiantes(actualizaEstudiante.nombre);
+            actualizaEstudiante.nombre = ReglasNegocioHelper.HelperOmitirAcentos(actualizaEstudiante.nombre);
+
+            return crudDatos.UpdateEstudiante(actualizaEstudiante);
         }
 
     }
