@@ -147,4 +147,5 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 2-Primer nombre en mayúscula para estudiantes.
 3-Primer nombre en mayúscula para profesores.
 4-Si una nota tiene un valor exacto de 4.2, automáticamente se eleva a 5.0.
+5-Estudiantes o profesores, registrador en notas, no pueden ser eliminados.
 ---
