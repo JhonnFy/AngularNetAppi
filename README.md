@@ -28,7 +28,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 
 ## Características
 
-- 
+Población de tablas con PowerShell
 -   
 
 - 
