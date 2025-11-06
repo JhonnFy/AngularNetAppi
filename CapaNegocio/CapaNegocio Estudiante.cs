@@ -109,6 +109,16 @@ namespace CapaNegocio
 
             return crudDatos.CreateProfesor(nuevoProfesor);
         }
+            
+        public bool NegocioCreateNota(ModeloNota nuevaNota)
+        {
+            if (nuevaNota == null)
+                throw new ArgumentNullException(nameof(nuevaNota));
+
+            nuevaNota.nombre = ReglasNegocioHelper.HelperNombreNota(nuevaNota.nombre);
+
+            return crudDatos.CreateNota(nuevaNota);
+        }
 
         public bool NegocioUpdateEstudiante(ModeloEstudiante actualizaEstudiante)
         {
