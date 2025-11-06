@@ -1,4 +1,5 @@
-﻿using CapaNegocio;
+﻿using CapaDatos;
+using CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,17 @@ namespace CapaControlador
         {
             objNegocioProfesor = new CapaNegocio_Profesor();
         }
-            
+
+        public List<ModeloProfesor> ConstructorReadProfesor()
+        {
+            return objNegocioProfesor.NegocioReadProfesor();
+        }
+
+        public List<ModeloProfesor> ContructorReadProfesorId(int id)
+        {
+            return objNegocioProfesor.NegocioReadProfesorId(id);
+        }
+
 
 
 
