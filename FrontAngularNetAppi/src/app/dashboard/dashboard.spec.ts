@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Elimina } from './elimina';
+import { Dashboard } from './dashboard';
 
-describe('Elimina', () => {
-  let component: Elimina;
-  let fixture: ComponentFixture<Elimina>;
+describe('Dashboard', () => {
+  let component: Dashboard;
+  let fixture: ComponentFixture<Dashboard>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Elimina]
+      imports: [Dashboard]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Elimina);
+    fixture = TestBed.createComponent(Dashboard);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-nota',
   imports: [],
   templateUrl: './nota.html',
-  styleUrl: './nota.css',
+  styleUrl: './nota.scss',
 })
 export class Nota {
 

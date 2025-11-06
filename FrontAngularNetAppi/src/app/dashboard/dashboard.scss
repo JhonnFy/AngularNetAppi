@@ -1,0 +1,41 @@
+/* dashboard.scss */
+
+/* ======== FONDO PERSONALIZADO ======== */
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eaf1ff 50%, #ffffff 50%);
+}
+
+/* Navbar */
+.navbar-brand span {
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+/* Card */
+.card {
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Footer */
+.footer {
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+}
