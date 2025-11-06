@@ -75,6 +75,17 @@ namespace CapaNegocio
             return crudDatos.CreateEstudiante(nuevoEstudiante);
         }
 
+        public bool NegocioReadCreateProfesor(ModeloProfesor nuevoProfesor)
+        {
+            if (nuevoProfesor == null)
+                throw new ArgumentNullException(nameof(nuevoProfesor));
+
+            nuevoProfesor.nombre = ReglasNegocioHelper.HelperNombreProfesores(nuevoProfesor.nombre);
+            nuevoProfesor.nombre = ReglasNegocioHelper.HelperOmitirAcentos(nuevoProfesor.nombre);
+
+            return crudDatos.CreateProfesor(nuevoProfesor);
+        }
+
         public bool NegocioUpdateEstudiante(ModeloEstudiante actualizaEstudiante)
         {
             if (actualizaEstudiante == null)
@@ -86,6 +97,16 @@ namespace CapaNegocio
             return crudDatos.UpdateEstudiante(actualizaEstudiante);
         }
 
+        public bool NegocioUpdateProfesor(ModeloProfesor actualizarProfesor)
+        {
+            if (actualizarProfesor == null)
+                throw new ArgumentException(nameof(actualizarProfesor));
+
+            actualizarProfesor.nombre = ReglasNegocioHelper.HelperNombreProfesores(actualizarProfesor.nombre);
+            actualizarProfesor.nombre = ReglasNegocioHelper.HelperOmitirAcentos(actualizarProfesor.nombre);
+
+            return crudDatos.UpdateProfesor(actualizarProfesor);
+        }
 
         public bool NegocioEliminarEstudiante(int idEstudiante)
         {
