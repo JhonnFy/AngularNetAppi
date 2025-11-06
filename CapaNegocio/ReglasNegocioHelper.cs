@@ -17,7 +17,6 @@ namespace CapaNegocio
             return Encoding.ASCII.GetString(bytes);
         }
 
-
         public static string HelperNombresEstudiantes(string nombre)
         {
             if (string.IsNullOrEmpty(nombre))
