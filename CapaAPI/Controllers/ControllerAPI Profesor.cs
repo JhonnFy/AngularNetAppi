@@ -52,7 +52,7 @@ namespace CapaAPI.Controllers
             if (existente == null)
                 return NotFound();
 
-            _servicio.Actualizar(id, profesor); // <- CORREGIDO
+            _servicio.Actualizar(id, profesor); 
             return profesor;
         }
 
