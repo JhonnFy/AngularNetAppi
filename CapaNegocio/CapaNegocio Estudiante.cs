@@ -36,7 +36,17 @@ namespace CapaNegocio
             }
 
             return lista;
-                
+        }
+
+        public bool CreateEstudiante(ModeloEstudiante nuevoEstudiante)
+        {
+            if (nuevoEstudiante == null)
+                throw new ArgumentNullException(nameof(nuevoEstudiante));
+
+            nuevoEstudiante.nombre = ReglasNegocioHelper.HelperNombresEstudiantes(nuevoEstudiante.nombre);
+            nuevoEstudiante.nombre = ReglasNegocioHelper.HelperOmitirAcentos(nuevoEstudiante.nombre);
+
+            return crudDatos.CreateEstudiante(nuevoEstudiante);
         }
 
     }
