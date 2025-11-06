@@ -1,59 +1,69 @@
-﻿using CapaAPI.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using CapaAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CapaAPI.Services
 {
     public class ServicioEstudiante
     {
-        private readonly List<Estudiante> _estudiantes;
+        private readonly AppDbContext _context;
 
-        public ServicioEstudiante()
+        public ServicioEstudiante(AppDbContext context)
         {
-            // Datos de ejemplo, luego se reemplaza con acceso a base de datos
-            _estudiantes = new List<Estudiante>
-            {
-                new Estudiante { IdIdentity = 1, Id = 101, Nombre = "Juan Perez" },
-                new Estudiante { IdIdentity = 2, Id = 102, Nombre = "Maria Gomez" }
-            };
+            _context = context;
+        }
+
+        public List<Estudiante> Listar()
+        {
+            return _context.Estudiantes.ToList();
+        }
+
+ 
+        public Estudiante ObtenerPorId(int id)
+        {
+            return _context.Estudiantes.FirstOrDefault(e => e.Id == id);
         }
 
 
-        public List<Estudiante> GetTodos()
+        public List<Estudiante> FiltrarPorNombre(string nombre)
         {
-            return _estudiantes;
+            return _context.Estudiantes
+                .Where(e => e.Nombre.Contains(nombre))
+                .ToList();
+        }
+
+        public List<Estudiante> OrdenarPorNombre(bool ascendente = true)
+        {
+            if (ascendente)
+                return _context.Estudiantes.OrderBy(e => e.Nombre).ToList();
+            else
+                return _context.Estudiantes.OrderByDescending(e => e.Nombre).ToList();
+        }
+
+        public Estudiante Crear(Estudiante estudiante)
+        {
+            _context.Estudiantes.Add(estudiante);
+            _context.SaveChanges();
+            return estudiante;
         }
 
 
-        public Estudiante GetPorId(int id)
+        public Estudiante Actualizar(Estudiante estudiante)
         {
-            return _estudiantes.FirstOrDefault(e => e.Id == id);
+            _context.Estudiantes.Update(estudiante);
+            _context.SaveChanges();
+            return estudiante;
         }
-
-
-        public void Agregar(Estudiante estudiante)
-        {
-            estudiante.IdIdentity = _estudiantes.Max(e => e.IdIdentity) + 1;
-            _estudiantes.Add(estudiante);
-        }
-
-
-        public bool Actualizar(Estudiante estudiante)
-        {
-            var existente = _estudiantes.FirstOrDefault(e => e.Id == estudiante.Id);
-            if (existente == null) return false;
-
-            existente.Nombre = estudiante.Nombre;
-            return true;
-        }
-
 
         public bool Eliminar(int id)
         {
-            var estudiante = _estudiantes.FirstOrDefault(e => e.Id == id);
-            if (estudiante == null) return false;
+            var estudiante = _context.Estudiantes.FirstOrDefault(e => e.Id == id);
+            if (estudiante == null)
+                return false;
 
-            _estudiantes.Remove(estudiante);
+            _context.Estudiantes.Remove(estudiante);
+            _context.SaveChanges();
             return true;
         }
     }
