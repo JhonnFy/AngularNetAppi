@@ -5,7 +5,7 @@ namespace CapaAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class API_ProfesorController : ControllerBase
+    public class ControllerAPI_Profesor : ControllerBase
     {
     }
 }
