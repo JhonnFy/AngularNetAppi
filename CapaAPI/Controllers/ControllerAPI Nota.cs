@@ -1,17 +1,65 @@
-using System.Runtime.InteropServices;
+using Microsoft.AspNetCore.Mvc;
+using CapaAPI.Models;
+using CapaAPI.Services;
+using System.Collections.Generic;
 
-// In SDK-style projects such as this one, several assembly attributes that were historically
-// defined in this file are now automatically added during build and populated with
-// values defined in project properties. For details of which attributes are included
-// and how to customise this process see: https://aka.ms/assembly-info-properties
+namespace CapaAPI.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class NotaController : ControllerBase
+    {
+        private readonly ServicioNota _servicio;
 
+        public NotaController(ServicioNota servicio)
+        {
+            _servicio = servicio;
+        }
 
-// Setting ComVisible to false makes the types in this assembly not visible to COM
-// components.  If you need to access a type in this assembly from COM, set the ComVisible
-// attribute to true on that type.
+        [HttpGet]
+        public ActionResult<List<Nota>> Listar()
+        {
+            var lista = _servicio.Listar();
+            return Ok(lista);
+        }
 
-[assembly: ComVisible(false)]
+        [HttpGet("{id}")]
+        public ActionResult<Nota> ObtenerPorId(int id)
+        {
+            var nota = _servicio.ObtenerPorId(id);
+            if (nota == null)
+                return NotFound();
+            return Ok(nota);
+        }
 
-// The following GUID is for the ID of the typelib if this project is exposed to COM.
+        [HttpPost]
+        public ActionResult<Nota> Crear([FromBody] Nota nota)
+        {
+            var creado = _servicio.Crear(nota);
+            return CreatedAtAction(nameof(ObtenerPorId), new { id = creado.Id }, creado);
+        }
 
-[assembly: Guid("67228aa3-5dea-4902-925e-e85b0cd67d1e")]
+        [HttpPut("{id}")]
+        public ActionResult<Nota> Actualizar(int id, [FromBody] Nota nota)
+        {
+            if (id != nota.Id)
+                return BadRequest();
+
+            var actualizado = _servicio.Actualizar(nota);
+            if (actualizado == null)
+                return NotFound();
+
+            return Ok(actualizado);
+        }
+
+        [HttpDelete("{id}")]
+        public ActionResult Eliminar(int id)
+        {
+            var eliminado = _servicio.Eliminar(id);
+            if (!eliminado)
+                return NotFound();
+
+            return NoContent();
+        }
+    }
+}
