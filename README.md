@@ -146,6 +146,5 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 1-Todos los nombres registrados en la base de datos deberán almacenarse o presentarse sin acentos (á, é, í, ó, ú, ñ → a, e, i, o, u, n).
 2-Primer nombre en mayúscula (Estudiantes).
 3-Primer nombre en mayúscula (Profesores).
-4-La primera palabra del nombre del profesor debe comenzar con mayúscula; las demás pueden ir en minúscula.
-5-Si una nota tiene un valor exacto de 4.2, automáticamente se eleva a 5.0
+4-Si una nota tiene un valor exacto de 4.2, automáticamente se eleva a 5.0
 ---
