@@ -143,17 +143,9 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 ---
 
 ## Reglas De Negocio
-1-Todos los nombres registrados en la base de datos deberán almacenarse o presentarse sin acentos (á, é, í, ó, ú, ñ → a, e, i, o, u, n).
-2-Primer nombre en mayúscula para estudiantes.
-3-Primer nombre en mayúscula para profesores.
-4-Si una nota tiene un valor exacto de 4.2, automáticamente se eleva a 5.0.
-5-Estudiantes o profesores, registrador en notas, no pueden ser eliminados.
-
-# Reglas del Sistema
-
 1. **Normalización de nombres**  
    Todos los nombres en la base de datos se almacenarán o mostrarán sin acentos ni caracteres especiales.  
-   *Ejemplo:* `á, é, í, ó, ú, ñ → a, e, i, o, u, n`
+   *Tipo:* `á, é, í, ó, ú, ñ → a, e, i, o, u, n`
 
 2. **Formato de nombres**  
    - **Estudiantes:** primer nombre en mayúscula.  
@@ -164,6 +156,5 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 
 4. **Integridad de registros**  
    Estudiantes, profesores y registradores de notas **no pueden ser eliminados**.
-
 
 ---
