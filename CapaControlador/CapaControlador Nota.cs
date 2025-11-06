@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaControlador
 {
-    internal class ControladorAngularNetAppi
+    internal class CapaControlador_Nota
     {
     }
 }
