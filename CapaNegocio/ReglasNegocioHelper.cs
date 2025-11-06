@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,6 +46,18 @@ namespace CapaNegocio
         public static decimal HelperAjustarValoresNotas(decimal valor)
         {
             return valor == 4.2m ? 5.0m : valor;
+        }
+
+        public bool HelperEliminarEstudiantes(int idEstudiante, List<ModeloNota> notas)
+        {
+            if (notas == null) return true;
+            return !notas.Any(n => n.idEstudiante == idEstudiante);
+        }
+
+        public static bool HelperEliminarProfesor(int idProfesor, List<ModeloNota> notas)
+        {
+            if (notas == null) return true; 
+            return !notas.Any(n => n.idProfesor == idProfesor);
         }
 
 
