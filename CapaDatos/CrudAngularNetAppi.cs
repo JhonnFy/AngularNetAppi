@@ -34,7 +34,6 @@ namespace CapaDatos
                         {
                             var modelo = new ModeloEstudiante
                             {
-                                idIdentity = runReadSql.GetInt32(0),
                                 id = runReadSql.GetInt32(1),
                                 nombre = runReadSql.GetString(2),
                             };
@@ -75,7 +74,6 @@ namespace CapaDatos
                             {
                                 var modelo = new ModeloEstudiante
                                 {
-                                    idIdentity = runReasSql.GetInt32(0),
                                     id = runReasSql.GetInt32(1),
                                     nombre = runReasSql.GetString(2),
                                 };
@@ -111,7 +109,6 @@ namespace CapaDatos
                         {
                             var modelo = new ModeloProfesor
                             {
-                                idIdentity = runReadSql.GetInt32(0),
                                 id = runReadSql.GetInt32(1),
                                 nombre = runReadSql.GetString(2),
                             };
@@ -152,7 +149,6 @@ namespace CapaDatos
                             {
                                 var modelo = new ModeloProfesor
                                 {
-                                    idIdentity = runReasSql.GetInt32(0),
                                     id = runReasSql.GetInt32(1),
                                     nombre = runReasSql.GetString(2),
                                 };
@@ -188,7 +184,6 @@ namespace CapaDatos
                         {
                             var modelo = new ModeloNota
                             {
-                                idIdentity = runReadSql.GetInt32(0),
                                 id = runReadSql.GetInt32(1),
                                 nombre = runReadSql.GetString(2),
                                 idProfesor = runReadSql.GetInt32(3),
@@ -232,7 +227,6 @@ namespace CapaDatos
                             {
                                 var modelo = new ModeloNota
                                 {
-                                    idIdentity = runReasSql.GetInt32(0),
                                     id = runReasSql.GetInt32(1),
                                     nombre = runReasSql.GetString(2),
                                     idProfesor = runReasSql.GetInt32(3),

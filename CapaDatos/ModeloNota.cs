@@ -9,7 +9,7 @@ namespace CapaDatos
 {
     public class ModeloNota
     {
-        public int idIdentity { get; set; }
+
         public int id {  get; set; }
         public string nombre { get; set; }
         public int idProfesor { get; set; }
