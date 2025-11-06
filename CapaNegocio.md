@@ -1,0 +1,19 @@
+Metodos De Datos Para Capa Negocio
+
+ReadEstudiante
+ReadEstudianteId
+ReadProfesor
+ReadProfesorId
+ReadNota
+ReadNotaId
+
+CreateEstudiante
+CreateProfesor
+CreateNota
+
+UpdateEstudiante
+UpdateProfesor
+UpdateNotas
+
+DeleteEstudiante
+DeleteProfesor
