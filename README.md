@@ -148,4 +148,22 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 3-Primer nombre en mayúscula para profesores.
 4-Si una nota tiene un valor exacto de 4.2, automáticamente se eleva a 5.0.
 5-Estudiantes o profesores, registrador en notas, no pueden ser eliminados.
+
+# Reglas del Sistema
+
+1. **Normalización de nombres**  
+   Todos los nombres en la base de datos se almacenarán o mostrarán sin acentos ni caracteres especiales.  
+   *Ejemplo:* `á, é, í, ó, ú, ñ → a, e, i, o, u, n`
+
+2. **Formato de nombres**  
+   - **Estudiantes:** primer nombre en mayúscula.  
+   - **Profesores:** primer nombre en mayúscula.
+
+3. **Ajuste de notas**  
+   Si una nota tiene un valor exacto de `4.2`, automáticamente se eleva a `5.0`.
+
+4. **Integridad de registros**  
+   Estudiantes, profesores y registradores de notas **no pueden ser eliminados**.
+
+
 ---
