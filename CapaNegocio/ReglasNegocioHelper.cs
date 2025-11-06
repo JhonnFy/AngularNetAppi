@@ -18,6 +18,7 @@ namespace CapaNegocio
             return Encoding.ASCII.GetString(bytes);
         }
 
+        
         public static string HelperNombresEstudiantes(string nombre)
         {
             if (string.IsNullOrEmpty(nombre))
@@ -60,6 +61,17 @@ namespace CapaNegocio
             return !notas.Any(n => n.idProfesor == idProfesor);
         }
 
+        public static string HelperNombreNota(string nombre)
+        {
+            if (string.IsNullOrEmpty(nombre))
+                return nombre;
+
+            nombre = HelperOmitirAcentos(nombre);
+
+            nombre = nombre.ToUpper();
+
+            return nombre;
+        }
 
     }
 }

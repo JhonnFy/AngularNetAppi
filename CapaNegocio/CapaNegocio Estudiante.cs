@@ -38,6 +38,16 @@ namespace CapaNegocio
             return lista;
         }
 
+        public List<ModeloNota> NegocioReadNota()
+        {
+            var lista = crudDatos.ReadNota();
+            foreach (var nota in lista)
+            {
+                nota.nombre = ReglasNegocioHelper.HelperNombreNota(nota.nombre);
+            }
+            return lista;
+        }
+
         public List<ModeloEstudiante> NegocioReadEstudianteId(int id)
         {
             var lista = crudDatos.ReadEstudianteId(id);
@@ -50,6 +60,7 @@ namespace CapaNegocio
 
             return lista;
         }
+                
 
         public List<ModeloProfesor> NegocioReadProfesorId(int id)
         {
