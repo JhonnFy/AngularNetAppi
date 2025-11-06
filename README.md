@@ -26,18 +26,8 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 
 ---
 
-## Características PowerShell
+## Reglas de Negocio
 
-
--   
-
-- 
+ 
 ---
 
-## Tecnologías
-
----
-
-## Arquitectura del Proyecto
-
----
