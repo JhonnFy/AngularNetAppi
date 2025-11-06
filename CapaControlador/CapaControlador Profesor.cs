@@ -32,7 +32,11 @@ namespace CapaControlador
             return objNegocioProfesor.NegocioReadCreateProfesor(nuevoProfesor);
         }
 
-
+        public bool ConstructorUpdateProfesor(ModeloProfesor actualizarProfesor)
+        {
+            return objNegocioProfesor.NegocioUpdateProfesor(actualizarProfesor);
+        }
+          
 
     }
 }
