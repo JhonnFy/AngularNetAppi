@@ -8,7 +8,7 @@ namespace CapaNegocio
 {
     internal class ReglasNegocioHelper
     {
-        public static string HleperOmitirAcentos(string texto)
+        public static string HelperOmitirAcentos(string texto)
         {
             if (string.IsNullOrEmpty(texto))
                 return texto;
