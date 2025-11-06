@@ -14,16 +14,19 @@ namespace CapaAPI.Services
             _context = context;
         }
 
+        // Listar todos los estudiantes
         public List<Estudiante> Listar()
         {
             return _context.Estudiantes.ToList();
         }
 
+        // Obtener un estudiante por Id
         public Estudiante ObtenerPorId(int id)
         {
             return _context.Estudiantes.FirstOrDefault(e => e.Id == id);
         }
 
+        // Filtrar por nombre
         public List<Estudiante> FiltrarPorNombre(string nombre)
         {
             return _context.Estudiantes
@@ -31,6 +34,7 @@ namespace CapaAPI.Services
                 .ToList();
         }
 
+        // Ordenar por nombre
         public List<Estudiante> OrdenarPorNombre(bool ascendente = true)
         {
             if (ascendente)
@@ -39,6 +43,7 @@ namespace CapaAPI.Services
                 return _context.Estudiantes.OrderByDescending(e => e.Nombre).ToList();
         }
 
+        // Crear estudiante
         public Estudiante Crear(Estudiante estudiante)
         {
             _context.Estudiantes.Add(estudiante);
@@ -46,13 +51,19 @@ namespace CapaAPI.Services
             return estudiante;
         }
 
-        public Estudiante Actualizar(Estudiante estudiante)
+        // Actualizar estudiante (sin conflictos de tracking)
+        public Estudiante Actualizar(int id, Estudiante estudiante)
         {
-            _context.Estudiantes.Update(estudiante);
+            var existente = _context.Estudiantes.FirstOrDefault(e => e.Id == id);
+            if (existente == null)
+                return null;
+
+            existente.Nombre = estudiante.Nombre;
             _context.SaveChanges();
-            return estudiante;
+            return existente;
         }
 
+        // Eliminar estudiante
         public bool Eliminar(int id)
         {
             var estudiante = _context.Estudiantes.FirstOrDefault(e => e.Id == id);
