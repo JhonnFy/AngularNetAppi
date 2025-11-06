@@ -26,6 +26,18 @@ namespace CapaNegocio
             return lista;
         }
 
+        public List<ModeloProfesor> NegocioReadProfesor()
+        {
+            var lista = crudDatos.ReadProfesor();
+            foreach (var profesor in lista)
+            {
+                profesor.nombre = ReglasNegocioHelper.HelperNombreProfesores(profesor.nombre);
+                profesor.nombre = ReglasNegocioHelper.HelperOmitirAcentos(profesor.nombre);
+            }
+
+            return lista;
+        }
+
         public List<ModeloEstudiante> NegocioReadEstudianteId(int id)
         {
             var lista = crudDatos.ReadEstudianteId(id);
@@ -34,6 +46,19 @@ namespace CapaNegocio
             {
                 estudienteId.nombre = ReglasNegocioHelper.HelperNombresEstudiantes(estudienteId.nombre);
                 estudienteId.nombre = ReglasNegocioHelper.HelperOmitirAcentos(estudienteId.nombre);
+            }
+
+            return lista;
+        }
+
+        public List<ModeloProfesor> NegocioReadProfesorId(int id)
+        {
+            var lista = crudDatos.ReadProfesorId(id);
+
+            foreach (var profesorId in lista)
+            {
+                profesorId.nombre = ReglasNegocioHelper.HelperNombreProfesores(profesorId.nombre);
+                profesorId.nombre = ReglasNegocioHelper.HelperOmitirAcentos(profesorId.nombre);
             }
 
             return lista;
