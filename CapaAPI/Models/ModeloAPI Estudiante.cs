@@ -1,6 +1,9 @@
 ﻿namespace CapaAPI.Models
 {
-    public class ModeloAPI_Estudiante
+    public class Estudiante
     {
+        public int IdIdentity { get; set; }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
     }
 }
