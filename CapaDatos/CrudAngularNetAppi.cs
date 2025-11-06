@@ -1,6 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
 using System.Security.Principal;
@@ -355,7 +356,7 @@ namespace CapaDatos
                     "VALUES " +
                     "(@id,@nombre,@idProfesor,@idEstudiante,@valor)";
 
-                
+
                 using (SqlCommand createSql = new SqlCommand(create, db))
                 {
                     createSql.Parameters.AddWithValue("@id", nuevaNota.id);
@@ -370,10 +371,39 @@ namespace CapaDatos
                 }
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Debug.WriteLine("[****].[ERROR].[CapaDatos].[CreateNota]");
                 throw new Exception("[ERROR].[CapaDatos].[CreateNota] " + e.Message);
+            }
+        }
+
+        public bool UpdateEstudiante(ModeloEstudiante updateEstudiante)
+        {
+            try
+            {
+                using var db = conexion.ObtenerConexion();
+                db.Open();
+
+                string @update =
+                    "UPDATE Estudiante " +
+                    "SET " +
+                    "nombre = @nombre " +
+                    "WHERE id = @id ";
+
+                using (SqlCommand updateSql = new SqlCommand(update, db))
+                {
+                    updateSql.Parameters.AddWithValue("@nombre", updateEstudiante.nombre);
+                    updateSql.Parameters.AddWithValue("@id", updateEstudiante.id);
+
+                    int filasAfectadas = updateSql.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("[****].[ERROR].[CapaDatos].[Update Estudinate] " + e.Message);
+                throw new Exception("ERROR [CapaDatos].[Update Estudinate] " + e.Message);
             }
         }
 

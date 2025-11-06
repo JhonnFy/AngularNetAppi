@@ -17,8 +17,8 @@ namespace CapaTesting
             {
                 ModeloNota nuevoRegistro = new ModeloNota
                 {
-                    id = 1234,
-                    nombre = "Nota 1234",
+                    id = 4445,
+                    nombre = "Nota 4445",
                     idProfesor = 8979,
                     idEstudiante = 1307,
                     valor = 416
