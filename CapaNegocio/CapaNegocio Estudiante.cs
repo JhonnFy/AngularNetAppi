@@ -25,29 +25,7 @@ namespace CapaNegocio
 
             return lista;
         }
-
-        public List<ModeloProfesor> NegocioReadProfesor()
-        {
-            var lista = crudDatos.ReadProfesor();
-            foreach (var profesor in lista)
-            {
-                profesor.nombre = ReglasNegocioHelper.HelperNombreProfesores(profesor.nombre);
-                profesor.nombre = ReglasNegocioHelper.HelperOmitirAcentos(profesor.nombre);
-            }
-
-            return lista;
-        }
-
-        public List<ModeloNota> NegocioReadNota()
-        {
-            var lista = crudDatos.ReadNota();
-            foreach (var nota in lista)
-            {
-                nota.nombre = ReglasNegocioHelper.HelperNombreNota(nota.nombre);
-                nota.valor = ReglasNegocioHelper.HelperAjustarValoresNotas(nota.valor);
-            }
-            return lista;
-        }
+                        
 
         public List<ModeloEstudiante> NegocioReadEstudianteId(int id)
         {
@@ -63,33 +41,6 @@ namespace CapaNegocio
         }
                 
 
-        public List<ModeloProfesor> NegocioReadProfesorId(int id)
-        {
-            var lista = crudDatos.ReadProfesorId(id);
-
-            foreach (var profesorId in lista)
-            {
-                profesorId.nombre = ReglasNegocioHelper.HelperNombreProfesores(profesorId.nombre);
-                profesorId.nombre = ReglasNegocioHelper.HelperOmitirAcentos(profesorId.nombre);
-            }
-
-            return lista;
-        }
-
-        public List<ModeloNota> NegocioReadNotaId(int id)
-        {
-            var lista = crudDatos.ReadNotaId(id);
-
-            foreach (var notaId in lista)
-            {
-                notaId.nombre = ReglasNegocioHelper.HelperNombreNota(notaId.nombre);
-                notaId.valor = ReglasNegocioHelper.HelperNombreNota(notaId.valor);
-            }
-
-            return lista;
-        }
-
-
         public bool NegocioReadCreateEstudiante(ModeloEstudiante nuevoEstudiante)
         {
             if (nuevoEstudiante == null)
@@ -100,27 +51,7 @@ namespace CapaNegocio
 
             return crudDatos.CreateEstudiante(nuevoEstudiante);
         }
-
-        public bool NegocioReadCreateProfesor(ModeloProfesor nuevoProfesor)
-        {
-            if (nuevoProfesor == null)
-                throw new ArgumentNullException(nameof(nuevoProfesor));
-
-            nuevoProfesor.nombre = ReglasNegocioHelper.HelperNombreProfesores(nuevoProfesor.nombre);
-            nuevoProfesor.nombre = ReglasNegocioHelper.HelperOmitirAcentos(nuevoProfesor.nombre);
-
-            return crudDatos.CreateProfesor(nuevoProfesor);
-        }
-            
-        public bool NegocioCreateNota(ModeloNota nuevaNota)
-        {
-            if (nuevaNota == null)
-                throw new ArgumentNullException(nameof(nuevaNota));
-
-            nuevaNota.nombre = ReglasNegocioHelper.HelperNombreNota(nuevaNota.nombre);
-
-            return crudDatos.CreateNota(nuevaNota);
-        }
+        
 
         public bool NegocioUpdateEstudiante(ModeloEstudiante actualizaEstudiante)
         {
@@ -133,16 +64,6 @@ namespace CapaNegocio
             return crudDatos.UpdateEstudiante(actualizaEstudiante);
         }
 
-        public bool NegocioUpdateProfesor(ModeloProfesor actualizarProfesor)
-        {
-            if (actualizarProfesor == null)
-                throw new ArgumentException(nameof(actualizarProfesor));
-
-            actualizarProfesor.nombre = ReglasNegocioHelper.HelperNombreProfesores(actualizarProfesor.nombre);
-            actualizarProfesor.nombre = ReglasNegocioHelper.HelperOmitirAcentos(actualizarProfesor.nombre);
-
-            return crudDatos.UpdateProfesor(actualizarProfesor);
-        }
 
         public bool NegocioEliminarEstudiante(int idEstudiante)
         {
@@ -157,21 +78,6 @@ namespace CapaNegocio
             var estudiante = new CapaDatos.ModeloEstudiante { id = idEstudiante };
             return crudDatos.DeleteEstudiante(estudiante);
         }
-            
-        public bool NegocioEliminarProfesor(int idProfesor)
-        {
-            var listaNotas = crudDatos.ReadNota();
-            if (!ReglasNegocioHelper.HelperEliminarProfesor(idProfesor, listaNotas))
-            {
-                Console.WriteLine("[*****][Negocio].[No se puede eliminar el profesor, tiene notas asociadas]");
-                Debug.WriteLine("[*****][Negocio].[No se puede eliminar el profesor, tiene notas asociadas].");
-                return false;
-            }
-
-            var profesor = new CapaDatos.ModeloProfesor { id = idProfesor };
-            return crudDatos.DeleteProfesor(profesor);
-        }
-
-
+        
     }
 }
