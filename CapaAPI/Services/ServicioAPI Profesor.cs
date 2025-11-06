@@ -46,11 +46,15 @@ namespace CapaAPI.Services
             return profesor;
         }
 
-        public Profesor Actualizar(Profesor profesor)
+        public Profesor Actualizar(int id, Profesor profesor)
         {
-            _context.Profesores.Update(profesor);
+            var existente = _context.Profesores.FirstOrDefault(p => p.Id == id);
+            if (existente == null)
+                return null;
+
+            existente.Nombre = profesor.Nombre;
             _context.SaveChanges();
-            return profesor;
+            return existente;
         }
 
         public bool Eliminar(int id)
