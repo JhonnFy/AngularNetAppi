@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
-    internal class CapaNegocio_Profesor
+    public class CapaNegocio_Profesor
     {
+        private CrudAngularNetAppi crudDatos = new CrudAngularNetAppi();
     }
 }
