@@ -19,6 +19,20 @@ namespace CapaControlador
             objNegocioNota = new CapaNegocio_Nota();
         }
 
+        public List<ModeloNota> ControladorReadNota()
+        {
+            return objNegocioNota.NegocioReadNota();
+        }
+
+        public List<ModeloNota> ControladorReadNotaId(int id)
+        {
+            return objNegocioNota.NegocioReadNotaId(id);
+        }
+
+        public bool ControladorCreateNota(ModeloNota nuevaNota)
+        {
+            return objNegocioNota.NegocioCreateNota(nuevaNota);       
+        }
 
     }
 }
