@@ -32,7 +32,10 @@ namespace CapaControlador
             return objNegocioEstudiante.NegocioReadCreateEstudiante(nuevoEstudiante);
         }
           
-
+        public bool ControladorUpdateEstudiante(ModeloEstudiante actualizarEstudiante)
+        {
+            return objNegocioEstudiante.NegocioUpdateEstudiante(actualizarEstudiante);
+        }
 
 
     }     
