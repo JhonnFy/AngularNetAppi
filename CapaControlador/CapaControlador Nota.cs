@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaDatos;
-
+    
 
 namespace CapaControlador
 {
@@ -32,6 +32,11 @@ namespace CapaControlador
         public bool ControladorCreateNota(ModeloNota nuevaNota)
         {
             return objNegocioNota.NegocioCreateNota(nuevaNota);       
+        }
+
+        public bool ControladorUpdateNota(ModeloNota actualizarNota)
+        {
+            return objNegocioNota.NegocioUpdateNota(actualizarNota);
         }
 
     }
