@@ -513,5 +513,51 @@ namespace CapaDatos
             }
         }
 
+        public bool DeleteProfesor(ModeloProfesor EliminarRegistro)
+        {
+            try
+            {
+                using var db = conexion.ObtenerConexion();
+                db.Open();
+
+                string checkFK = "SELECT COUNT(*) FROM Nota WHERE idProfesor = @id";
+                using (SqlCommand checkSql = new SqlCommand(checkFK, db))
+                {
+                    try
+                    {
+                        checkSql.Parameters.AddWithValue("@id", EliminarRegistro.id);
+                        int fkCount = (int)checkSql.ExecuteScalar();
+                        if (fkCount > 0)
+                        {
+                            Debug.WriteLine("[****].[INFO].[Delete Profesor] No se puede eliminar, tiene " + fkCount + " notas asociadas.");
+                            return false;
+                        }
+                    }
+                    catch (SqlException e) when (e.Number == 547)
+                    {
+                        Debug.WriteLine("[****].[INFO].[Delete Profesor] No se puede eliminar el estudiante, tiene notas asociadas.");
+                    }
+                }
+
+
+                string @delete =
+                    "DELETE FROM Profesor " +
+                    "WHERE id = @id ";
+
+                using (SqlCommand deleteSql = new SqlCommand(delete, db))
+                {
+                    deleteSql.Parameters.AddWithValue("@id", EliminarRegistro.id);
+
+                    int filasAfectadas = deleteSql.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("[****].[ERROR].[Capa Datos].[Delete Profesor] " + e.Message);
+                throw new Exception("ERROR [Capa Datos].[Delete Profesor] " + e.Message);
+            }
+        }
+
     }
 }
