@@ -435,5 +435,37 @@ namespace CapaDatos
                 throw new Exception("ERROR [CapaDatos].[Update Profesor] " + e.Message);
             }
         }
+
+        public bool UpdateNotas(ModeloNota updNotas)
+        {
+            try
+            {
+                using var db = conexion.ObtenerConexion();
+                db.Open();
+
+                string @update =
+                    "UPDATE Nota " +
+                    "SET " +
+                    "nombre = @nombre, " +
+                    "valor = @valor " +
+                    "WHERE id = @id ";
+
+                using (SqlCommand updateSql = new SqlCommand(update, db))
+                {
+                    updateSql.Parameters.AddWithValue("@nombre", updNotas.nombre);
+                    updateSql.Parameters.AddWithValue("@id", updNotas.id);
+                    updateSql.Parameters.AddWithValue("@valor", updNotas.valor);
+
+                    int filasAfectadas = updateSql.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("[****].[ERROR].[CapaDatos].[Update Notas] " + e.Message);
+                throw new Exception("ERROR [CapaDatos].[Update Notas] " + e.Message);
+            }
+        }
+
     }
 }
