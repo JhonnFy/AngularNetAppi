@@ -50,6 +50,6 @@ A continuación se detallan las herramientas que se usarán para el desarrollo d
 
 ## Postman
 <figure align="center">
-  
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/d6b8d9df-b805-47a4-ab32-1608f7f3796d" />
 </figure>
 
