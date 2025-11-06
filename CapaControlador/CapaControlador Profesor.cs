@@ -37,6 +37,10 @@ namespace CapaControlador
             return objNegocioProfesor.NegocioUpdateProfesor(actualizarProfesor);
         }
           
+        public bool ConstructorDeleteProfesor(int idProfesor)
+        {
+            return objNegocioProfesor.NegocioEliminarProfesor(idProfesor);
+        }
 
     }
 }
