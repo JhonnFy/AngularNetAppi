@@ -121,6 +121,20 @@ namespace CapaNegocio
             var estudiante = new CapaDatos.ModeloEstudiante { id = idEstudiante };
             return crudDatos.DeleteEstudiante(estudiante);
         }
+            
+        public bool NegocioEliminarProfesor(int idProfesor)
+        {
+            var listaNotas = crudDatos.ReadNota();
+            if (!ReglasNegocioHelper.HelperEliminarProfesor(idProfesor, listaNotas))
+            {
+                Console.WriteLine("[*****][Negocio].[No se puede eliminar el profesor, tiene notas asociadas]");
+                Debug.WriteLine("[*****][Negocio].[No se puede eliminar el profesor, tiene notas asociadas].");
+                return false;
+            }
+
+            var profesor = new CapaDatos.ModeloProfesor { id = idProfesor };
+            return crudDatos.DeleteProfesor(profesor);
+        }
 
 
     }
