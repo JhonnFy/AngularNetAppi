@@ -1,28 +1,28 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using CapaDatos;
+﻿using Microsoft.AspNetCore.Mvc;
 using CapaNegocio;
 
 namespace CapaAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Estudiante")] // Ruta fija
     [ApiController]
     public class EstudianteController : ControllerBase
     {
         private readonly CapaNegocio_Estudiante _negocioEstudiante;
 
-        public EstudianteController()
+        public EstudianteController(CapaNegocio_Estudiante negocioEstudiante)
         {
-            _negocioEstudiante = new CapaNegocio_Estudiante();
+            _negocioEstudiante = negocioEstudiante;
         }
 
+        // GET: api/Estudiante
         [HttpGet]
         public IActionResult Get()
         {
+            // Llama a la capa de negocio que retorna todos los estudiantes
             var lista = _negocioEstudiante.NegocioReadEstudiante();
+
+            // Retorna 200 OK con la lista
             return Ok(lista);
         }
-
-
     }
 }
