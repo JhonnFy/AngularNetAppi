@@ -158,6 +158,6 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
    
 
 5. **Integridad de registros**  
-   Estudiantes, profesores y registradores de notas **no pueden ser eliminados**.
+   Estudiantes, profesores y notas, registrados: **no pueden ser eliminados**.
 
 ---
