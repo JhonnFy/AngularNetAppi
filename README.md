@@ -1,6 +1,6 @@
 # AngularNetAppi
 
-Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Controller, Interface), diseñada para **procesar y gestionar **.
+Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Controller, Interface)
 
 ---
 
