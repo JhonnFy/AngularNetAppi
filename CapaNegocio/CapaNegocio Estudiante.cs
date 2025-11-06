@@ -75,6 +75,19 @@ namespace CapaNegocio
             return lista;
         }
 
+        public List<ModeloNota> NegocioReadNotaId(int id)
+        {
+            var lista = crudDatos.ReadNotaId(id);
+
+            foreach (var notaId in lista)
+            {
+                notaId.nombre = ReglasNegocioHelper.HelperNombreNota(notaId.nombre);
+            }
+
+            return lista;
+        }
+
+
         public bool NegocioReadCreateEstudiante(ModeloEstudiante nuevoEstudiante)
         {
             if (nuevoEstudiante == null)
