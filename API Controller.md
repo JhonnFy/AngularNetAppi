@@ -1,22 +1,9 @@
+Entidades planas
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7be9d847-8949-40a9-81b6-901cc563f952" />
 
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/84e79331-2956-4faf-83a2-ab111194279e" />
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f15bd94e-0d41-40ef-9db7-500ea47856d3" />
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/11bbbaa3-25bd-4999-ab1a-505bee32d444" />
+Servicios
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/dca165f7-3a36-4127-b5da-32aa0d4cd07b" />
 
-2-Crear Los controladores por entidad:
-EstudianteController.cs
-ProfesorController.cs
-NotaController.cs
-
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c99458d9-6ebb-446e-9740-b9a0c8013a49" />
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/bc6b4a4e-5423-4831-b2e5-8b2390b48385" />
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/d79d9a83-9b9d-4228-9f40-9e64b31968d5" />
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e8766574-152a-403f-9a57-0611e2efe0ba" />
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/68fe3622-ee89-4b91-866b-b01e393d7928" />
-
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/3a64b109-e50b-4b86-b280-aa738b94042c" />
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b739b87f-c8cd-42e6-8d26-77a8d19457b5" />
-
-
-
+Controller
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b89487d9-5342-4ced-bfc1-1d0f6c2d8d8c" />
 
