@@ -1,12 +1,24 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaDatos;
+
 
 namespace CapaControlador
 {
-    internal class CapaControlador_Nota
+    public class CapaControladorNota
     {
+        private CapaNegocio_Nota objNegocioNota;
+
+
+        public CapaControladorNota()
+        {
+            objNegocioNota = new CapaNegocio_Nota();
+        }
+
+
     }
 }
