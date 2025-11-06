@@ -15,8 +15,7 @@ NotaController.cs
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/68fe3622-ee89-4b91-866b-b01e393d7928" />
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/3a64b109-e50b-4b86-b280-aa738b94042c" />
-
-
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b739b87f-c8cd-42e6-8d26-77a8d19457b5" />
 
 
 
