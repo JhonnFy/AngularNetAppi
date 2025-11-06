@@ -9,6 +9,7 @@ A continuación se detallan las herramientas que se usarán para el desarrollo d
 - [Angular CLI](#angular-cli)
 - [Visual Studio Code](#visual-studio-code)
 - [Git](#git)
+- [Postman](#Postman)
 
 ---
 
@@ -40,10 +41,16 @@ A continuación se detallan las herramientas que se usarán para el desarrollo d
 <figure align="center">
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/995a07d9-8be8-439e-8476-a10e6ff1dec5" />
 </figure>
+
 ---
 
 ## Git
 <figure align="center">
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4870bc7f-4dda-4fc8-b745-75419f40ba8a" />
+</figure>
+
+## Postman
+<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/d6b8d9df-b805-47a4-ab32-1608f7f3796d" />
 </figure>
 
