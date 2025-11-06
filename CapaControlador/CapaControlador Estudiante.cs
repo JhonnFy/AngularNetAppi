@@ -17,6 +17,16 @@ namespace CapaControlador
             objNegocioEstudiante = new CapaNegocio_Estudiante();
         }
 
+        public List<ModeloEstudiante> ControladorReadEstudiante()
+        {
+            return objNegocioEstudiante.NegocioReadEstudiante();
+        }
 
-    }
+        public List<ModeloEstudiante> ControladorReadEstudianteId(int id)
+        {
+            return objNegocioEstudiante.NegocioReadEstudianteId(id);
+        }
+
+
+    }     
 }
