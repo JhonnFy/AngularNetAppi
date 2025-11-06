@@ -28,7 +28,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 
 ## Poblar Base De Datos Con PowerShell
 <figure align="center">
-  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f2c625d2-6cd6-4cdd-b5c4-355934113e37" />
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/32a77773-7d71-4f0b-b8b2-2c566d26aa2b" />
 </figure>
 
 ---
