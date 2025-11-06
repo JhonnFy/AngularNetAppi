@@ -1,6 +1,7 @@
 ﻿using CapaDatos;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,6 +60,22 @@ namespace CapaNegocio
 
             return crudDatos.UpdateEstudiante(actualizaEstudiante);
         }
+
+
+        public bool NegocioEliminarEstudiante(int idEstudiante)
+        {
+            var listaNotas = crudDatos.ReadNota();
+            if (!ReglasNegocioHelper.HelperEliminarEstudiantes(idEstudiante, listaNotas))
+            {
+                Console.WriteLine("[*****][Negocio].[No se puede eliminar el estudiante, tiene notas asociadas]");
+                Debug.WriteLine("[*****][Negocio].[No se puede eliminar el estudiante, tiene notas asociadas].");
+                return false;
+            }
+
+            var estudiante = new CapaDatos.ModeloEstudiante { id = idEstudiante };
+            return crudDatos.DeleteEstudiante(estudiante);
+        }
+
 
     }
 }

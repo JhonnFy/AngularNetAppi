@@ -48,7 +48,7 @@ namespace CapaNegocio
             return valor == 4.2m ? 5.0m : valor;
         }
 
-        public bool HelperEliminarEstudiantes(int idEstudiante, List<ModeloNota> notas)
+        public static bool HelperEliminarEstudiantes(int idEstudiante, List<ModeloNota> notas)
         {
             if (notas == null) return true;
             return !notas.Any(n => n.idEstudiante == idEstudiante);
