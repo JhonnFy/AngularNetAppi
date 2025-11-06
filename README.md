@@ -8,10 +8,10 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 
 1. [Interface](#Interface)  
 2. [Características PowerShell](#características-PowerShell)  
-3. [Tecnologías](#tecnologías)  
+3. [Reglas de Negocio](#Reglas-De-Negocio)    
 4. [Arquitectura del Proyecto](#arquitectura-del-proyecto)  
 5. [Instalación y Configuración](#instalación-y-configuración)  
-6. [Reglas de Negocio](#Reglas-De-Negocio)  
+6. [Tecnologías](#tecnologías)
 7. [Pruebas](#pruebas)  
 ---
 
