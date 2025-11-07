@@ -22,3 +22,52 @@
   height: 100vh;         /* Altura de toda la pantalla */
 }
 
+
+.btnCabecera {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;       
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    background-color: rgb(32, 121, 54);
+    padding: 0.3rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.tablaEstudiantes {
+  width: 100%;
+  border-collapse: collapse;
+  //background-color: rgb(255, 255, 255);
+  background-color: transparent;
+  color: black;
+  backdrop-filter: blur(5px);
+}
+
+.tablaEstudiantes th,
+.tablaEstudiantes td {
+  border: none;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+/* Línea delgada azul debajo de cada fila */
+.tablaEstudiantes tbody tr {
+  border-bottom: 1px solid rgba(0, 123, 255, 0.5); /* azul semitransparente */
+}
+
+/* Opcional: quitar línea del último tr */
+.tablaEstudiantes tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Efecto hover para resaltar la fila */
+.tablaEstudiantes tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* azul muy tenue */
+}
+
