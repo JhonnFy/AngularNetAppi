@@ -88,7 +88,20 @@ export class EstudianteComponent implements OnInit {
     if (this.paginaActual > 1) this.paginaActual--;
   }
 
-  // Tu eliminarEstudiante() y mostrarMensaje() siguen igual
+
+
+filtro: string = ''; 
+aplicarFiltro() {
+  this.paginaActual = 1;
+}
+
+limpiarFiltro() {
+  this.filtro = '';
+  this.paginaActual = 1;
+}
+
+
+
 }
 
 
