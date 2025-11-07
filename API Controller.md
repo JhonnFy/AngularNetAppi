@@ -7,3 +7,7 @@ Servicios
 Controller
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b89487d9-5342-4ced-bfc1-1d0f6c2d8d8c" />
 
+CapaApi
+Install-Package Microsoft.EntityFrameworkCore
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.EntityFrameworkCore.Tools
