@@ -14,7 +14,9 @@
 </figure>
 
 # http://localhost:5261/api/estudiante/2
+<figure align="center">
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/91077897-3795-4dba-92a7-6ee3c0ef7fb6" />
+</figure>
 
 
 
