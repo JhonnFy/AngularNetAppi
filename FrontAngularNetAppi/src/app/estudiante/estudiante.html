@@ -1,27 +1,25 @@
-<div class="container my-5">
-  <h2 class="mb-4">AUDISOFT / ESTUDIANTES</h2>
+<div class="container mt-4">
+  <h2>Panel de Control Académico</h2>
+  <p class="text-muted">Gestiona los estudiantes en AUDISOFT/ESTUDIANTES</p>
 
-  <form (ngSubmit)="guardarEstudiante()" class="mb-4 p-3 border rounded shadow-sm">
-    <div class="mb-3">
-      <label for="id" class="form-label">ID</label>
-      <input type="number" id="id" [(ngModel)]="estudiante.id" name="id" class="form-control" placeholder="ID">
+  <form (ngSubmit)="guardarEstudiante()" class="mb-3 p-3 border rounded shadow-sm">
+    <div class="mb-2">
+      <label>ID</label>
+      <input type="number" [(ngModel)]="estudiante.id" name="id" class="form-control" readonly>
     </div>
 
-    <div class="mb-3">
-      <label for="nombre" class="form-label">Nombre</label>
-      <input type="text" id="nombre" [(ngModel)]="estudiante.nombre" name="nombre" class="form-control" placeholder="Nombre">
+    <div class="mb-2">
+      <label>Nombre</label>
+      <input type="text" [(ngModel)]="estudiante.nombre" name="nombre" class="form-control">
     </div>
 
-    <div class="d-flex gap-2">
+    <div class="d-flex gap-2 mt-2">
       <button type="submit" class="btn btn-primary">
-        <i class="bi bi-save"></i> Guardar
+        <i class="bi bi-person-plus-fill"></i> Guardar
       </button>
       <button type="button" class="btn btn-secondary" (click)="limpiarFormulario()">
         <i class="bi bi-x-circle"></i> Limpiar
       </button>
-      <a routerLink="/dashboard" class="btn btn-info">
-        <i class="bi bi-arrow-left-circle"></i> Menú Principal
-      </a>
     </div>
   </form>
 
@@ -39,10 +37,10 @@
         <td>{{ est.nombre }}</td>
         <td>
           <button class="btn btn-sm btn-warning me-1" (click)="editarEstudiante(est)">
-            <i class="bi bi-pencil"></i>
+            <i class="bi bi-pencil-fill"></i>
           </button>
           <button class="btn btn-sm btn-danger" (click)="eliminarEstudiante(est.id)">
-            <i class="bi bi-trash"></i>
+            <i class="bi bi-trash-fill"></i>
           </button>
         </td>
       </tr>

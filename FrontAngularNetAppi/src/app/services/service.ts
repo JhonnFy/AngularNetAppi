@@ -1,7 +1,6 @@
 // src/app/servicios/estudiante.service.ts
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 export interface Estudiante {
   id: number;
@@ -9,26 +8,32 @@ export interface Estudiante {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root'  // esto permite inyectarlo directamente en el componente
 })
 export class EstudianteService {
-  private apiUrl = 'http://localhost:5261/todos'; // Cambia a tu endpoint real
-
-  constructor(private http: HttpClient) {}
+  private estudiantes: Estudiante[] = [
+    { id: 1, nombre: 'Juan Pérez' },
+    { id: 2, nombre: 'María Gómez' }
+  ];
 
   getEstudiantes(): Observable<Estudiante[]> {
-    return this.http.get<Estudiante[]>(this.apiUrl);
+    return of(this.estudiantes);
   }
 
-  crearEstudiante(estudiante: Estudiante): Observable<Estudiante> {
-    return this.http.post<Estudiante>(this.apiUrl, estudiante);
+  crearEstudiante(est: Estudiante): Observable<Estudiante> {
+    est.id = this.estudiantes.length + 1;
+    this.estudiantes.push(est);
+    return of(est);
+  }
+
+  actualizarEstudiante(est: Estudiante): Observable<Estudiante> {
+    const index = this.estudiantes.findIndex(e => e.id === est.id);
+    if (index !== -1) this.estudiantes[index] = est;
+    return of(est);
   }
 
   eliminarEstudiante(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
-  }
-
-  actualizarEstudiante(estudiante: Estudiante): Observable<Estudiante> {
-    return this.http.put<Estudiante>(`${this.apiUrl}/${estudiante.id}`, estudiante);
+    this.estudiantes = this.estudiantes.filter(e => e.id !== id);
+    return of();
   }
 }
