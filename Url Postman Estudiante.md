@@ -18,6 +18,10 @@
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4c72073a-19b1-4ab8-aaec-8a24181402a7" />  
 </figure>
 
+# http://localhost:5261/api/estudiante
+<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/961f48ee-6e38-4f16-be07-0ba2eec4284e" />
+</figure>
 
 
 
