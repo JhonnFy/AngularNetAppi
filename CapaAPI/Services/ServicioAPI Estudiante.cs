@@ -2,6 +2,7 @@
 using System.Linq;
 using CapaAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace CapaAPI.Services
 {
@@ -74,5 +75,35 @@ namespace CapaAPI.Services
             _context.SaveChanges();
             return true;
         }
+
+        public List<int> ListarEstudiantesConNotas()
+        {
+            return _context.Notas
+                .Select(n => n.IdEstudiante)
+                .Distinct()
+                .ToList();
+        }
+
+        public List<int> ListarEstudiantesSinNotas()
+        {
+            var idsConNotas = _context.Notas
+                .Select(n => n.IdEstudiante)
+                .Distinct()
+                .ToList();
+
+            var idsTodos = _context.Estudiantes
+                .Select(e => e.Id)
+                .ToList();
+
+            // Lista Los Candidatos A Eliminar
+            var idsSinNotas = idsTodos
+                .Where(id => !idsConNotas.Contains(id))
+                .ToList();
+
+            return idsSinNotas;
+        }
+
+
     }
 }
+
