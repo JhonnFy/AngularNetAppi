@@ -32,8 +32,9 @@
 
 
 <figure align="center">
-  
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/36c561bf-1341-4eb0-bd93-5ac0c91bcd53" />
 </figure>
+
 
 
 
