@@ -37,6 +37,22 @@
     text-align: center;
 }
 
+.btnCabeceraV2{
+    width: 40px;
+    height: 40px;
+    display: flex;       
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: rgb(14, 13, 13);
+    background-color:rgba(200, 200, 200, 0.3);
+    padding: 0.3rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
 .tablaEstudiantes th {
     text-align: center;
     vertical-align: middle;
