@@ -24,7 +24,9 @@
 </figure>
 
 
-
+<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/854ae631-f600-4898-85c8-48de69fef5b3" />
+</figure>
 
 
 
