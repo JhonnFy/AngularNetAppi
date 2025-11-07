@@ -18,4 +18,10 @@ export class EstudianteService {
   getEstudiantes(): Observable<Estudiante[]> {
     return this.http.get<Estudiante[]>(this.baseUrl);
   }
+
+  eliminarEstudiante(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${id}`);
+  }
+
+  // Otros métodos que ya tengas: crearEstudiante, actualizarEstudiante...
 }

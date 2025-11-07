@@ -1,8 +1,12 @@
-// src/app/app.routes.ts
 import { Routes } from '@angular/router';
-import { Dashboard } from './dashboard/dashboard';
+import { EstudianteComponent } from './estudiante/estudiante';
+import { Dashboard } from './dashboard/dashboard'; // tu dashboard
 
 export const routes: Routes = [
-  { path: '', component: Dashboard },
-  { path: '**', redirectTo: '' }
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: Dashboard },
+  { path: 'estudiantes', component: EstudianteComponent } // ✅ solo estudiantes por ahora
 ];
+
+
+
