@@ -8,9 +8,8 @@
 
   <!-- Lista de estudiantes -->
   <div>
-    <h5 class="mb-3">Lista de Estudiantes</h5>
     <table class="table table-bordered table-hover">
-      <thead class="table-light">
+      <thead class="table-light text-center">
         <tr>
           <th>ID</th>
           <th>Nombre</th>
@@ -19,12 +18,12 @@
       </thead>
       <tbody>
         <tr *ngFor="let est of estudiantes">
-          <td>{{ est.id }}</td>
-          <td>{{ est.nombre }}</td>
+          <td class="text-center">{{ est.id }}</td>
+          <td class="text-end">{{ est.nombre }}</td>
           <td class="d-flex justify-content-center gap-2">
             <!-- Botón Modificar -->
-            <button class="btn btn-sm btn-danger" (click)="(est.id)">
-              <i class="bi bi-trash-fill"></i>
+            <button class="btn btn-sm btn-warning" (click)="(est.id)">
+              <i class="bi bi-pencil"></i>
           </button>
 
             <!-- Botón Eliminar -->
