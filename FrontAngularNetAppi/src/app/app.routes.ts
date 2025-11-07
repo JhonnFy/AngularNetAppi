@@ -1,8 +1,8 @@
 // src/app/app.routes.ts
 import { Routes } from '@angular/router';
-import { EstudianteComponent } from './estudiante/estudiante';
+import { Dashboard } from './dashboard/dashboard';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/estudiantes', pathMatch: 'full' },
-  { path: 'estudiantes', component: EstudianteComponent }
+  { path: '', component: Dashboard },
+  { path: '**', redirectTo: '' }
 ];

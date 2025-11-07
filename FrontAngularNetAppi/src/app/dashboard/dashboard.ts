@@ -10,3 +10,4 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./dashboard.scss']
 })
 export class Dashboard {}
+

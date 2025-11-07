@@ -3,17 +3,69 @@
   <p class="lead text-muted">Gestiona fácilmente los módulos del sistema académico AUDISOFT.</p>
 
   <div class="row justify-content-center mt-5 g-4">
+
+    <!-- Estudiantes -->
     <div class="col-md-4 d-flex">
       <div class="card shadow-sm w-100 h-100">
-        <div class="card-body">
-          <div>
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div class="mb-3">
             <i class="bi bi-person-lines-fill display-5 text-primary"></i>
             <h5 class="card-title mt-3 fs-4">Estudiantes</h5>
-            <p class="card-text">Administra los estudiantes registrados.</p>
+            <p class="card-text">Administra la información de los estudiantes registrados.</p>
           </div>
-          <a routerLink="/estudiante" class="btn btn-primary w-100 mt-3">Ir al módulo</a>
+
+          <a href="#" class="btn btn-primary w-100 mb-3">Ir al módulo</a>
+
+          <div class="d-flex justify-content-around">
+            <button class="btn btn-sm btn-info rounded-circle" title="Crear"><i class="bi bi-plus-lg"></i></button>
+            <button class="btn btn-sm btn-warning rounded-circle" title="Editar"><i class="bi bi-pencil-fill"></i></button>
+            <button class="btn btn-sm btn-danger rounded-circle" title="Eliminar"><i class="bi bi-trash-fill"></i></button>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Notas -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow-sm w-100 h-100">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div class="mb-3">
+            <i class="bi bi-journal-text display-5 text-success"></i>
+            <h5 class="card-title mt-3 fs-4">Notas</h5>
+            <p class="card-text">Gestiona las notas y calificaciones de los estudiantes.</p>
+          </div>
+
+          <a href="#" class="btn btn-success w-100 mb-3">Ir al módulo</a>
+
+          <div class="d-flex justify-content-around">
+            <button class="btn btn-sm btn-info rounded-circle" title="Crear"><i class="bi bi-plus-lg"></i></button>
+            <button class="btn btn-sm btn-warning rounded-circle" title="Editar"><i class="bi bi-pencil-fill"></i></button>
+            <button class="btn btn-sm btn-danger rounded-circle" title="Eliminar"><i class="bi bi-trash-fill"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profesores -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow-sm w-100 h-100">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div class="mb-3">
+            <i class="bi bi-person-badge-fill display-5 text-warning"></i>
+            <h5 class="card-title mt-3 fs-4">Profesores</h5>
+            <p class="card-text">Edita o agrega la información de los profesores.</p>
+          </div>
+
+          <a href="#" class="btn btn-warning w-100 mb-3">Ir al módulo</a>
+
+          <div class="d-flex justify-content-around">
+            <button class="btn btn-sm btn-info rounded-circle" title="Crear"><i class="bi bi-plus-lg"></i></button>
+            <button class="btn btn-sm btn-warning rounded-circle" title="Editar"><i class="bi bi-pencil-fill"></i></button>
+            <button class="btn btn-sm btn-danger rounded-circle" title="Eliminar"><i class="bi bi-trash-fill"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

@@ -1,19 +1,13 @@
-body {
-  background: linear-gradient(135deg, #eaf1ff 50%, #ffffff 50%);
-  min-height: 100vh;
-}
-
 .card {
-  height: 100%;
   transition: all 0.3s ease-in-out;
-  background-color: #fff;
-  border: none;
   border-radius: 10px;
+  border: none;
+  background-color: #fff;
 }
 
 .card:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 .card .card-body {
