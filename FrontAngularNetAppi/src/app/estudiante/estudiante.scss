@@ -17,16 +17,15 @@
 }
 
 :host {
-  display: block;        /* Asegura que el host sea un bloque */
-  overflow-y: hidden;    /* Oculta el scroll vertical */
-  height: 100vh;         /* Altura de toda la pantalla */
+  display: block;
+  overflow-y: hidden;
+  height: 100vh;
 }
-
 
 .btnCabecera {
     width: 40px;
     height: 40px;
-    display: inline-flex;       
+    display: flex;       
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
@@ -36,9 +35,19 @@
     border-radius: 0.25rem;
     font-weight: bold;
     text-align: center;
+}
+
+.tablaEstudiantes th {
+    text-align: center;
     vertical-align: middle;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 
 .tablaEstudiantes {
   width: 100%;
