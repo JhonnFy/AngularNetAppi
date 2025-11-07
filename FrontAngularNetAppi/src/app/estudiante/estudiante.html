@@ -1,55 +1,31 @@
 <div class="container my-5">
 
-  <!-- Formulario -->
-  <form (ngSubmit)="guardarEstudiante()" class="card p-4 shadow-sm mb-4">
-    <h5>Estudiante</h5>
-    <div class="mb-3">
-      <label for="id" class="form-label">ID</label>
-      <input type="number" id="id" [(ngModel)]="estudiante.id" name="id" class="form-control" />
-    </div>
-    <div class="mb-3">
-      <label for="nombre" class="form-label">Nombre</label>
-      <input type="text" id="nombre" [(ngModel)]="estudiante.nombre" name="nombre" class="form-control" />
-    </div>
-    <div class="d-flex justify-content-between">
-      <button type="submit" class="btn btn-primary">
-        <i class="bi bi-person-lines-fill me-1"></i> Guardar
-      </button>
-      <button type="button" class="btn btn-secondary" (click)="limpiarFormulario()">
-        <i class="bi bi-arrow-clockwise me-1"></i> Limpiar
-      </button>
-      <button type="button" class="btn btn-warning" routerLink="/dashboard">
-        <i class="bi bi-house-door-fill me-1"></i> Menu
-      </button>
-    </div>
-  </form>
+  <h1 class="mb-4 text-center">Lista de Estudiantes</h1>
 
-  <!-- Tabla de estudiantes -->
-  <div class="card p-3 shadow-sm">
-    <h5>Lista de Estudiantes</h5>
-    <table class="table table-bordered table-hover">
-      <thead class="table-light">
-        <tr>
-          <th>ID</th>
-          <th>Nombre</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let est of estudiantes">
-          <td>{{ est.id }}</td>
-          <td>{{ est.nombre }}</td>
-          <td>
-            <button class="btn btn-sm btn-info me-2" (click)="editarEstudiante(est)">
-              <i class="bi bi-pencil-fill"></i>
-            </button>
-            <button class="btn btn-sm btn-danger" (click)="eliminarEstudiante(est.id)">
-              <i class="bi bi-trash-fill"></i>
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <table class="table table-bordered table-hover">
+    <thead class="table-light">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let est of estudiantes">
+        <td>{{ est.id }}</td>
+        <td>{{ est.nombre }}</td>
+      </tr>
+      <tr *ngIf="estudiantes.length === 0">
+        <td colspan="2" class="text-center text-muted">No hay estudiantes disponibles</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Mini log en pantalla -->
+  <div class="mt-3">
+    <h5>Log:</h5>
+    <ul>
+      <li *ngFor="let msg of log">{{ msg }}</li>
+    </ul>
   </div>
 
 </div>

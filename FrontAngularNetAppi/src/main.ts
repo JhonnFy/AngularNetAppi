@@ -1,12 +1,13 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
+
 import { AppComponent } from './app/app';
-import { routes } from './app/app.routes';
+import { routes } from './app/app.routes'; // <-- IMPORTANTE
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideHttpClient(withInterceptorsFromDi()), // HTTP moderno
-    provideRouter(routes)                        // Rutas
+    provideRouter(routes),
+    provideHttpClient()
   ]
 });
