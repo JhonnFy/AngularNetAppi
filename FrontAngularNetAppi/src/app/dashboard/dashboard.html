@@ -1,28 +1,48 @@
-<div class="dashboard-container">
-  <h1>PANEL DE CONTROL ACADÉMICO</h1>
-  <p>Gestiona fácilmente los módulos del sistema académico AUDISOFT.</p>
+<div class="container text-center my-5">
+  <h1 class="mb-4">Panel de Control Académico</h1>
+  <p class="lead text-muted">Gestiona fácilmente los módulos del sistema académico AUDISOFT.</p>
 
-  <div class="dashboard-cards">
-    <div class="dashboard-card">
-      <h2>Estudiantes</h2>
-      <p>Administra la información de los estudiantes registrados.</p>
-      <a routerLink="/estudiante">Ir al módulo</a>
+  <div class="row justify-content-center mt-5 g-4">
+    <!-- Estudiantes -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow-sm w-100 h-100">
+        <div class="card-body">
+          <div>
+            <i class="bi bi-person-lines-fill display-5 text-primary"></i>
+            <h5 class="card-title mt-3 fs-4">Estudiantes</h5>
+            <p class="card-text">Administra la información de los estudiantes registrados.</p>
+          </div>
+          <a routerLink="/estudiante" class="btn btn-primary w-100 mt-3">Ir al módulo</a>
+        </div>
+      </div>
     </div>
 
-    <div class="dashboard-card">
-      <h2>Notas</h2>
-      <p>Gestiona las notas y calificaciones de los estudiantes.</p>
-      <a routerLink="/nota">Ir al módulo</a>
+    <!-- Notas -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow-sm w-100 h-100">
+        <div class="card-body">
+          <div>
+            <i class="bi bi-journal-text display-5 text-success"></i>
+            <h5 class="card-title mt-3 fs-4">Notas</h5>
+            <p class="card-text">Gestiona las notas y calificaciones de los estudiantes.</p>
+          </div>
+          <a routerLink="/nota" class="btn btn-success w-100 mt-3">Ir al módulo</a>
+        </div>
+      </div>
     </div>
 
-    <div class="dashboard-card">
-      <h2>Profesores</h2>
-      <p>Edita o agrega la información de los profesores.</p>
-      <a routerLink="/profesor">Ir al módulo</a>
+    <!-- Profesores -->
+    <div class="col-md-4 d-flex">
+      <div class="card shadow-sm w-100 h-100">
+        <div class="card-body">
+          <div>
+            <i class="bi bi-person-badge-fill display-5 text-warning"></i>
+            <h5 class="card-title mt-3 fs-4">Profesores</h5>
+            <p class="card-text">Edita o agrega la información de los profesores.</p>
+          </div>
+          <a routerLink="/profesor" class="btn btn-warning w-100 mt-3">Ir al módulo</a>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="dashboard-footer">
-    © 2025 | AUDISOFT Consulting S.A.S
   </div>
 </div>

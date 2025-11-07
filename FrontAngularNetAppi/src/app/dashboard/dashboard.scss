@@ -1,81 +1,23 @@
-/* Container del dashboard */
-.dashboard-container {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+body {
+  background: linear-gradient(135deg, #eaf1ff 50%, #ffffff 50%);
+  min-height: 100vh;
 }
 
-/* Título principal */
-.dashboard-container h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #2c3e50;
-}
-
-/* Subtítulo */
-.dashboard-container p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  color: #555;
-}
-
-/* Tarjetas de módulos */
-.dashboard-cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.dashboard-card {
-  flex: 1 1 250px;
-  background-color: #f4f6f9;
+.card {
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  border: none;
   border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.dashboard-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Título de la tarjeta */
-.dashboard-card h2 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #34495e;
-}
-
-/* Texto de la tarjeta */
-.dashboard-card p {
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-/* Botón de acción */
-.dashboard-card a {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #3498db;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.2s ease;
-}
-
-.dashboard-card a:hover {
-  background-color: #2980b9;
-}
-
-/* Pie de página */
-.dashboard-footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.85rem;
-  color: #999;
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
