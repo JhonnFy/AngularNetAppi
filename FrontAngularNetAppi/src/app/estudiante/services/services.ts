@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+
 export interface Estudiante {
   id: number;
   nombre: string;
@@ -22,6 +23,15 @@ export class EstudianteService {
   eliminarEstudiante(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
+
+  EstudiantesConNotas(): Observable<number[]>{
+    return this.http.get<number[]>(`${this.baseUrl}/EstudiantesConNotas`);
+  }
+
+  EstudiantesSinNotas(): Observable<number[]>{
+    return this.http.get<number[]>(`${this.baseUrl}/EstudiantesSinNotas`);
+  }
+
 
   // Otros métodos que ya tengas: crearEstudiante, actualizarEstudiante...
 }

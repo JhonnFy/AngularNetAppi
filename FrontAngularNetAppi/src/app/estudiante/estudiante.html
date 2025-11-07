@@ -33,9 +33,12 @@
             <button class="btn btn-sm btn-warning" (click)="(est.id)">
               <i class="bi bi-pencil"></i>
             </button>
-            <button class="btn btn-sm btn-danger" (click)="eliminarEstudiante(est.id)">
-              <i class="bi bi-trash-fill"></i>
+            <button class="btn btn-sm btn-danger" 
+                (click)="eliminarEstudiante(est.id)"
+                [disabled]="!ArrayIdsEstudiantesSinNotas.includes(est.id)">
+                <i class="bi bi-trash-fill"></i>
             </button>
+            <span *ngIf="!ArrayIdsEstudiantesSinNotas.includes(est.id)" class="text-danger fw-bold">X</span>
           </td>
         </tr>
       </tbody>

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { EstudianteService, Estudiante } from '../estudiante/services/services';
 import { Router, RouterLink } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-estudiante',
@@ -25,6 +26,7 @@ export class EstudianteComponent implements OnInit {
 
   ngOnInit() {
     this.cargarEstudiantes();
+    this.cargarEstudiantesSinNotas();
   }
 
   cargarEstudiantes() {
@@ -37,27 +39,36 @@ export class EstudianteComponent implements OnInit {
     this.router.navigate(['/dashboard']);
   }
 
-  // eliminarEstudiante(id: number) {
-  // if (confirm('¿Estás seguro de eliminar este estudiante?')) {
-  //   this.estudianteService.eliminarEstudiante(id).subscribe({
-  //     next: () => this.cargarEstudiantes(),
-  //     error: (err) => console.error('Error al eliminar estudiante', err)
-  //   });
-  // }
-  // }
+getEstudiantesSinNotas(){
+  this.estudianteService.EstudiantesSinNotas().subscribe((id:number[]) =>{
+    console.log(id);
+  })
+}
+
+getEstudiantesConNotas(){
+  this.estudianteService.EstudiantesConNotas().subscribe((id:number[])=>{
+    console.log(id);
+  })
+}
+
+ArrayIdsEstudiantesSinNotas: number [] = [];
+cargarEstudiantesSinNotas() {
+  this.estudianteService.EstudiantesSinNotas().subscribe((ids: number[]) => {
+    this.ArrayIdsEstudiantesSinNotas = ids;
+    console.log(ids); 
+  });
+}
+
 
   eliminarEstudiante(id: number) {
   if (confirm('¿Estás seguro de eliminar este estudiante?')) {
     this.estudianteService.eliminarEstudiante(id).subscribe({
       next: () => {
-        // Se eliminó correctamente
         this.cargarEstudiantes();
         alert('Estudiante eliminado correctamente.');
       },
       error: (err) => {
-        // Mostrar mensaje según la respuesta de la API
         if (err.error && err.error.mensaje) {
-          // Si la API devuelve un mensaje personalizado
           alert(err.error.mensaje);
         } else if (err.status === 400) {
           alert('No se puede eliminar este estudiante porque tiene registros asociados.');
