@@ -3,7 +3,7 @@
   <!-- Título -->
   <div class="text-center mb-4">
     <h1 class="mb-2">Panel de Control Académico</h1>
-    <p class="text-muted">Gestiona fácilmente los módulos del sistema académico AUDISOFT/ESTUDIANTES.</p>
+    <p class="text-muted">Gestiona fácilmente los módulos del sistema académico.</p>
   </div>
 
   <!-- Lista de estudiantes -->
@@ -17,23 +17,34 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let est of estudiantes">
+        <!-- Aquí usamos estudiantesPaginados para la paginación -->
+        <tr *ngFor="let est of estudiantesPaginados">
           <td class="text-center">{{ est.id }}</td>
           <td class="text-end">{{ est.nombre }}</td>
           <td class="d-flex justify-content-center gap-2">
             <!-- Botón Modificar -->
             <button class="btn btn-sm btn-warning" (click)="(est.id)">
               <i class="bi bi-pencil"></i>
-          </button>
-
+            </button>
             <!-- Botón Eliminar -->
             <button class="btn btn-sm btn-danger" (click)="eliminarEstudiante(est.id)">
               <i class="bi bi-trash-fill"></i>
-          </button>
+            </button>
           </td>
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <!-- Botones de paginación -->
+  <div class="d-flex justify-content-center gap-2 mt-3">
+    <button class="btn btn-secondary btn-sm" (click)="paginaAnterior()" [disabled]="paginaActual === 1">
+      Anterior
+    </button>
+    <span> Página {{ paginaActual }} de {{ totalPaginas() }} </span>
+    <button class="btn btn-secondary btn-sm" (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas()">
+      Siguiente
+    </button>
   </div>
 
 </div>

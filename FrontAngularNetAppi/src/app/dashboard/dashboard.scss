@@ -11,3 +11,10 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+
+:host {
+  display: block;
+  overflow-y: hidden;
+  height: 100vh;
+}

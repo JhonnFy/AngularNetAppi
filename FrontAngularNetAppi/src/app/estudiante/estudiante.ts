@@ -13,6 +13,8 @@ import { EstudianteService, Estudiante } from '../estudiante/services/services';
 })
 export class EstudianteComponent implements OnInit {
   estudiantes: Estudiante[] = [];
+    paginaActual = 1;
+    registrosPorPagina = 7;
 
   constructor(
     private estudianteService: EstudianteService,
@@ -28,6 +30,8 @@ export class EstudianteComponent implements OnInit {
       this.estudiantes = data;
     }, (err) => console.error('Error cargando estudiantes', err));
   }
+
+
 
   // eliminarEstudiante(id: number) {
   // if (confirm('¿Estás seguro de eliminar este estudiante?')) {
@@ -65,5 +69,26 @@ export class EstudianteComponent implements OnInit {
 }
 
 
+
+  // Getter que devuelve solo los estudiantes de la página actual
+  get estudiantesPaginados(): Estudiante[] {
+    const inicio = (this.paginaActual - 1) * this.registrosPorPagina;
+    return this.estudiantes.slice(inicio, inicio + this.registrosPorPagina);
+  }
+
+  totalPaginas(): number {
+    return Math.ceil(this.estudiantes.length / this.registrosPorPagina);
+  }
+
+  paginaSiguiente() {
+    if (this.paginaActual < this.totalPaginas()) this.paginaActual++;
+  }
+
+  paginaAnterior() {
+    if (this.paginaActual > 1) this.paginaActual--;
+  }
+
+  // Tu eliminarEstudiante() y mostrarMensaje() siguen igual
 }
+
 

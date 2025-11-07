@@ -15,3 +15,10 @@
     border-radius: 50%;
   }
 }
+
+:host {
+  display: block;        /* Asegura que el host sea un bloque */
+  overflow-y: hidden;    /* Oculta el scroll vertical */
+  height: 100vh;         /* Altura de toda la pantalla */
+}
+
