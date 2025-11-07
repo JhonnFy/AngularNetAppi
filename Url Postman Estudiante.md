@@ -4,7 +4,7 @@
 |------------|-----|------------|-----------------|
 | GET | http://localhost:5261/api/estudiante | Listar todos los estudiantes | — |
 | GET | http://localhost:5261/api/estudiante/{id} | Obtener un estudiante por Id | — |
-| POST | http://localhost:5261/api/estudiante | Crear un estudiante | `{ "Nombre": "Juan" }` |
+| POST | http://localhost:5261/api/estudiante | Crear un estudiante | `{"Id": 1023,  "Nombre": "Juan"}` |
 | PUT | http://localhost:5261/api/estudiante/{id} | Actualizar estudiante | `{ "Id": 1, "Nombre": "Juan Actualizado" }` |
 | DELETE | http://localhost:5261/api/estudiante/{id} | Eliminar estudiante | — |
 
@@ -17,6 +17,7 @@
 <figure align="center">
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4c72073a-19b1-4ab8-aaec-8a24181402a7" />  
 </figure>
+
 
 
 
