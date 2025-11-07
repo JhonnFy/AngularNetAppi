@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { EstudianteService, Estudiante } from '../estudiante/services/services';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-estudiante',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './estudiante.html',
   styleUrls: ['./estudiante.scss']
 })
@@ -18,7 +19,8 @@ export class EstudianteComponent implements OnInit {
 
   constructor(
     private estudianteService: EstudianteService,
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -31,7 +33,9 @@ export class EstudianteComponent implements OnInit {
     }, (err) => console.error('Error cargando estudiantes', err));
   }
 
-
+  irAlDashboard() {
+    this.router.navigate(['/dashboard']);
+  }
 
   // eliminarEstudiante(id: number) {
   // if (confirm('¿Estás seguro de eliminar este estudiante?')) {
@@ -99,6 +103,10 @@ limpiarFiltro() {
   this.filtro = '';
   this.paginaActual = 1;
 }
+
+
+
+
 
 
 
