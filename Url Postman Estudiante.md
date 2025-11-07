@@ -9,8 +9,9 @@
 | DELETE | http://localhost:5261/api/estudiante/{id} | Eliminar estudiante | — |
 
 # http://localhost:5261/api/estudiante
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/00378412-6649-48e3-9b92-1b3a37a38ebc" />
-
+<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/00378412-6649-48e3-9b92-1b3a37a38ebc" />
+</figure>
 
 
 
