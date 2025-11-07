@@ -54,7 +54,7 @@ export class EstudianteComponent implements OnInit {
         } else if (err.status === 400) {
           alert('No se puede eliminar este estudiante porque tiene registros asociados.');
         } else {
-          alert('No se puede eliminar este estudiante porque tiene notas asociados.');
+          alert('No se puede eliminar este estudiante porque tiene registros asociados.');
           console.error(err);
         }
       }
@@ -63,7 +63,6 @@ export class EstudianteComponent implements OnInit {
     alert('No se eliminó el estudiante.');
   }
 }
-
 
 
 }

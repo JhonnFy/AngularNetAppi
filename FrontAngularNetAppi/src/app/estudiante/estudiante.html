@@ -23,9 +23,9 @@
           <td>{{ est.nombre }}</td>
           <td class="d-flex justify-content-center gap-2">
             <!-- Botón Modificar -->
-            <button class="btn btn-sm btn-warning"  title="Modificar">
-              <i class="bi bi-pencil-fill"></i>
-            </button>
+            <button class="btn btn-sm btn-danger" (click)="(est.id)">
+              <i class="bi bi-trash-fill"></i>
+          </button>
 
             <!-- Botón Eliminar -->
             <button class="btn btn-sm btn-danger" (click)="eliminarEstudiante(est.id)">
