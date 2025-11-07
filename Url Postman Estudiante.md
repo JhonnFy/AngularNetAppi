@@ -20,13 +20,15 @@
 
 # http://localhost:5261/api/estudiante
 <figure align="center">
-
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/3b8d948e-d96e-407e-ba9e-516316f30864" />
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/618caf5f-f3bd-44a3-9e6a-fc190c303666" />
 </figure>
 
 
 <figure align="center">
 
 </figure>
+
 
 
 
