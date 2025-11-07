@@ -69,7 +69,6 @@
 .tablaEstudiantes {
   width: 100%;
   border-collapse: collapse;
-  //background-color: rgb(255, 255, 255);
   background-color: transparent;
   color: black;
   backdrop-filter: blur(5px);
@@ -82,18 +81,26 @@
   text-align: left;
 }
 
-/* Línea delgada azul debajo de cada fila */
+
 .tablaEstudiantes tbody tr {
-  border-bottom: 1px solid rgba(0, 123, 255, 0.5); /* azul semitransparente */
+  border-bottom: 1px solid rgba(0, 123, 255, 0.5);
 }
 
-/* Opcional: quitar línea del último tr */
+
 .tablaEstudiantes tbody tr:last-child {
   border-bottom: none;
 }
 
-/* Efecto hover para resaltar la fila */
+
 .tablaEstudiantes tbody tr:hover {
-  background-color: rgba(0, 123, 255, 0.1); /* azul muy tenue */
+  background-color: rgba(0, 123, 255, 0.1); 
 }
 
+.nombresTabla{
+  position: relative;
+}
+
+.nombresTabla span{
+  position: absolute;
+  right: 0;
+}
