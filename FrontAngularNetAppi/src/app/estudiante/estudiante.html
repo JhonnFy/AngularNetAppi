@@ -1,30 +1,51 @@
-<div class="container text-center my-5">
-  <h1 class="mb-4">Panel de Control Académico</h1>
-  <p class="lead text-muted">Gestiona fácilmente los módulos del sistema académico AUDISOFT/ESTUDIANTES.</p>
+<div class="container my-5">
+  <h2 class="mb-4">AUDISOFT / ESTUDIANTES</h2>
 
-  <div class="card shadow-sm mx-auto p-4" style="max-width: 500px;">
-    <div class="card-body">
-      <div class="mb-3">
-        <label for="idInput" class="form-label">ID</label>
-        <input type="text" id="idInput" class="form-control" [(ngModel)]="estudiante.id">
-      </div>
-
-      <div class="mb-3">
-        <label for="nombreInput" class="form-label">Nombre</label>
-        <input type="text" id="nombreInput" class="form-control" [(ngModel)]="estudiante.nombre">
-      </div>
-
-      <div class="d-flex gap-2 justify-content-between">
-        <button class="btn btn-primary" (click)="guardarEstudiante()">
-          <i class="bi bi-person-check"></i> Guardar
-        </button>
-        <button class="btn btn-secondary" (click)="limpiarFormulario()">
-          <i class="bi bi-x-circle"></i> Limpiar
-        </button>
-        <button class="btn btn-info" (click)="regresarMenu()">
-          <i class="bi bi-arrow-left-circle"></i> Menu
-        </button>
-      </div>
+  <form (ngSubmit)="guardarEstudiante()" class="mb-4 p-3 border rounded shadow-sm">
+    <div class="mb-3">
+      <label for="id" class="form-label">ID</label>
+      <input type="number" id="id" [(ngModel)]="estudiante.id" name="id" class="form-control" placeholder="ID">
     </div>
-  </div>
+
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" id="nombre" [(ngModel)]="estudiante.nombre" name="nombre" class="form-control" placeholder="Nombre">
+    </div>
+
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-primary">
+        <i class="bi bi-save"></i> Guardar
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="limpiarFormulario()">
+        <i class="bi bi-x-circle"></i> Limpiar
+      </button>
+      <a routerLink="/dashboard" class="btn btn-info">
+        <i class="bi bi-arrow-left-circle"></i> Menú Principal
+      </a>
+    </div>
+  </form>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let est of estudiantes">
+        <td>{{ est.id }}</td>
+        <td>{{ est.nombre }}</td>
+        <td>
+          <button class="btn btn-sm btn-warning me-1" (click)="editarEstudiante(est)">
+            <i class="bi bi-pencil"></i>
+          </button>
+          <button class="btn btn-sm btn-danger" (click)="eliminarEstudiante(est.id)">
+            <i class="bi bi-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
