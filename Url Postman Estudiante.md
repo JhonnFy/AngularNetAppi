@@ -10,13 +10,9 @@
 
 # http://localhost:5261/api/estudiante
 <figure align="center">
-  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/00378412-6649-48e3-9b92-1b3a37a38ebc" />
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/9d62ec72-b9b3-457f-b827-b3d9d9e79e8f" />
 </figure>
 
-# http://localhost:5261/api/estudiante/2
-<figure align="center">
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/91077897-3795-4dba-92a7-6ee3c0ef7fb6" />
-</figure>
 
 
 
