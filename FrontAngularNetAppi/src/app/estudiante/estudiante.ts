@@ -1,14 +1,13 @@
-// src/app/estudiante/estudiante.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
-import { EstudianteService, Estudiante } from '../services/service';
+import { Estudiante, EstudianteService } from '../estudiante/services/services';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-estudiante',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './estudiante.html',
   styleUrls: ['./estudiante.scss']
 })
@@ -16,58 +15,47 @@ export class EstudianteComponent implements OnInit {
   estudiantes: Estudiante[] = [];
   estudiante: Estudiante = { id: 0, nombre: '' };
 
-  constructor(private estudianteService: EstudianteService, private router: Router) {}
+  constructor(private estudianteService: EstudianteService) {}
 
   ngOnInit() {
     this.cargarEstudiantes();
   }
 
-  // Cargar todos los estudiantes
   cargarEstudiantes() {
-    this.estudianteService.getEstudiantes().subscribe(data => {
-      this.estudiantes = data;
+    this.estudianteService.getEstudiantes().subscribe({
+      next: data => this.estudiantes = data,
+      error: err => console.error('Error cargando estudiantes:', err)
     });
   }
 
-  // Guardar o actualizar estudiante
   guardarEstudiante() {
-    if (!this.estudiante.nombre) return; // validar que nombre no esté vacío
-
     if (this.estudiante.id === 0) {
       // Crear
-      this.estudianteService.crearEstudiante(this.estudiante).subscribe(() => {
-        this.cargarEstudiantes();
-        this.limpiarFormulario();
+      this.estudianteService.crearEstudiante(this.estudiante).subscribe({
+        next: () => { this.cargarEstudiantes(); this.limpiarFormulario(); },
+        error: err => console.error('Error creando estudiante:', err)
       });
     } else {
       // Actualizar
-      this.estudianteService.actualizarEstudiante(this.estudiante).subscribe(() => {
-        this.cargarEstudiantes();
-        this.limpiarFormulario();
+      this.estudianteService.actualizarEstudiante(this.estudiante).subscribe({
+        next: () => { this.cargarEstudiantes(); this.limpiarFormulario(); },
+        error: err => console.error('Error actualizando estudiante:', err)
       });
     }
   }
 
-  // Editar estudiante
   editarEstudiante(est: Estudiante) {
     this.estudiante = { ...est };
   }
 
-  // Eliminar estudiante
   eliminarEstudiante(id: number) {
-    if (!confirm('¿Deseas eliminar este estudiante?')) return;
-    this.estudianteService.eliminarEstudiante(id).subscribe(() => {
-      this.cargarEstudiantes();
+    this.estudianteService.eliminarEstudiante(id).subscribe({
+      next: () => this.cargarEstudiantes(),
+      error: err => console.error('Error eliminando estudiante:', err)
     });
   }
 
-  // Limpiar formulario
   limpiarFormulario() {
     this.estudiante = { id: 0, nombre: '' };
-  }
-
-  // Regresar al dashboard
-  regresarDashboard() {
-    this.router.navigate(['/dashboard']);
   }
 }

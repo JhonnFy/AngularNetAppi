@@ -1,3 +1,19 @@
+//{
+//  "$schema": "http://json.schemastore.org/launchsettings.json",
+//  "profiles": {
+//    "http": {
+//      "commandName": "Project",
+//      "dotnetRunMessages": true,
+//      "launchBrowser": true,
+//      "launchUrl": "todos",
+//      "applicationUrl": "http://localhost:5261",
+//      "environmentVariables": {
+//        "ASPNETCORE_ENVIRONMENT": "Development"
+//      }
+//    }
+//  }
+//}
+
 {
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
@@ -5,7 +21,7 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "todos",
+      "launchUrl": "api/estudiante",
       "applicationUrl": "http://localhost:5261",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
