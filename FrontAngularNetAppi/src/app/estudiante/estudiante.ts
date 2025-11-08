@@ -189,21 +189,22 @@ guardarEdicion(est: Estudiante) {
 }
 
 
+
 // abrirCrearUsuario() {
 //   Swal.fire({
-//     title: '¿Estás Seguro?',
-//     text: 'Vas a crear un nuevo usuario. ¡No podrás revertir esta acción!',
-//     icon: 'question',
+//     title: '<strong>Nuevo Estudiante</strong>',
 //     html: `
+//       <p style="font-size:0.9rem; color:#555;">DNI (Requerido)</p>
 //       <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
-//         <i class="bi bi-card-text"></i>
-//         <input id="swal-input-id" class="swal2-input" placeholder="ID">
+//         <i class="bi bi-card-text" style="color:#ff4500; font-size:1.5rem;"></i>
+//         <input id="swal-input-id" class="swal2-input" placeholder="DNI">
 //       </div>
 //       <div style="display:flex; align-items:center; gap:8px;">
-//         <i class="bi bi-person-fill"></i>
+//         <i class="bi bi-person-fill" style="color:#1e90ff; font-size:1.5rem;"></i>
 //         <input id="swal-input-nombre" class="swal2-input" placeholder="Nombre" disabled>
 //       </div>
 //     `,
+//     icon: 'question',
 //     showCancelButton: true,
 //     confirmButtonText: 'Sí, Crear',
 //     cancelButtonText: 'No, Cancelar',
@@ -214,7 +215,7 @@ guardarEdicion(est: Estudiante) {
 //       const idInput = document.getElementById('swal-input-id') as HTMLInputElement;
 //       const nombreInput = document.getElementById('swal-input-nombre') as HTMLInputElement;
 
-//       // Cada vez que se escribe en el ID, activamos o desactivamos el nombre
+//       // Activar/desactivar input de nombre según ID
 //       idInput.addEventListener('input', () => {
 //         nombreInput.disabled = !idInput.value.trim();
 //       });
@@ -235,53 +236,59 @@ guardarEdicion(est: Estudiante) {
 //   });
 // }
 
+
 abrirCrearUsuario() {
-  Swal.fire({
-    title: '<strong>Nuevo Estudiante</strong>',
-    html: `
-      <p style="font-size:0.9rem; color:#555;">DNI (Requerido)</p>
-      <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
-        <i class="bi bi-card-text" style="color:#ff4500; font-size:1.5rem;"></i>
-        <input id="swal-input-id" class="swal2-input" placeholder="DNI">
-      </div>
-      <div style="display:flex; align-items:center; gap:8px;">
-        <i class="bi bi-person-fill" style="color:#1e90ff; font-size:1.5rem;"></i>
-        <input id="swal-input-nombre" class="swal2-input" placeholder="Nombre" disabled>
-      </div>
-    `,
-    icon: 'question',
-    showCancelButton: true,
-    confirmButtonText: 'Sí, Crear',
-    cancelButtonText: 'No, Cancelar',
-    confirmButtonColor: '#ff0000',
-    cancelButtonColor: '#006bc9',
-    reverseButtons: true,
-    didOpen: () => {
-      const idInput = document.getElementById('swal-input-id') as HTMLInputElement;
-      const nombreInput = document.getElementById('swal-input-nombre') as HTMLInputElement;
+    Swal.fire({
+      title: '<strong>Nuevo Estudiante</strong>',
+      html: `
+        <p style="font-size:0.9rem; color:#555;">DNI (Requerido)</p>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+          <i class="bi bi-card-text" style="color:#ff4500; font-size:1.5rem;"></i>
+          <input id="swal-input-id" class="swal2-input" placeholder="DNI">
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <i class="bi bi-person-fill" style="color:#1e90ff; font-size:1.5rem;"></i>
+          <input id="swal-input-nombre" class="swal2-input" placeholder="Nombre" disabled>
+        </div>
+      `,
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Sí, Crear',
+      cancelButtonText: 'No, Cancelar',
+      confirmButtonColor: '#ff0000',
+      cancelButtonColor: '#006bc9',
+      reverseButtons: true,
+      didOpen: () => {
+        const idInput = document.getElementById('swal-input-id') as HTMLInputElement;
+        const nombreInput = document.getElementById('swal-input-nombre') as HTMLInputElement;
 
-      // Activar/desactivar input de nombre según ID
-      idInput.addEventListener('input', () => {
-        nombreInput.disabled = !idInput.value.trim();
-      });
-    },
-    preConfirm: () => {
-      const id = (document.getElementById('swal-input-id') as HTMLInputElement).value;
-      const nombre = (document.getElementById('swal-input-nombre') as HTMLInputElement).value;
-      if (!id || !nombre) Swal.showValidationMessage('¡Completa todos los campos!');
-      return { id, nombre };
-    }
-  }).then(result => {
-    if (result.isConfirmed && result.value) {
-      console.log('Crear usuario:', result.value);
-      Swal.fire('¡Creado!', `Usuario "${result.value.nombre}" creado correctamente.`, 'success');
-    } else if (result.dismiss === Swal.DismissReason.cancel) {
-      Swal.fire('Cancelado', 'No se creó el usuario.', 'info');
-    }
-  });
-}
+        // Activar/desactivar input de nombre según ID y permitir solo números
+        idInput.addEventListener('input', () => {
+          idInput.value = idInput.value.replace(/\D/g, ''); // solo números
+          nombreInput.disabled = !idInput.value.trim();
+        });
+      },
+      preConfirm: () => {
+        const id = (document.getElementById('swal-input-id') as HTMLInputElement).value;
+        const nombre = (document.getElementById('swal-input-nombre') as HTMLInputElement).value;
 
+        if (!id || !nombre) {
+          Swal.showValidationMessage('¡Completa todos los campos!');
+        } else if (!/^\d+$/.test(id)) {
+          Swal.showValidationMessage('El DNI solo puede contener números');
+        }
 
+        return { id, nombre };
+      }
+    }).then(result => {
+      if (result.isConfirmed && result.value) {
+        console.log('Crear usuario:', result.value);
+        Swal.fire('¡Creado!', `Usuario "${result.value.nombre}" creado correctamente.`, 'success');
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire('Cancelado', 'No se creó el usuario.', 'info');
+      }
+    });
+  }
 
 
 
