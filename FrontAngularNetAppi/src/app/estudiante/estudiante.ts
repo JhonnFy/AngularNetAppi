@@ -283,12 +283,28 @@ abrirCrearUsuario() {
     }).then(result => {
       if (result.isConfirmed && result.value) {
         console.log('Crear usuario:', result.value);
+        const { id, nombre } = result.value; 
+        this.registrarEstudiante(+id, nombre);
         Swal.fire('¡Creado!', `Usuario "${result.value.nombre}" creado correctamente.`, 'success');
       } else if (result.dismiss === Swal.DismissReason.cancel) {
         Swal.fire('Cancelado', 'No se creó el usuario.', 'info');
       }
     });
   }
+
+registrarEstudiante(id: number, nombre: string) {
+  this.estudianteService.registrarEstudiante({ id, nombre }).subscribe({
+    next: (nuevoEst) => {
+      console.log('Estudiante registrado:', nuevoEst);
+      this.cargarEstudiantes(); // refresca la tabla
+      this.cargarEstudiantesSinNotas(); // actualiza ArrayIdsEstudiantesSinNotas
+    },
+    error: (err) => {
+      console.error('Error registrando estudiante:', err);
+    }
+  });
+}
+
 
 
 
