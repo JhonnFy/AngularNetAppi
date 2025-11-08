@@ -29,11 +29,25 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 </figure>
 
 <figure align="center">
-  
+  <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/312c1ff2-52ec-47c4-aa56-008a78f53cd1" />
 </figure>
 
 <figure align="center">
-  
+  <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/6f53b86e-add0-4c09-947f-d6d0a4d726db" />
+</figure>
+
+<figure align="center">
+  <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/3874ab4f-e8eb-4a5f-aead-b1415377a275" />
+</figure>
+
+<figure align="center">
+  <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/59732d9c-7879-4398-a77e-9483dde9ac02" />
+</figure>
+
+<figure align="center">
+</figure>
+
+<figure align="center">
 </figure>
 
 ---
@@ -66,6 +80,29 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 <figure align="center">
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6e09fa79-d56f-4119-8878-4b59277d6815" />
 </figure>
+
+<figure align="center">
+  <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/7682122c-afac-454d-a6cf-80df081705d7" />
+</figure>
+
+
+<figure align="center">
+</figure>
+
+
+<figure align="center">
+</figure>
+
+<figure align="center">
+</figure>
+
+<figure align="center">
+</figure>
+
+<figure align="center">
+</figure>
+
+  
 ---
 
 ## Testing MSTest
