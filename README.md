@@ -85,15 +85,16 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
   <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/7682122c-afac-454d-a6cf-80df081705d7" />
 </figure>
 
-
 <figure align="center">
-</figure>
-
-
-<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/fc418716-0909-4fbd-ab62-84298338e27d" />
 </figure>
 
 <figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e9af0264-0519-4349-b130-c21df4f37a9c" />
+</figure>
+
+<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6cb79a0a-4916-4906-863b-284986fc6dac" />
 </figure>
 
 <figure align="center">
