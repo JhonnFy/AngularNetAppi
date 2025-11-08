@@ -36,6 +36,9 @@ export class EstudianteService {
     return this.http.get<number[]>(`${this.baseUrl}/EstudiantesSinNotas`);
   }
 
+  actualizarEstudiante(estudiante: Estudiante): Observable<Estudiante> {
+    return this.http.put<Estudiante>(`${this.baseUrl}/${estudiante.id}`, estudiante);
+  }
 
   // Otros métodos que ya tengas: crearEstudiante, actualizarEstudiante...
 }

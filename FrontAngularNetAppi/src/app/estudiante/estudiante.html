@@ -1,9 +1,7 @@
 <div class="container my-5">
 
   <!-- Encabezado + buscador -->
-<div class="d-flex justify-content-start align-items-start mb-4 gap-3">
-
-    <!-- Bloque buscador con texto arriba -->
+  <div class="d-flex justify-content-start align-items-start mb-4 gap-3">
     <div class="d-flex flex-column gap-1">
       <p class="text-muted mb-1">AUDISOFT/ESTUDIANTES</p>
       <div class="d-flex gap-1">
@@ -12,8 +10,7 @@
         <button class="btn btn-sm btn-secondary" (click)="limpiarFiltro()">Limpiar</button>
       </div>
     </div>
-
-</div>
+  </div>
 
   <!-- Tabla de estudiantes -->
   <div>
@@ -28,15 +25,31 @@
       <tbody>
         <tr *ngFor="let est of estudiantesPaginados">
           <td class="text-center">{{ est.id }}</td>
-          <td class="nombresTabla">{{ est.nombre }}</td>
+
+          <!-- Nombre editable -->
+          <td class="nombresTabla">
+            <span *ngIf="filaEditandoId !== est.id">{{ est.nombre }}</span>
+            <input *ngIf="filaEditandoId === est.id" type="text" [(ngModel)]="nombreEditado" class="form-control form-control-sm">
+          </td>
+
+          <!-- Botones de acción -->
           <td class="d-flex justify-content-center gap-2">
-            <button class="btn btn-sm btn-warning" (click)="(est.id)">
+            <!-- Editar / Guardar / Cancelar -->
+            <button *ngIf="filaEditandoId !== est.id" class="btn btn-sm btn-warning" (click)="activarEdicion(est)">
               <i class="bi bi-pencil"></i>
             </button>
+            <button *ngIf="filaEditandoId === est.id" class="btn btn-sm btn-success" (click)="guardarEdicion(est)">
+              <i class="bi bi-check2"></i>
+            </button>
+            <button *ngIf="filaEditandoId === est.id" class="btn btn-sm btn-secondary" (click)="cancelarEdicion()">
+              <i class="bi bi-x"></i>
+            </button>
+
+            <!-- Eliminar -->
             <button class="btn btn-sm btn-danger" 
-                (click)="eliminarEstudiante(est.id)"
-                [disabled]="!ArrayIdsEstudiantesSinNotas.includes(est.id)">
-                <i class="bi bi-trash-fill"></i>
+                    (click)="eliminarEstudiante(est.id)"
+                    [disabled]="!ArrayIdsEstudiantesSinNotas.includes(est.id)">
+              <i class="bi bi-trash-fill"></i>
             </button>
             <span *ngIf="!ArrayIdsEstudiantesSinNotas.includes(est.id)" class="text-danger fw-bold">X</span>
           </td>
@@ -45,27 +58,21 @@
     </table>
   </div>
 
-<!-- Tabla de estudiantes -->
-<div>
-  <table class="tablaEstudiantes table-hover">
-    <!-- ... tu tabla ... -->
-  </table>
-</div>
+  <!-- Contenedor de botones fijo al bottom -->
+  <div class="d-flex justify-content-between align-items-center p-3"
+       style="position: fixed; bottom: 20px; left: 0; right: 0; max-width: 1200px; margin: 0 auto; background: transparent;">
+    
+    <!-- Botón de retorno -->
+    <button class="btn btn-sm btn-info rounded-circle" [routerLink]="['/dashboard']" title="Volver al dashboard">
+        <i class="bi bi-arrow-left"></i>
+    </button>
 
-<!-- Contenedor de botones fijo al bottom -->
-<div class="d-flex justify-content-between align-items-center p-3"
-     style="position: fixed; bottom: 20px; left: 0; right: 0; max-width: 1200px; margin: 0 auto; background: transparent;">
-  
-  <!-- Botón de retorno -->
-  <button class="btn btn-sm btn-info rounded-circle" [routerLink]="['/dashboard']" title="Volver al dashboard">
-      <i class="bi bi-arrow-left"></i>
-  </button>
-
-  <!-- Botones de paginación -->
-  <div class="d-flex align-items-center gap-2">
-    <button class="btn btn-secondary btn-sm" (click)="paginaAnterior()" [disabled]="paginaActual === 1">Anterior</button>
-    <span>Página {{ paginaActual }} de {{ totalPaginas() }}</span>
-    <button class="btn btn-secondary btn-sm" (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas()">Siguiente</button>
+    <!-- Botones de paginación -->
+    <div class="d-flex align-items-center gap-2">
+      <button class="btn btn-secondary btn-sm" (click)="paginaAnterior()" [disabled]="paginaActual === 1">Anterior</button>
+      <span>Página {{ paginaActual }} de {{ totalPaginas() }}</span>
+      <button class="btn btn-secondary btn-sm" (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas()">Siguiente</button>
+    </div>
   </div>
 
 </div>

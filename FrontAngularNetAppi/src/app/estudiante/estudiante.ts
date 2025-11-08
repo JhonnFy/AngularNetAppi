@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 import Swal from 'sweetalert2';
 
 
+
+
 @Component({
   selector: 'app-estudiante',
   standalone: true,
@@ -19,6 +21,8 @@ export class EstudianteComponent implements OnInit {
   estudiantes: Estudiante[] = [];
     paginaActual = 1;
     registrosPorPagina = 7;
+    filaEditandoId: number | null = null;
+    nombreEditado: string = ''; 
 
   constructor(
     private estudianteService: EstudianteService,
@@ -61,30 +65,6 @@ cargarEstudiantesSinNotas() {
   });
 }
 
-
-// eliminarEstudiante(id: number) {
-//   if (confirm('¿Estás seguro de eliminar este estudiante?')) {
-//     this.estudianteService.eliminarEstudiante(id).subscribe({
-//       next: () => {
-//         this.cargarEstudiantes();
-//         alert('Estudiante eliminado correctamente.');
-//       },
-//       error: (err) => {
-//         if (err.error && err.error.mensaje) {
-//           alert(err.error.mensaje);
-//         } else if (err.status === 400) {
-//           alert('No se puede eliminar este estudiante porque tiene registros asociados.');
-//         } else {
-//           alert('No se puede eliminar este estudiante porque tiene registros asociados.');
-//           console.error(err);
-//         }
-//       }
-//     });
-//   } else {
-//     alert('No se eliminó el estudiante.');
-//   }
-// }
-
 eliminarEstudiante(id: number) {
   Swal.fire({
     title: '¿Estás Seguro?',
@@ -114,8 +94,6 @@ eliminarEstudiante(id: number) {
     }
   });
 }
-
-
 
 
   // Getter que devuelve solo los estudiantes de la página actual
@@ -165,6 +143,51 @@ limpiarFiltro() {
   this.paginaActual = 1;
   this.cargarEstudiantes();
 }
+
+
+// Activar modo edición en una fila
+activarEdicion(est: Estudiante) {
+  this.filaEditandoId = est.id;
+  this.nombreEditado = est.nombre; // copia el valor actual
+}
+
+// Cancelar edición
+cancelarEdicion() {
+  this.filaEditandoId = null;
+  this.nombreEditado = '';
+}
+
+// Guardar cambios con confirmación
+guardarEdicion(est: Estudiante) {
+  Swal.fire({
+    title: '¿Deseas guardar los cambios?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonText: 'Sí, actualizar',
+    cancelButtonText: 'No, cancelar'
+  }).then(result => {
+    if (result.isConfirmed) {
+      // Llamas al servicio para actualizar
+      const estudianteActualizado: Estudiante = {
+        id: est.id,
+        nombre: this.nombreEditado
+      };
+
+      this.estudianteService.actualizarEstudiante(estudianteActualizado).subscribe({
+        next: () => {
+          Swal.fire('Actualizado', 'El estudiante fue actualizado correctamente.', 'success');
+          this.cargarEstudiantes(); // recarga tabla
+          this.cancelarEdicion();
+        },
+        error: (err) => {
+          Swal.fire('Error', 'No se pudo actualizar el estudiante.', 'error');
+          console.error(err);
+        }
+      });
+    }
+  });
+}
+
 
 
 
