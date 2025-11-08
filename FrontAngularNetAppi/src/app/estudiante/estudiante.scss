@@ -104,3 +104,14 @@
   position: absolute;
   right: 0;
 }
+
+.tablaEstudiantes td.nombresTabla {
+    text-align: left; /* todos los nombres alineados a la izquierda */
+    padding-left: 250px; /* aquí defines la posición inicial exacta */
+    position: relative; /* si luego quieres algún elemento absoluto dentro */
+}
+
+.tablaEstudiantes td.nombresTabla span {
+    position: static; /* quitas el absolute para que respete el padding */
+}
+
