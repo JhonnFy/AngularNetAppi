@@ -5,6 +5,8 @@ import { HttpClient } from '@angular/common/http';
 import { EstudianteService, Estudiante } from '../estudiante/services/services';
 import { Router, RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-estudiante',
@@ -60,28 +62,59 @@ cargarEstudiantesSinNotas() {
 }
 
 
-  eliminarEstudiante(id: number) {
-  if (confirm('¿Estás seguro de eliminar este estudiante?')) {
-    this.estudianteService.eliminarEstudiante(id).subscribe({
-      next: () => {
-        this.cargarEstudiantes();
-        alert('Estudiante eliminado correctamente.');
-      },
-      error: (err) => {
-        if (err.error && err.error.mensaje) {
-          alert(err.error.mensaje);
-        } else if (err.status === 400) {
-          alert('No se puede eliminar este estudiante porque tiene registros asociados.');
-        } else {
-          alert('No se puede eliminar este estudiante porque tiene registros asociados.');
+// eliminarEstudiante(id: number) {
+//   if (confirm('¿Estás seguro de eliminar este estudiante?')) {
+//     this.estudianteService.eliminarEstudiante(id).subscribe({
+//       next: () => {
+//         this.cargarEstudiantes();
+//         alert('Estudiante eliminado correctamente.');
+//       },
+//       error: (err) => {
+//         if (err.error && err.error.mensaje) {
+//           alert(err.error.mensaje);
+//         } else if (err.status === 400) {
+//           alert('No se puede eliminar este estudiante porque tiene registros asociados.');
+//         } else {
+//           alert('No se puede eliminar este estudiante porque tiene registros asociados.');
+//           console.error(err);
+//         }
+//       }
+//     });
+//   } else {
+//     alert('No se eliminó el estudiante.');
+//   }
+// }
+
+eliminarEstudiante(id: number) {
+  Swal.fire({
+    title: '¿Estás Seguro?',
+    text: "¡No podrás Revertir El Cambio!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#ff0000ff',
+    confirmButtonText: 'Sí, Eliminar',
+    cancelButtonText: 'No, Cancelar',
+    cancelButtonColor: '#006bc9ff',
+    reverseButtons: true
+  }).then((result) => {
+    if (result.isConfirmed) {
+      this.estudianteService.eliminarEstudiante(id).subscribe({
+        next: () => {
+          this.cargarEstudiantes();
+          Swal.fire('¡Eliminado!', 'El estudiante fue eliminado correctamente.', 'success');
+        },
+        error: (err) => {
+          const mensaje = err.error?.mensaje || 'No se puede eliminar este estudiante porque tiene registros asociados.';
+          Swal.fire('Error', mensaje, 'error');
           console.error(err);
         }
-      }
-    });
-  } else {
-    alert('No se eliminó el estudiante.');
-  }
+      });
+    } else if (result.dismiss === Swal.DismissReason.cancel) {
+      Swal.fire('Cancelado', 'No se eliminó el estudiante.', 'info');
+    }
+  });
 }
+
 
 
 
