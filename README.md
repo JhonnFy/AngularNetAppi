@@ -66,6 +66,29 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 <figure align="center">
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6e09fa79-d56f-4119-8878-4b59277d6815" />
 </figure>
+
+<figure align="center">
+  <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/7682122c-afac-454d-a6cf-80df081705d7" />
+</figure>
+
+
+<figure align="center">
+</figure>
+
+
+<figure align="center">
+</figure>
+
+<figure align="center">
+</figure>
+
+<figure align="center">
+</figure>
+
+<figure align="center">
+</figure>
+
+  
 ---
 
 ## Testing MSTest
