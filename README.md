@@ -17,19 +17,23 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 
 ## Interface
 <figure align="center">
-  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/97243837-c51c-42ad-b853-c90085a95bf6" />
+  <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/dad261c7-ebd4-4903-90ea-7c9694bf5a4d" />
 </figure>
 
 <figure align="center">
-  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/40f0075e-05e6-42a0-845d-7640f6f175de" />
+  <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/a7b4835b-cabe-4415-95f5-f410ef428a39" />
 </figure>
 
 <figure align="center">
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a6cbb35e-e564-4031-9ac7-2e75e0f1c614" />
+  <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/4641ad13-16e8-4cff-924b-7e4f1871acbb" />
 </figure>
 
 <figure align="center">
-  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a564024e-5a0e-484d-a2cf-a8e4dbfcee3c" />
+  
+</figure>
+
+<figure align="center">
+  
 </figure>
 
 ---
