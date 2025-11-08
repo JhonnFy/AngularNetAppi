@@ -18,7 +18,18 @@
       <thead class="table-light text-center">
         <tr>
           <th><div class="flex-center"><i class="bi bi-list-ol btnCabecera"></i></div></th>
-          <th><div class="flex-center"><i class="bi bi-person-bounding-box btnCabecera"></i></div></th>
+          
+          <!-- Icono de usuario que abre formulario de crear -->
+          <th>
+            <div class="flex-center">
+              <i class="bi bi-person-bounding-box btnCabecera" 
+                 style="cursor:pointer;" 
+                 title="Crear Usuario"
+                 (click)="abrirCrearUsuario()">
+              </i>
+            </div>
+          </th>
+          
           <th><div class="flex-center"><i class="bi bi-gear-fill btnCabeceraV2"></i></div></th>
         </tr>
       </thead>
