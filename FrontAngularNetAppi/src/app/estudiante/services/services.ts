@@ -20,6 +20,10 @@ export class EstudianteService {
     return this.http.get<Estudiante[]>(this.baseUrl);
   }
 
+  getEstudiantePorId(id: number): Observable<Estudiante> {
+    return this.http.get<Estudiante>(`${this.baseUrl}/${id}`);
+  }
+
   eliminarEstudiante(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }

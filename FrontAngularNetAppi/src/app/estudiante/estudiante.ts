@@ -140,12 +140,30 @@ eliminarEstudiante(id: number) {
 
 filtro: string = ''; 
 aplicarFiltro() {
-  this.paginaActual = 1;
+  if(!this.filtro){
+    this.cargarEstudiantes();
+    return;
+  }
+
+  const id = +this.filtro;
+  this.estudianteService.getEstudiantePorId(+this.filtro).subscribe({
+  next: (estudiante: Estudiante) => {
+    this.estudiantes = estudiante ? [estudiante] : [];
+    this.paginaActual = 1;
+  },
+  error: (err) => {
+    console.error('Error filtrando estudiante', err);
+    this.estudiantes = [];
+  }
+});
+
+
 }
 
 limpiarFiltro() {
   this.filtro = '';
   this.paginaActual = 1;
+  this.cargarEstudiantes();
 }
 
 
