@@ -67,5 +67,35 @@ namespace CapaAPI.Services
             _context.SaveChanges();
             return true;
         }
+
+        public List<int> ListarProfesoresConNotas()
+        {
+            return _context.Notas
+                .Select(n => n.IdProfesor)
+                .Distinct()
+                .ToList();
+        }
+
+        public List<int> ListarProfesoresSinNotas()
+        {
+            var idsConNotas = _context.Notas
+                .Select(n => n.IdProfesor)
+                .Distinct()
+                .ToList();
+
+            var idsTodos = _context.Profesores
+                .Select(p => p.Id)
+                .ToList();
+
+            // Lista los profesores que no tienen notas
+            var idsSinNotas = idsTodos
+                .Where(id => !idsConNotas.Contains(id))
+                .ToList();
+
+            return idsSinNotas;
+        }
+
+
+
     }
 }

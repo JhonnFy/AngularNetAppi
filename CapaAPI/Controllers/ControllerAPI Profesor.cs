@@ -65,5 +65,21 @@ namespace CapaAPI.Controllers
                 return NotFound();
             return NoContent();
         }
+
+        //ListarProfesoresConNotas
+        [HttpGet("ProfesoresConNotas")]
+        public ActionResult<List<int>> ListarProfesoresConNotas()
+        {
+            var ids = _servicio.ListarProfesoresConNotas();
+            return Ok(ids);
+        }
+
+        //ListarProfesoresSinNotas
+        [HttpGet("ProfesoresSinNotas")]
+        public ActionResult<List<int>> ListarProfesoresSinNotas()
+        {
+            var ids = _servicio.ListarProfesoresSinNotas();
+            return Ok(ids);
+        }
     }
 }
