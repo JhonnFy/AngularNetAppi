@@ -35,5 +35,9 @@ eliminarNota(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${id}`);
 }
 
+registrarNota(nota: Nota): Observable<Nota> {
+    return this.http.post<Nota>(this.baseUrl, nota);
+}
+
 
 }

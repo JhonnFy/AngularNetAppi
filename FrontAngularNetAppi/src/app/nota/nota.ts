@@ -6,6 +6,9 @@ import { NotaService, Nota } from '../nota/services/services';
 import { Router, RouterModule } from '@angular/router';
 import { Observable } from 'rxjs';
 import Swal from 'sweetalert2';
+import { ProfesorService } from '../profesor/services/services';
+import { EstudianteService } from '../estudiante/services/services';
+
 
 @Component({
   selector: 'app-nota',
@@ -30,7 +33,9 @@ export class NotaComponent implements OnInit {
     constructor(
       private notaservice: NotaService,
       private http: HttpClient,
-      private router: Router
+      private router: Router,
+    private profesorservice: ProfesorService,
+    private estudianteservice: EstudianteService
     ) {}
 
     ngOnInit() {
@@ -162,4 +167,75 @@ export class NotaComponent implements OnInit {
     paginaAnterior() {
       if (this.paginaActual > 1) this.paginaActual--;
     }
+
+
+  abrirCrearNota() {
+    Swal.fire({
+      title: '<strong>Nueva Nota</strong>',
+      html: `
+        <input id="swal-id" class="swal2-input" placeholder="ID Nota">
+        <input id="swal-nombre" class="swal2-input" placeholder="Nombre Nota">
+        <input id="swal-profesor" class="swal2-input" placeholder="ID Profesor">
+        <input id="swal-estudiante" class="swal2-input" placeholder="ID Estudiante">
+        <input id="swal-valor" class="swal2-input" placeholder="Valor (0-5)">
+      `,
+      focusConfirm: false,
+      showCancelButton: true,
+      confirmButtonText: 'Crear',
+      cancelButtonText: 'Cancelar',
+      preConfirm: async () => {
+        const id = +(document.getElementById('swal-id') as HTMLInputElement).value;
+        const nombre = (document.getElementById('swal-nombre') as HTMLInputElement).value.trim();
+        const idProfesor = +(document.getElementById('swal-profesor') as HTMLInputElement).value;
+        const idEstudiante = +(document.getElementById('swal-estudiante') as HTMLInputElement).value;
+        const valor = +(document.getElementById('swal-valor') as HTMLInputElement).value;
+
+        if (!id || !nombre || !idProfesor || !idEstudiante || isNaN(valor)) {
+          Swal.showValidationMessage('Todos los campos son obligatorios');
+          return false;
+        }
+
+        // Validar si profesor y estudiante existen
+        const profExiste = await this.profesorservice.getProfesorPorId(idProfesor).toPromise().catch(() => null);
+        const estExiste = await this.estudianteservice.getEstudiantePorId(idEstudiante).toPromise().catch(() => null);
+
+        if (!profExiste) {
+          Swal.showValidationMessage(`El profesor con ID ${idProfesor} no existe`);
+          return false;
+        }
+        if (!estExiste) {
+          Swal.showValidationMessage(`El estudiante con ID ${idEstudiante} no existe`);
+          return false;
+        }
+
+        return { id, nombre, idProfesor, idEstudiante, valor };
+      }
+    }).then((result) => {
+      if (result.isConfirmed && result.value) {
+        this.notaservice.registrarNota(result.value).subscribe({
+          next: () => {
+            this.cargarNotas();
+            Swal.fire('Éxito', 'Nota creada correctamente', 'success');
+          },
+          error: (err) => {
+            console.error('Error creando nota', err);
+            Swal.fire('Error', 'No se pudo crear la nota', 'error');
+          }
+        });
+      }
+    });
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }
