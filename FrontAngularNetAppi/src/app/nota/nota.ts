@@ -169,194 +169,28 @@ export class NotaComponent implements OnInit {
     }
 
 
-
-// abrirCrearNota() {
-//   Swal.fire({
-//     title: '<strong>Crear Nota</strong>',
-//     html: `
-//       <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
-//         <i class="bi bi-hash" style="font-size:1.2rem;"></i>
-//         <input id="swal-input-id" class="swal2-input" placeholder="ID Nota">
-//       </div>
-//       <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
-//         <i class="bi bi-pencil" style="font-size:1.2rem;"></i>
-//         <input id="swal-input-nombre" class="swal2-input" placeholder="Nombre Nota">
-//       </div>
-//       <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
-//         <i class="bi bi-person-fill" style="font-size:1.2rem;"></i>
-//         <input id="swal-input-idProfesor" class="swal2-input" placeholder="ID Profesor">
-//       </div>
-//       <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
-//         <i class="bi bi-person" style="font-size:1.2rem;"></i>
-//         <input id="swal-input-idEstudiante" class="swal2-input" placeholder="ID Estudiante">
-//       </div>
-//       <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
-//         <i class="bi bi-pencil-square" style="font-size:1.2rem;"></i>
-//         <input id="swal-input-valor" class="swal2-input" placeholder="Valor Nota">
-//       </div>
-//     `,
-//     icon: 'question',
-//     showCancelButton: true,
-//     confirmButtonText: 'Crear',
-//     cancelButtonText: 'Cancelar',
-//     confirmButtonColor: '#ff0000',
-//     cancelButtonColor: '#006bc9',
-//     reverseButtons: true,
-//     preConfirm: async () => {
-//       const id = (document.getElementById('swal-input-id') as HTMLInputElement).value;
-//       const nombre = (document.getElementById('swal-input-nombre') as HTMLInputElement).value;
-//       const idProfesor = (document.getElementById('swal-input-idProfesor') as HTMLInputElement).value;
-//       const idEstudiante = (document.getElementById('swal-input-idEstudiante') as HTMLInputElement).value;
-//       const valor = (document.getElementById('swal-input-valor') as HTMLInputElement).value;
-
-//       if (!id || !nombre || !idProfesor || !idEstudiante || !valor) {
-//         Swal.showValidationMessage('¡Completa todos los campos!');
-//         return false;
-//       }
-
-//       // Validar Profesor
-//       const profesorExist = await this.profesorService.getProfesorPorId(+idProfesor).toPromise()
-//         .then(() => true)
-//         .catch(() => false);
-
-//       if (!profesorExist) {
-//         Swal.showValidationMessage(`El Profesor con ID ${idProfesor} no existe.`);
-//         return false;
-//       }
-
-//       // Validar Estudiante
-//       const estudianteExist = await this.estudianteService.getEstudiantePorId(+idEstudiante).toPromise()
-//         .then(() => true)
-//         .catch(() => false);
-
-//       if (!estudianteExist) {
-//         Swal.showValidationMessage(`El Estudiante con ID ${idEstudiante} no existe.`);
-//         return false;
-//       }
-
-//       return { id: +id, nombre, idProfesor: +idProfesor, idEstudiante: +idEstudiante, valor: +valor };
-//     }
-//   }).then(result => {
-//     if (result.isConfirmed && result.value) {
-//       this.notaservice.registrarNota(result.value).subscribe({
-//         next: () => {
-//           Swal.fire('¡Creada!', `La nota se creó correctamente.`, 'success');
-//           this.cargarNotas(); // refresca tabla
-//         },
-//         error: (err) => {
-//           console.error('Error creando nota:', err);
-//           Swal.fire('Error', 'No se pudo crear la nota.', 'error');
-//         }
-//       });
-//     }
-//   });
-// }
-
-
-//  abrirCrearNota() {
-//     Swal.fire({
-//       html: `
-//         <div style="display:flex; flex-direction:column; gap:4px; font-size:0.8rem;">
-//           <div style="display:flex; align-items:center; gap:4px;">
-//             <i class="bi bi-hash" style="font-size:1rem;"></i>
-//             <input id="swal-input-id" class="swal2-input form-control form-control-sm" placeholder="ID Nota">
-//           </div>
-//           <div style="display:flex; align-items:center; gap:4px;">
-//             <i class="bi bi-pencil" style="font-size:1rem;"></i>
-//             <input id="swal-input-nombre" class="swal2-input form-control form-control-sm" placeholder="Nombre Nota">
-//           </div>
-//           <div style="display:flex; align-items:center; gap:4px;">
-//             <i class="bi bi-person-fill" style="font-size:1rem;"></i>
-//             <input id="swal-input-idProfesor" class="swal2-input form-control form-control-sm" placeholder="ID Profesor">
-//           </div>
-//           <div style="display:flex; align-items:center; gap:4px;">
-//             <i class="bi bi-person" style="font-size:1rem;"></i>
-//             <input id="swal-input-idEstudiante" class="swal2-input form-control form-control-sm" placeholder="ID Estudiante">
-//           </div>
-//           <div style="display:flex; align-items:center; gap:4px;">
-//             <i class="bi bi-pencil-square" style="font-size:1rem;"></i>
-//             <input id="swal-input-valor" class="swal2-input form-control form-control-sm" placeholder="Valor Nota">
-//           </div>
-//         </div>
-//       `,
-//       icon: 'question',
-//       showCancelButton: true,
-//       confirmButtonText: 'Crear',
-//       cancelButtonText: 'Cancelar',
-//       confirmButtonColor: '#ff0000',
-//       cancelButtonColor: '#006bc9',
-//       reverseButtons: true,
-//       preConfirm: async () => {
-//         const id = (document.getElementById('swal-input-id') as HTMLInputElement).value;
-//         const nombre = (document.getElementById('swal-input-nombre') as HTMLInputElement).value;
-//         const idProfesor = (document.getElementById('swal-input-idProfesor') as HTMLInputElement).value;
-//         const idEstudiante = (document.getElementById('swal-input-idEstudiante') as HTMLInputElement).value;
-//         const valor = (document.getElementById('swal-input-valor') as HTMLInputElement).value;
-
-//         if (!id || !nombre || !idProfesor || !idEstudiante || !valor) {
-//           Swal.showValidationMessage('¡Completa todos los campos!');
-//           return false;
-//         }
-
-//         // Validar Profesor
-//         const profesorExist = await this.profesorService.getProfesorPorId(+idProfesor).toPromise()
-//           .then(() => true)
-//           .catch(() => false);
-//         if (!profesorExist) {
-//           Swal.showValidationMessage(`El Profesor con ID ${idProfesor} no existe.`);
-//           return false;
-//         }
-
-//         // Validar Estudiante
-//         const estudianteExist = await this.estudianteService.getEstudiantePorId(+idEstudiante).toPromise()
-//           .then(() => true)
-//           .catch(() => false);
-//         if (!estudianteExist) {
-//           Swal.showValidationMessage(`El Estudiante con ID ${idEstudiante} no existe.`);
-//           return false;
-//         }
-
-//         return { id: +id, nombre, idProfesor: +idProfesor, idEstudiante: +idEstudiante, valor: +valor };
-//       }
-//     }).then(result => {
-//       if (result.isConfirmed && result.value) {
-//         this.notaservice.registrarNota(result.value).subscribe({
-//           next: () => {
-//             Swal.fire('¡Creada!', `La nota se creó correctamente.`, 'success');
-//             this.cargarNotas();
-//           },
-//           error: (err) => {
-//             console.error('Error creando nota:', err);
-//             Swal.fire('Error', 'No se pudo crear la nota.', 'error');
-//           }
-//         });
-//       }
-//     });
-//   }
-
-
 abrirCrearNota() {
   Swal.fire({
     html: `
       <div style="display:flex; flex-direction:column; gap:4px; font-size:0.8rem;">
         <div style="display:flex; align-items:center; gap:4px;">
-          <i class="bi bi-hash" style="font-size:1rem;"></i>
+          <i class="bi bi-hash" style="font-size:1rem; color:#ff4500;"></i>
           <input id="swal-input-id" class="swal2-input form-control form-control-sm" placeholder="ID Nota">
         </div>
         <div style="display:flex; align-items:center; gap:4px;">
-          <i class="bi bi-pencil" style="font-size:1rem;"></i>
+          <i class="bi bi-pencil" style="font-size:1rem; color:#1e90ff;"></i>
           <input id="swal-input-nombre" class="swal2-input form-control form-control-sm" placeholder="Nombre Nota">
         </div>
         <div style="display:flex; align-items:center; gap:4px;">
-          <i class="bi bi-person-fill" style="font-size:1rem;"></i>
+          <i class="bi bi-person-fill" style="font-size:1rem; color:#28a745;"></i>
           <input id="swal-input-idProfesor" class="swal2-input form-control form-control-sm" placeholder="ID Profesor">
         </div>
         <div style="display:flex; align-items:center; gap:4px;">
-          <i class="bi bi-person" style="font-size:1rem;"></i>
+          <i class="bi bi-person" style="font-size:1rem; color:#ffc107;"></i>
           <input id="swal-input-idEstudiante" class="swal2-input form-control form-control-sm" placeholder="ID Estudiante">
         </div>
         <div style="display:flex; align-items:center; gap:4px;">
-          <i class="bi bi-pencil-square" style="font-size:1rem;"></i>
+          <i class="bi bi-pencil-square" style="font-size:1rem; color:#ff69b4;"></i>
           <input id="swal-input-valor" class="swal2-input form-control form-control-sm" placeholder="Valor Nota">
         </div>
       </div>
@@ -376,6 +210,15 @@ abrirCrearNota() {
 
       if (!id || !nombre || !idProfesor || !idEstudiante || !valor) {
         Swal.showValidationMessage('¡Completa todos los campos!');
+        return false;
+      }
+
+      // Validar si la Nota ya existe
+      const notaExist = await this.notaservice.getNotaPorId(+id).toPromise()
+        .then(() => true)
+        .catch(() => false);
+      if (notaExist) {
+        Swal.showValidationMessage(`La Nota con ID ${id} ya existe.`);
         return false;
       }
 
@@ -416,6 +259,4 @@ abrirCrearNota() {
 }
 
 
-
- 
 }
