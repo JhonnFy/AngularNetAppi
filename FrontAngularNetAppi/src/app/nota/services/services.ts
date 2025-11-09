@@ -31,7 +31,9 @@ actualizarNota(nota: Nota): Observable<Nota> {
     return this.http.put<Nota>(`${this.baseUrl}/${nota.id}`, nota);
 }
 
-
+eliminarNota(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${id}`);
+}
 
 
 }

@@ -28,47 +28,70 @@
       <tbody>
         <tr *ngFor="let nota of notasPaginadas">
           <td class="text-center">{{ nota.id }}</td>
-          <td>{{ nota.nombre }}</td>
+          
+          <!-- Nombre editable -->
+          <td>
+            <span *ngIf="filaEditandoId !== nota.id">{{ nota.nombre }}</span>
+            <input *ngIf="filaEditandoId === nota.id" type="text" [(ngModel)]="nombreEditado" class="form-control form-control-sm">
+          </td>
+
           <td class="text-center">{{ nota.idProfesor }}</td>
           <td class="text-center">{{ nota.idEstudiante }}</td>
-          <td class="text-center">{{ nota.valor }}</td>
+
+          <!-- Valor editable -->
+          <td class="text-center">
+            <span *ngIf="filaEditandoId !== nota.id">{{ nota.valor }}</span>
+            <input *ngIf="filaEditandoId === nota.id" type="number" [(ngModel)]="valorEditado" class="form-control form-control-sm">
+          </td>
+
           <td class="d-flex justify-content-center gap-2">
-            <!-- Botón Actualizar -->
-            <button class="btn btn-sm btn-warning">
+            <!-- Botón Editar / Guardar / Cancelar -->
+            <button *ngIf="filaEditandoId !== nota.id" class="btn btn-sm btn-warning" (click)="activarEdicion(nota)">
               <i class="bi bi-pencil"></i>
             </button>
+            <button *ngIf="filaEditandoId === nota.id" class="btn btn-sm btn-success" (click)="guardarEdicion(nota)">
+              <i class="bi bi-check2"></i>
+            </button>
+            <button *ngIf="filaEditandoId === nota.id" class="btn btn-sm btn-secondary" (click)="cancelarEdicion()">
+              <i class="bi bi-x"></i>
+            </button>
+
             <!-- Botón Eliminar -->
-            <button class="btn btn-sm btn-danger">
+            <button class="btn btn-sm btn-danger" 
+                    (click)="eliminarNota(nota.id)"
+                    [disabled]="nota.idProfesor !== 0 && nota.idEstudiante !== 0">
               <i class="bi bi-trash-fill"></i>
             </button>
+            <span *ngIf="nota.idProfesor !== 0 && nota.idEstudiante !== 0" class="text-danger fw-bold">X</span>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
 
-<!-- Contenedor de botones fijo al bottom -->
+  <!-- Contenedor de botones fijo al bottom -->
   <div class="d-flex justify-content-between align-items-center p-3"
        style="position: fixed; bottom: 20px; left: 0; right: 0; max-width: 1200px; margin: 0 auto; background: transparent;">
-    
+
     <!-- Botón de retorno -->
     <button class="btn btn-sm btn-info rounded-circle" [routerLink]="['/dashboard']" title="Volver al dashboard">
         <i class="bi bi-arrow-left"></i>
     </button>
 
-  <!-- Paginadores-->
-  <div class="d-flex align-items-center gap-2">
-  <button class="btn btn-secondary btn-sm" (click)="paginaAnterior()" [disabled]="paginaActual === 1">
-    Anterior
-  </button>
+    <!-- Paginadores-->
+    <div class="d-flex align-items-center gap-2">
+      <button class="btn btn-secondary btn-sm" (click)="paginaAnterior()" [disabled]="paginaActual === 1">
+        Anterior
+      </button>
 
-  <span>
-    Página {{ paginaActual }} de {{ notas.length }}
-  </span>
+      <span>
+        Página {{ paginaActual }} de {{ notas.length }}
+      </span>
 
-  <button class="btn btn-secondary btn-sm" (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas()">
-    Siguiente
-  </button>
-</div>
+      <button class="btn btn-secondary btn-sm" (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas()">
+        Siguiente
+      </button>
+    </div>
 
+  </div>
 </div>
