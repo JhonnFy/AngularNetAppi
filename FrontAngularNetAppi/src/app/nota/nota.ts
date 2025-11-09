@@ -169,69 +169,150 @@ export class NotaComponent implements OnInit {
     }
 
 
-  abrirCrearNota() {
-    Swal.fire({
-      title: '<strong>Nueva Nota</strong>',
-      html: `
-        <input id="swal-id" class="swal2-input" placeholder="ID Nota">
-        <input id="swal-nombre" class="swal2-input" placeholder="Nombre Nota">
-        <input id="swal-profesor" class="swal2-input" placeholder="ID Profesor">
-        <input id="swal-estudiante" class="swal2-input" placeholder="ID Estudiante">
-        <input id="swal-valor" class="swal2-input" placeholder="Valor (0-5)">
-      `,
-      focusConfirm: false,
-      showCancelButton: true,
-      confirmButtonText: 'Crear',
-      cancelButtonText: 'Cancelar',
-      preConfirm: async () => {
-        const id = +(document.getElementById('swal-id') as HTMLInputElement).value;
-        const nombre = (document.getElementById('swal-nombre') as HTMLInputElement).value.trim();
-        const idProfesor = +(document.getElementById('swal-profesor') as HTMLInputElement).value;
-        const idEstudiante = +(document.getElementById('swal-estudiante') as HTMLInputElement).value;
-        const valor = +(document.getElementById('swal-valor') as HTMLInputElement).value;
+// abrirCrearNota() {
+//   Swal.fire({
+//     html: `
+//       <div style="display:flex; flex-direction:column; gap:4px; font-size:0.8rem;">
+//         <div style="display:flex; align-items:center; gap:4px;">
+//           <i class="bi bi-hash" style="color:#ff4500; font-size:1rem;"></i>
+//           <input id="swal-input-id" class="swal2-input form-control form-control-sm" placeholder="ID Nota">
+//         </div>
 
-        if (!id || !nombre || !idProfesor || !idEstudiante || isNaN(valor)) {
-          Swal.showValidationMessage('Todos los campos son obligatorios');
-          return false;
-        }
+//         <div style="display:flex; align-items:center; gap:4px;">
+//           <i class="bi bi-journal-text" style="color:#1e90ff; font-size:1rem;"></i>
+//           <input id="swal-input-nombre" class="swal2-input form-control form-control-sm" placeholder="Nombre">
+//         </div>
 
-        // Validar si profesor y estudiante existen
-        const profExiste = await this.profesorservice.getProfesorPorId(idProfesor).toPromise().catch(() => null);
-        const estExiste = await this.estudianteservice.getEstudiantePorId(idEstudiante).toPromise().catch(() => null);
+//         <div style="display:flex; align-items:center; gap:4px;">
+//           <i class="bi bi-person-fill" style="color:#28a745; font-size:1rem;"></i>
+//           <input id="swal-input-idProfesor" class="swal2-input form-control form-control-sm" placeholder="ID Profesor">
+//         </div>
 
-        if (!profExiste) {
-          Swal.showValidationMessage(`El profesor con ID ${idProfesor} no existe`);
-          return false;
-        }
-        if (!estExiste) {
-          Swal.showValidationMessage(`El estudiante con ID ${idEstudiante} no existe`);
-          return false;
-        }
+//         <div style="display:flex; align-items:center; gap:4px;">
+//           <i class="bi bi-person-badge-fill" style="color:#ffc107; font-size:1rem;"></i>
+//           <input id="swal-input-idEstudiante" class="swal2-input form-control form-control-sm" placeholder="ID Estudiante">
+//         </div>
 
-        return { id, nombre, idProfesor, idEstudiante, valor };
+//         <div style="display:flex; align-items:center; gap:4px;">
+//           <i class="bi bi-pencil-fill" style="color:#ff69b4; font-size:1rem;"></i>
+//           <input id="swal-input-valor" type="number" class="swal2-input form-control form-control-sm" placeholder="Valor">
+//         </div>
+//       </div>
+//     `,
+//     icon: 'question',
+//     showCancelButton: true,
+//     confirmButtonText: 'Crear',
+//     cancelButtonText: 'Cancelar',
+//     confirmButtonColor: '#28a745',
+//     cancelButtonColor: '#dc3545',
+//     reverseButtons: true,
+//     preConfirm: () => {
+//       const id = (document.getElementById('swal-input-id') as HTMLInputElement).value;
+//       const nombre = (document.getElementById('swal-input-nombre') as HTMLInputElement).value;
+//       const idProfesor = (document.getElementById('swal-input-idProfesor') as HTMLInputElement).value;
+//       const idEstudiante = (document.getElementById('swal-input-idEstudiante') as HTMLInputElement).value;
+//       const valor = (document.getElementById('swal-input-valor') as HTMLInputElement).value;
+
+//       if (!id || !nombre || !idProfesor || !idEstudiante || !valor) {
+//         Swal.showValidationMessage('¡Completa todos los campos!');
+//       }
+
+//       return { id, nombre, idProfesor, idEstudiante, valor };
+//     }
+//   }).then(result => {
+//     if (result.isConfirmed && result.value) {
+//       const { id, nombre, idProfesor, idEstudiante, valor } = result.value;
+//       this.notaservice.registrarNota({
+//         id: +id,
+//         nombre,
+//         idProfesor: +idProfesor,
+//         idEstudiante: +idEstudiante,
+//         valor: +valor
+//       }).subscribe({
+//         next: () => {
+//           Swal.fire('¡Creada!', `La nota "${nombre}" se creó correctamente.`, 'success');
+//           this.cargarNotas(); // refresca la tabla
+//         },
+//         error: (err) => {
+//           Swal.fire('Error', 'No se pudo crear la nota.', 'error');
+//           console.error(err);
+//         }
+//       });
+//     }
+//   });
+// }
+
+abrirCrearNota() {
+  Swal.fire({
+    html: `
+      <div style="display:flex; flex-direction:column; gap:4px; font-size:0.8rem;">
+        <div style="display:flex; align-items:center; gap:4px;">
+          <i class="bi bi-hash" style="color:#ff4500; font-size:1rem;"></i>
+          <input id="swal-input-id" class="swal2-input form-control form-control-sm" placeholder="ID Nota">
+        </div>
+
+        <div style="display:flex; align-items:center; gap:4px;">
+          <i class="bi bi-journal-text" style="color:#1e90ff; font-size:1rem;"></i>
+          <input id="swal-input-nombre" class="swal2-input form-control form-control-sm" placeholder="Nombre">
+        </div>
+
+        <div style="display:flex; align-items:center; gap:4px;">
+          <i class="bi bi-person-fill" style="color:#28a745; font-size:1rem;"></i>
+          <input id="swal-input-idProfesor" class="swal2-input form-control form-control-sm" placeholder="ID Profesor">
+        </div>
+
+        <div style="display:flex; align-items:center; gap:4px;">
+          <i class="bi bi-person-badge-fill" style="color:#ffc107; font-size:1rem;"></i>
+          <input id="swal-input-idEstudiante" class="swal2-input form-control form-control-sm" placeholder="ID Estudiante">
+        </div>
+
+        <div style="display:flex; align-items:center; gap:4px;">
+          <i class="bi bi-pencil-fill" style="color:#ff69b4; font-size:1rem;"></i>
+          <input id="swal-input-valor" type="number" class="swal2-input form-control form-control-sm" placeholder="Valor">
+        </div>
+      </div>
+    `,
+    showCancelButton: true,
+    confirmButtonText: 'Crear',
+    cancelButtonText: 'Cancelar',
+    confirmButtonColor: '#28a745',
+    cancelButtonColor: '#dc3545',
+    reverseButtons: true,
+    preConfirm: () => {
+      const id = (document.getElementById('swal-input-id') as HTMLInputElement).value;
+      const nombre = (document.getElementById('swal-input-nombre') as HTMLInputElement).value;
+      const idProfesor = (document.getElementById('swal-input-idProfesor') as HTMLInputElement).value;
+      const idEstudiante = (document.getElementById('swal-input-idEstudiante') as HTMLInputElement).value;
+      const valor = (document.getElementById('swal-input-valor') as HTMLInputElement).value;
+
+      if (!id || !nombre || !idProfesor || !idEstudiante || !valor) {
+        Swal.showValidationMessage('¡Completa todos los campos!');
       }
-    }).then((result) => {
-      if (result.isConfirmed && result.value) {
-        this.notaservice.registrarNota(result.value).subscribe({
-          next: () => {
-            this.cargarNotas();
-            Swal.fire('Éxito', 'Nota creada correctamente', 'success');
-          },
-          error: (err) => {
-            console.error('Error creando nota', err);
-            Swal.fire('Error', 'No se pudo crear la nota', 'error');
-          }
-        });
-      }
-    });
-  }
 
-
-
-
-
-
-
+      return { id, nombre, idProfesor, idEstudiante, valor };
+    }
+  }).then(result => {
+    if (result.isConfirmed && result.value) {
+      const { id, nombre, idProfesor, idEstudiante, valor } = result.value;
+      this.notaservice.registrarNota({
+        id: +id,
+        nombre,
+        idProfesor: +idProfesor,
+        idEstudiante: +idEstudiante,
+        valor: +valor
+      }).subscribe({
+        next: () => {
+          Swal.fire('¡Creada!', `La nota "${nombre}" se creó correctamente.`, 'success');
+          this.cargarNotas(); // refresca la tabla
+        },
+        error: (err) => {
+          Swal.fire('Error', 'No se pudo crear la nota.', 'error');
+          console.error(err);
+        }
+      });
+    }
+  });
+}
 
 
 
