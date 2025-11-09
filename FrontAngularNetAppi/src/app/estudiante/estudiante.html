@@ -78,12 +78,19 @@
         <i class="bi bi-arrow-left"></i>
     </button>
 
-    <!-- Botones de paginación -->
-    <div class="d-flex align-items-center gap-2">
-      <button class="btn btn-secondary btn-sm" (click)="paginaAnterior()" [disabled]="paginaActual === 1">Anterior</button>
-      <span>Página {{ paginaActual }} de {{ totalPaginas() }}</span>
-      <button class="btn btn-secondary btn-sm" (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas()">Siguiente</button>
-    </div>
-  </div>
+  <!-- Paginadores-->
+  <div class="d-flex align-items-center gap-2">
+  <button class="btn btn-secondary btn-sm" (click)="paginaAnterior()" [disabled]="paginaActual === 1">
+    Anterior
+  </button>
+
+  <span>
+    Página {{ paginaActual }} de {{ estudiantes.length }}
+  </span>
+
+  <button class="btn btn-secondary btn-sm" (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas()">
+    Siguiente
+  </button>
+</div>
 
 </div>
