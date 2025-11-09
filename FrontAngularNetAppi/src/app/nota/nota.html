@@ -5,15 +5,49 @@
     <div class="d-flex flex-column gap-1">
       <p class="text-muted mb-1">AUDISOFT/NOTAS</p>
       <div class="d-flex gap-1">
-        <input type="text" class="form-control form-control-sm" placeholder="Filtrar...">
+        <input type="text" class="form-control form-control-sm" placeholder="Filtrar..." [(ngModel)]="filtro">
         <button class="btn btn-sm btn-primary" (click)="aplicarFiltro()">Filtrar</button>
         <button class="btn btn-sm btn-secondary" (click)="limpiarFiltro()">Limpiar</button>
       </div>
     </div>
   </div>
 
+  <!-- Tabla de notas -->
+  <div>
+    <table class="tablaNotas table-hover">
+      <thead class="table-light text-center">
+        <tr>
+          <th>id</th>
+          <th>nombre</th>
+          <th>idProfesor</th>
+          <th>idEstudiante</th>
+          <th>valor</th>
+          <th>Acciones</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let nota of notasPaginadas">
+          <td class="text-center">{{ nota.id }}</td>
+          <td>{{ nota.nombre }}</td>
+          <td class="text-center">{{ nota.idProfesor }}</td>
+          <td class="text-center">{{ nota.idEstudiante }}</td>
+          <td class="text-center">{{ nota.valor }}</td>
+          <td class="d-flex justify-content-center gap-2">
+            <!-- Botón Actualizar -->
+            <button class="btn btn-sm btn-warning">
+              <i class="bi bi-pencil"></i>
+            </button>
+            <!-- Botón Eliminar -->
+            <button class="btn btn-sm btn-danger">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-  <!-- Contenedor de botones fijo al bottom -->
+<!-- Contenedor de botones fijo al bottom -->
   <div class="d-flex justify-content-between align-items-center p-3"
        style="position: fixed; bottom: 20px; left: 0; right: 0; max-width: 1200px; margin: 0 auto; background: transparent;">
     
@@ -21,8 +55,20 @@
     <button class="btn btn-sm btn-info rounded-circle" [routerLink]="['/dashboard']" title="Volver al dashboard">
         <i class="bi bi-arrow-left"></i>
     </button>
-  </div>
 
+  <!-- Paginadores-->
+  <div class="d-flex align-items-center gap-2">
+  <button class="btn btn-secondary btn-sm" (click)="paginaAnterior()" [disabled]="paginaActual === 1">
+    Anterior
+  </button>
 
+  <span>
+    Página {{ paginaActual }} de {{ notas.length }}
+  </span>
+
+  <button class="btn btn-secondary btn-sm" (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas()">
+    Siguiente
+  </button>
+</div>
 
 </div>

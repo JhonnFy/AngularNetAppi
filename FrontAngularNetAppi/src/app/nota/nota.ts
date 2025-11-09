@@ -66,4 +66,23 @@ export class NotaComponent implements OnInit {
       this.paginaActual = 1;
       this.cargarNotas();
     }
+
+ // Getter que devuelve solo los estudiantes de la página actual
+  get notasPaginadas(): Nota[] {
+    const inicio = (this.paginaActual - 1) * this.registrosPorPagina;
+    return this.notas.slice(inicio, inicio + this.registrosPorPagina);
+  }
+
+  totalPaginas(): number {
+    return Math.ceil(this.notas.length / this.registrosPorPagina);
+  }
+
+  paginaSiguiente() {
+    if (this.paginaActual < this.totalPaginas()) this.paginaActual++;
+  }
+
+  paginaAnterior() {
+    if (this.paginaActual > 1) this.paginaActual--;
+  }
+
 }
