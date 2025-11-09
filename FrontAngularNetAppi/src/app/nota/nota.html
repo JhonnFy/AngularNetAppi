@@ -7,9 +7,22 @@
       <div class="d-flex gap-1">
         <input type="text" class="form-control form-control-sm" placeholder="Filtrar...">
         <button class="btn btn-sm btn-primary" (click)="aplicarFiltro()">Filtrar</button>
-        <!-- //<button class="btn btn-sm btn-secondary" (click)="limpiarFiltro()">Limpiar</button> -->
+        <button class="btn btn-sm btn-secondary" (click)="limpiarFiltro()">Limpiar</button>
       </div>
     </div>
   </div>
+
+
+  <!-- Contenedor de botones fijo al bottom -->
+  <div class="d-flex justify-content-between align-items-center p-3"
+       style="position: fixed; bottom: 20px; left: 0; right: 0; max-width: 1200px; margin: 0 auto; background: transparent;">
+    
+    <!-- Botón de retorno -->
+    <button class="btn btn-sm btn-info rounded-circle" [routerLink]="['/dashboard']" title="Volver al dashboard">
+        <i class="bi bi-arrow-left"></i>
+    </button>
+  </div>
+
+
 
 </div>
