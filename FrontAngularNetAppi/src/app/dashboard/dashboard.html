@@ -14,10 +14,12 @@
             <p class="card-text">Administra la información de los estudiantes registrados.</p>
           </div>
           <a class="btn btn-primary w-100 mt-3" [routerLink]="['/estudiantes']">Ir al módulo</a>
-          <div class="d-flex justify-content-around"></div>
-        </div>
+          <div class="d-flex justify-content-around mt-3"> <!-- <- Aquí agregamos margen top -->
+        <button class="btn btn-sm btn-info rounded-circle" title="Crear"><i class="bi bi-plus-lg"></i></button>
       </div>
     </div>
+  </div>
+</div>
 
     <!-- Notas -->
     <div class="col-md-4 d-flex">
@@ -31,8 +33,6 @@
           <a class="btn btn-primary w-100 mt-3" [routerLink]="['/notas']">Ir al módulo</a>
           <div class="d-flex justify-content-around">
             <button class="btn btn-sm btn-info rounded-circle" title="Crear"><i class="bi bi-plus-lg"></i></button>
-            <button class="btn btn-sm btn-warning rounded-circle" title="Editar"><i class="bi bi-pencil-fill"></i></button>
-            <button class="btn btn-sm btn-danger rounded-circle" title="Eliminar"><i class="bi bi-trash-fill"></i></button>
           </div>
         </div>
       </div>
@@ -48,16 +48,12 @@
             <p class="card-text">Edita o agrega la información de los profesores.</p>
           </div>
           <a class="btn btn-primary w-100 mt-3" [routerLink]="['/profesores']">Ir al módulo</a>
-          <div class="d-flex justify-content-around"></div>
-          
-          <!-- <div class="d-flex justify-content-around">
-            <button class="btn btn-sm btn-info rounded-circle" title="Crear"><i class="bi bi-plus-lg"></i></button>
-            <button class="btn btn-sm btn-warning rounded-circle" title="Editar"><i class="bi bi-pencil-fill"></i></button>
-            <button class="btn btn-sm btn-danger rounded-circle" title="Eliminar"><i class="bi bi-trash-fill"></i></button>
-          </div> -->
-        </div>
+          <div class="d-flex justify-content-around mt-3"> <!-- <- Aquí agregamos margen top -->
+        <button class="btn btn-sm btn-info rounded-circle" title="Crear"><i class="bi bi-plus-lg"></i></button>
       </div>
     </div>
+  </div>
+</div>
 
   </div>
 </div>
