@@ -71,5 +71,18 @@ namespace CapaAPI.Services
             _context.SaveChanges();
             return true;
         }
+
+        public bool RegistrarNota(Nota nuevaNota)
+        {
+            var profesorExiste = _context.Profesores.Any(p => p.Id == nuevaNota.IdProfesor);
+            var estudianteExiste = _context.Estudiantes.Any(e => e.Id == nuevaNota.IdEstudiante);
+
+            if (!profesorExiste || !estudianteExiste)
+                return false;
+
+            _context.Notas.Add(nuevaNota);
+            _context.SaveChanges();
+            return true;
+        }
     }
 }

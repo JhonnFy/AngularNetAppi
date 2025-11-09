@@ -65,5 +65,17 @@ namespace CapaAPI.Controllers
                 return NotFound();
             return NoContent();
         }
+
+        [HttpPost]
+        public IActionResult RegistrarNota([FromBody] Nota nota)
+        {
+            if (nota == null) return BadRequest("Datos inválidos");
+
+            var registrada = _servicio.RegistrarNota(nota);
+            if (!registrada)
+                return BadRequest("El profesor o el estudiante no existen.");
+
+            return Ok(nota);
+        }
     }
 }
