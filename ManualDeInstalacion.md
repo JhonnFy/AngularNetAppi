@@ -53,6 +53,28 @@ Inciaremos poblando los registros que asociaremos a tabla notas, para ello copia
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/9cb19323-bc37-42c6-9d71-d5e295b3a6a0" />
 </figure>
 
+Insert Los registros en la db
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/ef7b7827-723c-4483-9b79-b9aa0b28e62e" />
+</figure>
 
+Ejecutar el insert
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/e9c49a3c-3013-4d24-bcc4-2a1354e5fce7" />
+</figure>
 
+En el mismo archivo, consulte la hoja SinFk:
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/5a832c3f-acd3-4c23-8fc4-ffdeabed970d" />
+</figure>
+
+Trasladar los registros al motor de base de datos:
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/60d201b6-231f-41db-ae58-4f1a726bf22b" />
+</figure>
+
+Ejecutar el insert:
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b8888f74-314f-448c-be7c-78b32764006e" />
+</figure>
 
