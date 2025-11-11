@@ -162,6 +162,21 @@ D:\AngularNetAppi\FrontAngularNetAppi
   <sub>Figura 16: ✔️ Respuesta Code</sub>
 </p>
 
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/55530390-4a6c-4a2a-85bc-d0b49853cafe" />
+  <br>
+  <sub>Figura 17: Instrucción: Presione Ctrl + F5 para ejecutar la aplicación</sub>
+</p>
+
+
+<h6>BIENVENID@ Oficialmente a AngularNetAppi</h6>
+
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b6156b87-ad5e-4e88-8ead-058426fa80a9" />
+  <br>
+  <sub>Figura 17: Instrucción: Presione Ctrl + F5 para ejecutar la aplicación</sub>
+</p>
+
 
 
 
