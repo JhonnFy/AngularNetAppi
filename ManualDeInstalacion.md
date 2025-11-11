@@ -1,3 +1,20 @@
+# Manual de Instalación
+
+Bienvenido al Manual de Instalación.  
+
+En este manual, le guiaremos paso a paso en el proceso de instalación de la aplicación.  
+
+El desarrollo de este ejercicio se realizará en una unidad externa, simulando un equipo que no cuenta con los medios instalados previamente. Se recomienda seguir cada paso cuidadosamente para garantizar la correcta ejecución del procedimiento.
+
+## 1. Clonar el repositorio
+
+Primero, asegúrese de tener Git instalado. Para verificarlo, ejecute:
+
+```bash
+git --version
+
+
+
 Bienvenido al Manual de Instalación
 
 En este manual, le guiaremos paso a paso en el proceso de instalación de la aplicación.
@@ -45,6 +62,7 @@ Encontrara los insert a las tablas organizadas en archivos xlsx
  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/760a8032-b188-4ff9-af1b-716a47982b14" />
 
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/74067adb-8543-4aa4-a072-ff86fe14dcd7" />
+
 
 
 
