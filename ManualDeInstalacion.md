@@ -86,7 +86,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Profesor.xlsx
 <p align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/120c8c6c-b6fc-4ace-aea5-adb0b40996f9" />
   <br>
-  <sub>Figura 8: Instrucción: Copie el script [Sin FK] y ejecútelo en su motor de base de datos</sub>
+  <sub>Figura 8: Profesor: Copie el script [Sin FK] y ejecútelo en su motor de base de datos</sub>
 </p>
 
 > La hoja Estudiante permite la creación de registros que posteriormente serán asociados a la tabla Notas. Estos registros no podrán ser eliminados.
@@ -107,6 +107,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 </p>
 
 > Con estas acciones se da por concluido el proceso de configuración y carga de información en la base de datos.
+
 
 
 
