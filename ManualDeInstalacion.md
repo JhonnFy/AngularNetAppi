@@ -1,4 +1,4 @@
-Bienvenido al manual de instalacion.
+<img width="791" height="32766" alt="image" src="https://github.com/user-attachments/assets/a8ed65c9-43c9-485d-9cc8-0a54c0efbd71" />Bienvenido al manual de instalacion.
 
 En este manual le guiaremos en el paso a paso para realizar la instalacion de la App
 
@@ -114,5 +114,9 @@ Ejecutar el insert
 5-Poblar la tabla nota:
 Consulte el archivo Profesor, en el repo la direccion es: D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 
+En este apartado del manual leguiaremos en el insert, seleccione la columna J
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/608740c0-6ebf-4986-9255-5a6846da2275" />
+</figure>
 
 
