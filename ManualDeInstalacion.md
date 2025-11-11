@@ -37,4 +37,22 @@ Consulte la url. D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/d2ca0e86-97f1-470b-9ef7-ce97aca5ed8d" />
 </figure>
 
+2.4 Poblar la tabla Estudiante:
+Importante :
+1-Los nombres y cc de los registros fue genereado por script en powershell no son datos reales.
+2-En el archivo Estudiantes encontrara dos hojas Estudiantes 'Registros que me permite poblar el id de notas', 
+sin FK 'Registros que no tienen una Foreing key con notas y podran ser eliminados'. 
+
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/4df56e9a-54f1-45a9-bd75-7d70d74a76cb" />
+</figure>
+
+Inciaremos poblando los registros que asociaremos a tabla notas, para ello copiar la columana G, de la hoja Estudiante
+
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/9cb19323-bc37-42c6-9d71-d5e295b3a6a0" />
+</figure>
+
+
+
 
