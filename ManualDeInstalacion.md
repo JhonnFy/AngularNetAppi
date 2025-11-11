@@ -5,7 +5,7 @@
 > Este procedimiento está pensado para un **equipo limpio**, es decir, sin herramientas o dependencias previamente instaladas. Por ello, se recomienda seguir cada paso cuidadosamente para garantizar que la instalación se realice de manera correcta y sin inconvenientes.
 
 
-## Paso 1: Clonar el repositorio
+## Paso 1: [Clonar el repositorio]
 
 > Para obtener el código fuente del proyecto, abra una terminal y ejecute:
 
@@ -29,7 +29,7 @@ git clone https://github.com/JhonnFy/AngularNetAppi.git
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/efb3f320-42c8-4c99-9a24-1e49d9646629" />
 
 
-2-Crear y poblar la base de datos.
+## Paso 2: [Crear la base de datos]
 En el repositorio consulte. D:\AngularNetAppi\db.sql En este enlace se le suministyra el script.
 
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/0fd22e28-031f-447c-9f08-f899c1a0317c" />
@@ -60,6 +60,7 @@ Encontrara los insert a las tablas organizadas en archivos xlsx
  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/760a8032-b188-4ff9-af1b-716a47982b14" />
 
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/74067adb-8543-4aa4-a072-ff86fe14dcd7" />
+
 
 
 
