@@ -33,14 +33,14 @@ D:\AngularNetAppi\db.sql
 <p align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/40c9002b-7efc-411e-b673-4605ae397d9b" />
   <br>
-  <sub>Figura 3: Instrucción: Copie el script y ejecútelo en su motor de base de datos..</sub>
+  <sub>Figura 3: Instrucción: Copie el script y ejecútelo en su motor de base de datos</sub>
 </p>
 
 
 <p align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b7255670-372f-4d71-85ca-218a3a679177" />
   <br>
-  <sub>Figura 3: Instrucción: Copie el script y ejecútelo en su motor de base de datos..</sub>
+  <sub>Figura 4: ✔️ Base de datos creada correctamente</sub>
 </p>
 
 
@@ -76,6 +76,7 @@ Encontrara los insert a las tablas organizadas en archivos xlsx
  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/760a8032-b188-4ff9-af1b-716a47982b14" />
 
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/74067adb-8543-4aa4-a072-ff86fe14dcd7" />
+
 
 
 
