@@ -29,6 +29,7 @@ git clone https://github.com/JhonnFy/AngularNetAppi.git
   <sub>Figura 2: ✔️ `git clone` Completado con éxito.</sub>
 </p>
 ___
+&nbsp;
 
 <small>➤ [Crear la base de datos]</small>
 
@@ -109,6 +110,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 
 > Con estas acciones se da por concluido el proceso de configuración y carga de información en la base de datos.
 ___
+
 
 
 
