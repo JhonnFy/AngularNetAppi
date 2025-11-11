@@ -14,19 +14,4 @@ El desarrollo de este ejercicio se realizara en una unidad externa simulando un 
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/efb3f320-42c8-4c99-9a24-1e49d9646629" />
 </figure>
 
-2-Ingresar en Visual Studio:
-<figure align="center">
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/139c5484-50e9-4412-8e1e-1bc3733e89ba" />
-</figure>
-
-3-Open a project or solution
-<figure align="center">
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/47057233-f440-46d8-9279-8b7e6e962b53" />
-</figure>
-
-4-Compilar, por configuracion cargara http://localhost:5261/api/estudiante
-<figure align="center">
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b8d82dfe-9a44-437b-9a3f-0bcc1121c3ab" />
-</figure>
-
-
+2-Crear la DB
