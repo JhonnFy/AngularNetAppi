@@ -14,6 +14,10 @@ El desarrollo de este ejercicio se realizara en una unidad externa simulando un 
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/efb3f320-42c8-4c99-9a24-1e49d9646629" />
 </figure>
 
+2-Ingresar en Visual Studio:
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/139c5484-50e9-4412-8e1e-1bc3733e89ba" />
+</figure>
 
 
 
