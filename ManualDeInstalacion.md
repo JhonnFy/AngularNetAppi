@@ -204,3 +204,8 @@ D:\AngularNetAppi\FrontAngularNetAppi
   <sub>Estados</sub>
 </p>
 
+<p>
+Agradecemos el tiempo que ha dedicado al estudio de este manual. Se encuentra en plena libertad de realizar cambios y ajustes en su proyecto según lo considere necesario. Sin duda, este recorrido le permitirá familiarizarse de manera práctica e interesante con las tecnologías del lado del backend, así como con la consulta y gestión de la información en la interfaz. 
+<h1>¡Espero que le sea de gran utilidad!</h1>h1
+</p>
+
