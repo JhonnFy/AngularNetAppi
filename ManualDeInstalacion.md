@@ -8,8 +8,6 @@ Se recomienda seguir cada paso cuidadosamente para garantizar que la instalació
 Para que la aplicación funcione correctamente, se requiere contar con las siguientes herramientas instaladas:
 > SQL Server 2022 | Visual Studio 2022 | Node.js & npm | Angular CLI | Visual Studio Code | Git | Postman
 
-&nbsp;
-
 <small>➤ [Clonar el repositorio]</small>
 
 > Para obtener el código fuente del proyecto, abra una terminal y ejecute:
@@ -30,7 +28,7 @@ git clone https://github.com/JhonnFy/AngularNetAppi.git
   <sub>Figura 2: ✔️ `git clone` Completado con éxito.</sub>
 </p>
 
-&nbsp;
+
 <small>➤ [Crear la base de datos]</small>
 
 > Para consultar el script de la base de datos, diríjase al repositorio y localice el siguiente archivo:
@@ -49,7 +47,7 @@ D:\AngularNetAppi\db.sql
   <sub>Figura 4: ✔️ Base de datos creada correctamente</sub>
 </p>
 
-&nbsp;
+
 <small>➤ [Poblar la tabla Estudiante]</small>
 > Para consultar el script que contiene las sentencias INSERT, diríjase al repositorio y localice el siguiente archivo:
 ```bash
@@ -72,7 +70,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Estudiante.xlsx
 
 > La hoja Sin FK permite crear registros independientes, los cuales pueden eliminarse al no estar asociados a ninguna nota.
 
-&nbsp;
+
 <small>➤ [Poblar la tabla Profesor]</small>
 > Para consultar el script que contiene las sentencias INSERT, diríjase al repositorio y localice el siguiente archivo:
 ```bash
@@ -95,7 +93,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Profesor.xlsx
 
 > La hoja Sin FK permite crear registros independientes, los cuales pueden eliminarse al no estar asociados a ninguna nota.
 
-&nbsp;
+
 <small>➤ [Poblar la tabla Notas]</small>
 > Para consultar el script que contiene las sentencias INSERT, diríjase al repositorio y localice el siguiente archivo:
 ```bash
@@ -109,7 +107,8 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 </p>
 
 > Con estas acciones se da por concluido el proceso de configuración y carga de información en la base de datos.
-___
+
+
 
 
 
