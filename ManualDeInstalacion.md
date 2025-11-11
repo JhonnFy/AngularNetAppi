@@ -157,11 +157,12 @@ D:\AngularNetAppi\FrontAngularNetAppi
 ```
 
 <p align="center">
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/30864004-43cf-47e9-aece-3488c061e52b" />
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/152b3e9d-5056-4ec0-b23a-37126a4be58a" />
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/30864004-43cf-47e9-aece-3488c061e52b" />
   <br>
   <sub>Figura 16: ✔️ Respuesta Code</sub>
 </p>
+
 
 
 
