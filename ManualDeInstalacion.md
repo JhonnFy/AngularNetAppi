@@ -64,8 +64,6 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Estudiante.xlsx
 
 > La hoja Sin FK permite crear registros independientes, los cuales pueden eliminarse al no estar asociados a ninguna nota.
 
-
-
 <small>➤ [Poblar la tabla Profesor]</small>
 > Para consultar el script que contiene las sentencias INSERT, diríjase al repositorio y localice el siguiente archivo:
 ```bash
@@ -89,8 +87,17 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Profesor.xlsx
 > La hoja Sin FK permite crear registros independientes, los cuales pueden eliminarse al no estar asociados a ninguna nota.
 
 
+<small>➤ [Poblar la tabla Notas]</small>
+> Para consultar el script que contiene las sentencias INSERT, diríjase al repositorio y localice el siguiente archivo:
+```bash
+D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
+```
 
-
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/92433a99-0828-406f-9540-1bd16c43273f" />
+  <br>
+  <sub>Figura 8: Instrucción: Copie el script [Sin FK] y ejecútelo en su motor de base de datos</sub>
+</p>
 
 
 
