@@ -119,4 +119,13 @@ En este apartado del manual leguiaremos en el insert, seleccione la columna J
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/608740c0-6ebf-4986-9255-5a6846da2275" />
 </figure>
 
+Trasladar los registros al motor de base de datos:
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/fd841640-8803-4f25-9395-b0ee405e60ab" />
+</figure>
+
+Ejecutar el insert
+<figure align="center">
+  
+</figure>
 
