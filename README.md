@@ -10,7 +10,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 2. [Poblar Base De Datos Con PowerShell](#Poblar-Base-De-Datos-Con-PowerShell)  
 3. [Reglas de Negocio](#Reglas-De-Negocio)    
 4. [Arquitectura del Proyecto](#arquitectura-del-proyecto)  
-5. [Instalación y Configuración](#instalación-y-configuración)  
+5. [Instalación y Configuración](https://github.com/JhonnFy/AngularNetAppi/blob/main/ManualDeInstalacion.md)
 6. [Tecnologías](#tecnologías)
 7. [Testing MSTest](#Testing-MSTest)  
 ---
