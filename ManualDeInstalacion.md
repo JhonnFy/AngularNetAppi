@@ -20,3 +20,7 @@ En el repositorio encontrara el script para crear la db
 <figure align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/80e616f7-cceb-44c7-8322-4f56215501fc" />
 </figure>
+
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/dfd63726-e35b-456d-bb65-dbd551eea811" />
+</figure>
