@@ -91,7 +91,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Profesor.xlsx
   <sub>Figura 8: Profesor: Copie el script [Sin FK] y ejecútelo en su motor de base de datos</sub>
 </p>
 
-> La hoja Estudiante permite la creación de registros que posteriormente serán asociados a la tabla Notas. Estos registros no podrán ser eliminados.
+> La hoja Profesor permite la creación de registros que posteriormente serán asociados a la tabla Notas. Estos registros no podrán ser eliminados.
 
 > La hoja Sin FK permite crear registros independientes, los cuales pueden eliminarse al no estar asociados a ninguna nota.
 
@@ -109,6 +109,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 </p>
 
 > Con estas acciones se da por concluido el proceso de configuración y carga de información en la base de datos.
+
 
 
 
