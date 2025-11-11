@@ -24,5 +24,9 @@ El desarrollo de este ejercicio se realizara en una unidad externa simulando un 
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/47057233-f440-46d8-9279-8b7e6e962b53" />
 </figure>
 
+4-Compilar, por configuracion cargara http://localhost:5261/api/estudiante
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b8d82dfe-9a44-437b-9a3f-0bcc1121c3ab" />
+</figure>
 
 
