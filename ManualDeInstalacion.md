@@ -29,9 +29,8 @@ git clone https://github.com/JhonnFy/AngularNetAppi.git
   <br>
   <sub>Figura 2: ✔️ `git clone` Completado con éxito.</sub>
 </p>
-___
-&nbsp;
 
+&nbsp;
 <small>➤ [Crear la base de datos]</small>
 
 > Para consultar el script de la base de datos, diríjase al repositorio y localice el siguiente archivo:
@@ -49,8 +48,8 @@ D:\AngularNetAppi\db.sql
   <br>
   <sub>Figura 4: ✔️ Base de datos creada correctamente</sub>
 </p>
-___
 
+&nbsp;
 <small>➤ [Poblar la tabla Estudiante]</small>
 > Para consultar el script que contiene las sentencias INSERT, diríjase al repositorio y localice el siguiente archivo:
 ```bash
@@ -72,8 +71,8 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Estudiante.xlsx
 > La hoja Estudiante permite la creación de registros que posteriormente serán asociados a la tabla Notas. Estos registros no podrán ser eliminados.
 
 > La hoja Sin FK permite crear registros independientes, los cuales pueden eliminarse al no estar asociados a ninguna nota.
-___
 
+&nbsp;
 <small>➤ [Poblar la tabla Profesor]</small>
 > Para consultar el script que contiene las sentencias INSERT, diríjase al repositorio y localice el siguiente archivo:
 ```bash
@@ -95,8 +94,8 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Profesor.xlsx
 > La hoja Estudiante permite la creación de registros que posteriormente serán asociados a la tabla Notas. Estos registros no podrán ser eliminados.
 
 > La hoja Sin FK permite crear registros independientes, los cuales pueden eliminarse al no estar asociados a ninguna nota.
-___
 
+&nbsp;
 <small>➤ [Poblar la tabla Notas]</small>
 > Para consultar el script que contiene las sentencias INSERT, diríjase al repositorio y localice el siguiente archivo:
 ```bash
@@ -111,6 +110,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 
 > Con estas acciones se da por concluido el proceso de configuración y carga de información en la base de datos.
 ___
+
 
 
 
