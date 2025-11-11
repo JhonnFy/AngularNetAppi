@@ -176,12 +176,7 @@ D:\AngularNetAppi\FrontAngularNetAppi
   <sub>Dashboard</sub>
 </p>
 
-<p align="center">
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b780d93e-d153-47fd-8719-0bbc839a493f" />
-  <br>
-  <sub>Estudiante</sub>
-</p>
-
+<br></br>
 
 <p align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b780d93e-d153-47fd-8719-0bbc839a493f" />
@@ -196,6 +191,7 @@ D:\AngularNetAppi\FrontAngularNetAppi
   <br>
   <sub>Estudiante</sub>
 </p>
+
 
 
 
