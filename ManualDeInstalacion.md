@@ -168,16 +168,34 @@ D:\AngularNetAppi\FrontAngularNetAppi
   <sub>Figura 17: Instrucción: Presione Ctrl + F5 para ejecutar la aplicación</sub>
 </p>
 
-
-<h6>BIENVENID@ Oficialmente a AngularNetAppi</h6>
+<h2>Bienvenid@ – Su recorrido oficial en AngularNetAppi comienza aquí</h2>
 
 <p align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b6156b87-ad5e-4e88-8ead-058426fa80a9" />
   <br>
-  <sub>Figura 17: Instrucción: Presione Ctrl + F5 para ejecutar la aplicación</sub>
+  <sub>Dashboard</sub>
+</p>
+
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b780d93e-d153-47fd-8719-0bbc839a493f" />
+  <br>
+  <sub>Estudiante</sub>
 </p>
 
 
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b780d93e-d153-47fd-8719-0bbc839a493f" />
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/0e262903-c3de-4941-ad1c-4f3d89f454d2" />
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/74cdc043-2354-4b62-a392-1fd361d4845a" />
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/26fe0598-1cd6-416d-b252-c96293571c4f" />
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/21b0de53-7057-4f25-a1d8-0a09b39bf75c" />
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/db92b214-5a3c-4bc0-8632-d15b46274d3d" />
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/1bdd15a0-863a-4fd4-a866-ff2c7d48e417" />
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/dd3cf752-e4c2-49d8-b8d6-81ff934cd7aa" />
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/a3b86d6d-b46a-437a-97c8-8f0e1cd04182" />
+  <br>
+  <sub>Estudiante</sub>
+</p>
 
 
 
