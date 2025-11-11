@@ -19,7 +19,6 @@ git clone https://github.com/JhonnFy/AngularNetAppi.git
   <sub>Figura 1: Recomendado: usar git bash para los comandos de Git.</sub>
 </p>
 
-
 <p align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/260e4d23-0b49-4f4f-bfcc-98cbce2c9743" />
   <br>
@@ -31,6 +30,11 @@ Para consultar el script de la base de datos, diríjase al repositorio y localic
 ```bash
 D:\AngularNetAppi\db.sql
 ```
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/40c9002b-7efc-411e-b673-4605ae397d9b" />
+  <br>
+  <sub>Figura 3: Recomendado: usar git bash para los comandos de Git.</sub>
+</p>
 
 En este enlace se le proporcionará el script necesario para la configuración de la base de datos.
 
@@ -63,6 +67,7 @@ Encontrara los insert a las tablas organizadas en archivos xlsx
  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/760a8032-b188-4ff9-af1b-716a47982b14" />
 
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/74067adb-8543-4aa4-a072-ff86fe14dcd7" />
+
 
 
 
