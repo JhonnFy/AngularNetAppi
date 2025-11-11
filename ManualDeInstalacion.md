@@ -6,6 +6,10 @@ El desarrollo de este ejercicio se realizara en una unidad externa simulando un 
 
 1-clonar el repositorio: git --version
 
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f54cef06-9dbc-49a0-b42d-f1e7d5819ea0" />
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f54cef06-9dbc-49a0-b42d-f1e7d5819ea0" />
+</figure>
+
+
 
 
