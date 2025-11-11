@@ -49,7 +49,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Estudiante.xlsx
 ```
 
 <p align="center">
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/07019217-aebe-4ef2-ad3a-3c6ddc98834f" />
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/9e7dcb16-3949-43e9-af01-13109c14111b" />
   <br>
   <sub>Figura 5: Instrucción: Copie el script [Estudiante] y ejecútelo en su motor de base de datos</sub>
 </p>
@@ -59,6 +59,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Estudiante.xlsx
   <br>
   <sub>Figura 6: Instrucción: Copie el script [Sin FK] y ejecútelo en su motor de base de datos</sub>
 </p>
+
 
 
 
