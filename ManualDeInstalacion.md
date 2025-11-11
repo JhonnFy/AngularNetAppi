@@ -96,10 +96,11 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 <p align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/92433a99-0828-406f-9540-1bd16c43273f" />
   <br>
-  <sub>Figura 8: Instrucción: Copie el script y ejecútelo en su motor de base de datos</sub>
+  <sub>Figura 9: Instrucción: Copie el script y ejecútelo en su motor de base de datos</sub>
 </p>
 
 > Con estas acciones se da por concluido el proceso de configuración y carga de información en la base de datos.
+
 
 
 
