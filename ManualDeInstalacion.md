@@ -1,4 +1,4 @@
-<img width="791" height="32766" alt="image" src="https://github.com/user-attachments/assets/a8ed65c9-43c9-485d-9cc8-0a54c0efbd71" />Bienvenido al manual de instalacion.
+Bienvenido al manual de instalacion.
 
 En este manual le guiaremos en el paso a paso para realizar la instalacion de la App
 
@@ -128,4 +128,5 @@ Ejecutar el insert
 <figure align="center">
   
 </figure>
+
 
