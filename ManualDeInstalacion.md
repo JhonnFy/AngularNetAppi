@@ -110,9 +110,17 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 
 > Con estas acciones se da por concluido el proceso de configuración y carga de información en la base de datos.
 
+> En este apartado del manual, le guiaremos en las pruebas del backend correspondientes a **Backend: Preparar el entorno** y en la **consulta de rutas utilizando Postman**.
+
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/aa395218-575e-4e8f-821e-8fad02105746" />
+  <br>
+  <sub>Figura 9: Instrucción: Abrir la solución desde Visual Studio</sub>
+</p>
 
 
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/aa395218-575e-4e8f-821e-8fad02105746" />
+
+
 
 
 
