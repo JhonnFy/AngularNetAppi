@@ -252,24 +252,26 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 ---
 
 ## Arquitectura del Proyecto
+
 AngularNetAppi/
 │
 ├── CapaAPI/               → Controladores (Controllers) y configuración de la API
 ├── CapaNegocio/           → Lógica de negocio y validaciones
-├── CapaDatos/             → Acceso a datos, repositorios y conexión a base de datos
+├── CapaDatos/             → Acceso a datos, repositorios y conexión a la base de datos
 ├── CapaEntidades/         → Modelos (POCOs) compartidos entre capas
 │
 ├── Interface/             → Frontend Angular (interfaz de usuario)
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── components/  → Componentes visuales (CRUD de estudiantes, notas, etc.)
-│   │   │   ├── services/    → Comunicación con la API .NET vía HTTPClient
+│   │   │   ├── services/    → Comunicación con la API .NET vía HttpClient
 │   │   │   ├── models/      → Interfaces TypeScript (DTOs)
 │   │   │   └── app.module.ts
 │   │   └── assets/
 │   └── angular.json
 │
 └── Scripts/               → Archivos PowerShell para poblar la base de datos
+
 
 ---
 
