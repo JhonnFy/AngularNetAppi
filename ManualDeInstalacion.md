@@ -4,7 +4,7 @@
 
 
 ## Stack tecnológico requerido
-Para que la aplicación funcione correctamente, se requiere contar con las siguientes herramientas y versiones recomendadas:
+Para que la aplicación funcione correctamente, se requiere contar con las siguientes herramientas recomendadas:
 
 - **SQL Server 2022**  
 - **Visual Studio 2022**  
@@ -112,6 +112,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 </p>
 
 > Con estas acciones se da por concluido el proceso de configuración y carga de información en la base de datos.
+
 
 
 
