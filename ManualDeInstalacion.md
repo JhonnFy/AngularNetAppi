@@ -96,4 +96,17 @@ Ejecutar el insert
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/0a226a9a-4482-4aee-83a1-87c046167ef5" />
 </figure>
 
+Seleccionar la hoja Si FK
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/4508e5bd-c3b5-4ea2-8e3a-fbb109dbc8cc" />
+</figure>
+
+Trasladar los registros al motor de base de datos:
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b7003995-2458-4d5e-9e7c-35452b5a9cdd" />
+</figure>
+
+Ejecutar el insert
+<figure align="center">
+</figure>
 
