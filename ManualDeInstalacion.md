@@ -13,3 +13,17 @@ El desarrollo de este ejercicio se realizara en una unidad externa simulando un 
 <figure align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/efb3f320-42c8-4c99-9a24-1e49d9646629" />
 </figure>
+
+
+2-Crear y poblar la base de datos.
+En el repositorio consulte. D:\AngularNetAppi\db.sql En este enlace se le suministyra el script.
+
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/0fd22e28-031f-447c-9f08-f899c1a0317c" />
+</figure>
+
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/0134ac0a-e215-4bad-be02-8af27b9096f8" />
+</figure>
+
+
