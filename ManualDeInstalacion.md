@@ -15,8 +15,7 @@ Para que la aplicación funcione correctamente, se requiere contar con las sigui
 - **Git**  
 - **Postman**
 
----
-
+***
 
 <small>➤ [Clonar el repositorio]</small>
 
@@ -114,6 +113,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 </p>
 
 > Con estas acciones se da por concluido el proceso de configuración y carga de información en la base de datos.
+
 
 
 
