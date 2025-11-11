@@ -108,5 +108,7 @@ Trasladar los registros al motor de base de datos:
 
 Ejecutar el insert
 <figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/878daa15-a360-4d46-85b8-00621be05b83" />
 </figure>
+
 
