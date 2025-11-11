@@ -252,7 +252,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 ---
 
 ## Arquitectura del Proyecto
-
+<p>
 AngularNetAppi/
 ├── CapaAPI/ # Controladores y configuración de la API
 ├── CapaNegocio/ # Lógica de negocio y validaciones
@@ -268,7 +268,7 @@ AngularNetAppi/
 │ │ └── assets/
 │ └── angular.json
 └── Scripts/ # Archivos PowerShell para poblar la base de datos
-
+</p>
 
 ---
 
