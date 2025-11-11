@@ -78,4 +78,14 @@ Inciaremos poblando los registros que asociaremos a tabla notas, para ello copia
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b8888f74-314f-448c-be7c-78b32764006e" />
 </figure>
 
+4-Poblar la tabla Profesor
+Consulte el archivo Profesor, en el repo la direccion es: D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Profesor.xlsx
+
+En este apartado del manual leguiaremos en el insert, seleccione la columna G
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/2a51096c-b622-4bd7-b94e-97bc1f1a2338" />
+</figure>
+
+
+
 
