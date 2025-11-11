@@ -148,62 +148,8 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
   <sub>Figura 15: ✔️ Respuesta HTTP con los datos de Notas</sub>
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<small>➤ [Front: Preparar el entorno]</small>
+> En este apartado del manual, le guiaremos en las pruebas del Front. 
 
 
 
