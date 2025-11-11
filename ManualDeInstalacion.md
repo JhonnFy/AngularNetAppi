@@ -10,6 +10,9 @@ El desarrollo de este ejercicio se realizara en una unidad externa simulando un 
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f54cef06-9dbc-49a0-b42d-f1e7d5819ea0" />
 </figure>
 
+<figure align="center">
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/efb3f320-42c8-4c99-9a24-1e49d9646629" />
+</figure>
 
 
 
