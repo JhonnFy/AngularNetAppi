@@ -11,7 +11,7 @@ El desarrollo de este procedimiento se realiza considerando un equipo limpio, es
 Para obtener el código fuente del proyecto, abra una terminal y ejecute:
 
 ```bash
-git clone https://github.com/JhonnFy/AngularNetAppi.git
+  git clone https://github.com/JhonnFy/AngularNetAppi.git
 ```
 
 <p align="center">
@@ -21,7 +21,11 @@ git clone https://github.com/JhonnFy/AngularNetAppi.git
 </p>
 
 
-  
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f54cef06-9dbc-49a0-b42d-f1e7d5819ea0" />
+  <br>
+  <sub>Figura 2: Recomendado: usar git bash para los comandos de Git.</sub>
+</p>
 
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/efb3f320-42c8-4c99-9a24-1e49d9646629" />
 
@@ -57,6 +61,7 @@ Encontrara los insert a las tablas organizadas en archivos xlsx
  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/760a8032-b188-4ff9-af1b-716a47982b14" />
 
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/74067adb-8543-4aa4-a072-ff86fe14dcd7" />
+
 
 
 
