@@ -86,6 +86,14 @@ En este apartado del manual leguiaremos en el insert, seleccione la columna G
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/2a51096c-b622-4bd7-b94e-97bc1f1a2338" />
 </figure>
 
+Trasladar los registros al motor de base de datos:
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/31204de4-83e7-4b03-bad0-fc80f41ad9ea" />
+</figure>
 
+Ejecutar el insert
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/0a226a9a-4482-4aee-83a1-87c046167ef5" />
+</figure>
 
 
