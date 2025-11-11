@@ -11,6 +11,7 @@ Para obtener el código fuente del proyecto, abra una terminal y ejecute:
 
 ```bash
 git clone https://github.com/JhonnFy/AngularNetAppi.git
+```
 
 <p align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f54cef06-9dbc-49a0-b42d-f1e7d5819ea0" />
