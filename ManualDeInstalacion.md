@@ -2,6 +2,19 @@
 
 > En este documento encontrará una **guía detallada y paso a paso** para instalar correctamente la aplicación, desde la preparación del entorno hasta la puesta en marcha del sistema.
 
+## Stack tecnológico requerido
+
+Para que la aplicación funcione correctamente, se requiere contar con las siguientes herramientas y versiones recomendadas:
+
+- **SQL Server 2022**  
+- **Visual Studio 2022**  
+- **Node.js y npm**  
+- **Angular CLI**  
+- **Visual Studio Code**  
+- **Git**  
+- **Postman**
+
+
 > Este procedimiento está pensado para un **equipo limpio**, es decir, sin herramientas o dependencias previamente instaladas. Por ello, se recomienda seguir cada paso cuidadosamente para garantizar que la instalación se realice de manera correcta y sin inconvenientes.
 
 <small>➤ [Clonar el repositorio]</small>
@@ -100,6 +113,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 </p>
 
 > Con estas acciones se da por concluido el proceso de configuración y carga de información en la base de datos.
+
 
 
 
