@@ -48,5 +48,12 @@ D:\AngularNetAppi\db.sql
 D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Estudiante.xlsx
 ```
 
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/07019217-aebe-4ef2-ad3a-3c6ddc98834f" />
+  <br>
+  <sub>Figura 3: Instrucción: Copie el script y ejecútelo en su motor de base de datos</sub>
+</p>
+
+
 
 
