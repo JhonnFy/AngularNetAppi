@@ -112,6 +112,8 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 
 
 
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/aa395218-575e-4e8f-821e-8fad02105746" />
+
 
 
 
