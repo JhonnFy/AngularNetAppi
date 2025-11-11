@@ -19,9 +19,10 @@ El desarrollo de este ejercicio se realizara en una unidad externa simulando un 
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/139c5484-50e9-4412-8e1e-1bc3733e89ba" />
 </figure>
 
-Open 
+3-Open a project or solution
 <figure align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/47057233-f440-46d8-9279-8b7e6e962b53" />
 </figure>
+
 
 
