@@ -30,14 +30,14 @@ El desarrollo de este ejercicio se realizara en una unidad externa simulando un 
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/aa567876-11dc-41dd-a144-da0038c24aec" />
 </figure>
 
-2.3 Poblar la base de datos.
+3 Poblar la base de datos.
 En el respositorio encontrara una 3 archivos con instrucciones insert, que le permitiran poblar las tablas. 
 Consulte la url. D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto
 <figure align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/d2ca0e86-97f1-470b-9ef7-ce97aca5ed8d" />
 </figure>
 
-2.4 Poblar la tabla Estudiante:
+3.1 Poblar la tabla Estudiante:
 Importante :
 1-Los nombres y cc de los registros fue genereado por script en powershell no son datos reales.
 2-En el archivo Estudiantes encontrara dos hojas Estudiantes 'Registros que me permite poblar el id de notas', 
@@ -53,28 +53,29 @@ Inciaremos poblando los registros que asociaremos a tabla notas, para ello copia
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/9cb19323-bc37-42c6-9d71-d5e295b3a6a0" />
 </figure>
 
-Insert Los registros en la db
+3.2 Insert Los registros en la db
 <figure align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/ef7b7827-723c-4483-9b79-b9aa0b28e62e" />
 </figure>
 
-Ejecutar el insert
+3.3 Ejecutar el insert
 <figure align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/e9c49a3c-3013-4d24-bcc4-2a1354e5fce7" />
 </figure>
 
-En el mismo archivo, consulte la hoja SinFk:
+3.4 En el mismo archivo, consulte la hoja SinFk:
 <figure align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/5a832c3f-acd3-4c23-8fc4-ffdeabed970d" />
 </figure>
 
-Trasladar los registros al motor de base de datos:
+3.5 Trasladar los registros al motor de base de datos:
 <figure align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/60d201b6-231f-41db-ae58-4f1a726bf22b" />
 </figure>
 
-Ejecutar el insert:
+3.6 Ejecutar el insert:
 <figure align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b8888f74-314f-448c-be7c-78b32764006e" />
 </figure>
+
 
