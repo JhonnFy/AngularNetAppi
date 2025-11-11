@@ -42,10 +42,11 @@ D:\AngularNetAppi\db.sql
   <sub>Figura 4: ✔️ Base de datos creada correctamente</sub>
 </p>
 
-<small>➤ [Poblar Las Tablas]</small>
+<small>➤ [Poblar la tabla Estudiante]</small>
 > Para consultar el script que contiene las sentencias INSERT, diríjase al repositorio y localice el siguiente archivo:
-
-
+```bash
+D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Estudiante.xlsx
+```
 
 
 
