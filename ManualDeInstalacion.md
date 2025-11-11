@@ -26,4 +26,34 @@ En el repositorio consulte. D:\AngularNetAppi\db.sql En este enlace se le sumini
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/0134ac0a-e215-4bad-be02-8af27b9096f8" />
 </figure>
 
+<figure align="center">  
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/07842ab7-af13-421c-856a-f44472fdcc4d" />
+</figure>
+
+
+3-Poblar las tablas estudiante, profesor, nit.
+Importante:
+  Los registros fueron creados por un script en powershel no son datos reales.
+  Si requiere consultar los .ps1, consultelos en las url: 
+    D:\AngularNetAppi\OrigenDatos\Generar Nombres\GenerarCc.ps1
+    D:\AngularNetAppi\OrigenDatos\Generar Nombres\GenerarNombres.ps1
+
+Encontrara los insert a las tablas organizadas en archivos xlsx
+ +Estudiante.xlsx
+ +Profesor.xlsx
+ +Notas.xlsx
+
+ Para las tablas estidiante y profesor, se crea una hoja de onbre Sin FK, permite insertar registros que no se encuentran asociados
+ a foreing key notas, y por tanto podran ser eliminados.
+
+ En este apartado del manual le guiaremos en el proceso para insertar registros de la tabla estudiante, se recomienda seguir la secunecia de las imagenes:
+
+<figure align="center">  
+ <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/760a8032-b188-4ff9-af1b-716a47982b14" />
+</figure>
+
+<figure align="center">  
+ <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/760a8032-b188-4ff9-af1b-716a47982b14" />
+</figure>
+
 
