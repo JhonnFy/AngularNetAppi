@@ -16,7 +16,7 @@ El desarrollo de este ejercicio se realizara en una unidad externa simulando un 
 
 2-Crear la DB
 
-En el repositorio encontrara el script para crear la db
+2.1 En el repositorio encontrara el script para crear la db
 <figure align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/80e616f7-cceb-44c7-8322-4f56215501fc" />
 </figure>
@@ -25,7 +25,16 @@ En el repositorio encontrara el script para crear la db
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/dfd63726-e35b-456d-bb65-dbd551eea811" />
 </figure>
 
-Ejecute el script:
+2.2 Ejecute el script:
 <figure align="center">
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/aa567876-11dc-41dd-a144-da0038c24aec" />
 </figure>
+
+2.3 Poblar la base de datos.
+En el respositorio encontrara una 3 archivos con instrucciones insert, que le permitiran poblar las tablas. 
+Consulte la url. D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto
+<figure align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/d2ca0e86-97f1-470b-9ef7-ce97aca5ed8d" />
+</figure>
+
+
