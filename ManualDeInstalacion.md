@@ -15,6 +15,6 @@ Antes de comenzar con la instalación y ejecución del proyecto, asegúrate de t
    ```bash
    npm install -g @angular/cli
 
-4. **Angular SQL**
-   Tenga instalado un SQL Server (o SQL Express) localmente o accesible, y asegúrese de que pueda crear bases de datos, usuarios, etc.:
-https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+4 Ten instalado un SQL Server (o SQL Express) localmente o accesible, y asegúrate de que puedas crear bases de datos, usuarios, etc.
+5 Ten un editor de código como Visual Studio Code o Visual Studio según tu preferencia.
+
