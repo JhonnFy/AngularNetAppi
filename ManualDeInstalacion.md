@@ -179,23 +179,28 @@ D:\AngularNetAppi\FrontAngularNetAppi
 <br></br>
 
 <p align="center">
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b780d93e-d153-47fd-8719-0bbc839a493f" />
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/0e262903-c3de-4941-ad1c-4f3d89f454d2" />
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/74cdc043-2354-4b62-a392-1fd361d4845a" />
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/26fe0598-1cd6-416d-b252-c96293571c4f" />
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/21b0de53-7057-4f25-a1d8-0a09b39bf75c" />
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/db92b214-5a3c-4bc0-8632-d15b46274d3d" />
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/1bdd15a0-863a-4fd4-a866-ff2c7d48e417" />
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/dd3cf752-e4c2-49d8-b8d6-81ff934cd7aa" />
-  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/a3b86d6d-b46a-437a-97c8-8f0e1cd04182" />
-  <br>
-  <sub>Estudiante</sub>
+    <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/609e4082-0c4f-4ffe-a47d-3bc294c8155c" />
+    <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f43b1f3f-1dcb-4091-aade-d04fde9185ac" />
+    <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/1f7c0fe5-3311-44df-912c-b64ea1850d6e" />
+  <sub>Entidades</sub>
 </p>
 
+<br></br>
+<p align="center">
+    <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f51e2106-fcf5-4a19-b9d6-09d423b1f8c9" />
+    <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/e2150170-96d2-4054-a3d6-13ec44a57710" />
+    <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/201a9c40-233b-40db-ab50-eea46c55b29f" />
+  <sub>Control FK</sub>
+</p>
 
-
-
-
-
-
+<br></br>
+<p align="center">
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/e4fa4ef1-b2f3-4741-b2ce-90e8e3f19b81" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/ed793a62-5f7f-4d4c-baea-bef49ec7e1ee" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/a76a8af1-c7f2-4fb4-8235-d11e3f7965ec" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/17e83a7a-e341-4e14-912f-2f985b66070c" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/22e82076-42b0-423b-a195-00a507a8f066" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/ed7bce9e-526e-4f33-ae07-270a0af48ca6" />
+  <sub>Estados</sub>
+</p>
 
