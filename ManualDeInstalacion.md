@@ -8,8 +8,7 @@ Se recomienda seguir cada paso cuidadosamente para garantizar que la instalació
 Para que la aplicación funcione correctamente, se requiere contar con las siguientes herramientas instaladas:
 > SQL Server 2022 | Visual Studio 2022 | Node.js & npm | Angular CLI | Visual Studio Code | Git | Postman
 
-==============
-
+&nbsp;
 
 <small>➤ [Clonar el repositorio]</small>
 
@@ -112,6 +111,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 
 > Con estas acciones se da por concluido el proceso de configuración y carga de información en la base de datos.
 ___
+
 
 
 
