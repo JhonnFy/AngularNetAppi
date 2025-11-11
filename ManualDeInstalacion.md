@@ -151,6 +151,9 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 <small>➤ [Front: Preparar el entorno]</small>
 > En este apartado del manual, le guiaremos en las pruebas del Front. 
 
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/152b3e9d-5056-4ec0-b23a-37126a4be58a" />
+
+
 
 
 
