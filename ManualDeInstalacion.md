@@ -1,20 +1,10 @@
-Manual de Instalación
+**Manual De Instalación**
 
-Bienvenido al Manual de Instalación.
-En este documento le guiaremos paso a paso para instalar la aplicación.
-El desarrollo de este ejercicio se realizará en una unidad externa, simulando un equipo que no cuenta con los medios instalados previamente. Le recomendamos seguir cada paso cuidadosamente para garantizar la correcta ejecución del procedimiento.
+Bienvenido al manual de instalación de la aplicación.
 
-1. Clonar el repositorio
+En este documento, encontrará una guía detallada y paso a paso para instalar correctamente la aplicación, desde la preparación del entorno hasta la puesta en marcha del sistema.
 
-Primero, asegúrese de tener instalado Git. Verifique su versión así:
-
-
-
-Bienvenido al Manual de Instalación
-
-En este manual, le guiaremos paso a paso en el proceso de instalación de la aplicación.
-
-El desarrollo de este ejercicio se realizará en una unidad externa, simulando un equipo que no cuenta con los medios instalados previamente. Se recomienda seguir cada paso cuidadosamente para garantizar la correcta ejecución del procedimiento.
+El desarrollo de este procedimiento se realiza considerando un equipo limpio, es decir, sin herramientas o dependencias previamente instaladas. Por ello, se recomienda seguir cada paso cuidadosamente para asegurar que la instalación se realice de manera correcta y sin inconvenientes.
 
 1-clonar el repositorio: git --version  https://github.com/JhonnFy/AngularNetAppi.git
 
@@ -57,6 +47,7 @@ Encontrara los insert a las tablas organizadas en archivos xlsx
  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/760a8032-b188-4ff9-af1b-716a47982b14" />
 
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/74067adb-8543-4aa4-a072-ff86fe14dcd7" />
+
 
 
 
