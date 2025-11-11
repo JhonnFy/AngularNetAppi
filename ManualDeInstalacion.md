@@ -149,9 +149,20 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 </p>
 
 <small>➤ [Front: Preparar el entorno]</small>
-> En este apartado del manual, le guiaremos en las pruebas del Front. 
+> En este apartado del manual, le guiaremos en las pruebas del Front.
 
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/152b3e9d-5056-4ec0-b23a-37126a4be58a" />
+> Para abrir el frontend del proyecto, abra una terminal y navegue hasta la carpeta del frontend:
+```bash
+cd D:\AngularNetAppi\FrontAngularNetAppi
+code .
+
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/30864004-43cf-47e9-aece-3488c061e52b" />
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/152b3e9d-5056-4ec0-b23a-37126a4be58a" />
+  <br>
+  <sub>Figura 15: ✔️ Respuesta HTTP con los datos de Notas</sub>
+</p>
+
 
 
 
