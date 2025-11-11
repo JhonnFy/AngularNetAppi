@@ -62,6 +62,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Estudiante.xlsx
 
 > La hoja Estudiante permite la creación de registros que posteriormente serán asociados a la tabla Notas. Estos registros no podrán ser eliminados.
 
+> La hoja Sin FK permite crear registros independientes, los cuales pueden eliminarse al no estar asociados a ninguna nota.
 
 
 
