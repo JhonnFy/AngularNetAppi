@@ -42,9 +42,8 @@ D:\AngularNetAppi\db.sql
   <sub>Figura 4: ✔️ Base de datos creada correctamente</sub>
 </p>
 
-
-
-
+<small>➤ [Poblar Las Tablas]</small>
+> Para consultar el script que contiene las sentencias INSERT, diríjase al repositorio y localice el siguiente archivo:
 
 
 
