@@ -1,5 +1,5 @@
 <h2>Bienvenido al manual de instalación de la aplicación</h2>
-
+Bienvenido al manual de instalación de la aplicación
 
 > En este documento encontrará una **guía detallada y paso a paso** para instalar correctamente la aplicación, desde la preparación del entorno hasta la puesta en marcha del sistema.
 
@@ -111,6 +111,7 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 </p>
 
 > Con estas acciones se da por concluido el proceso de configuración y carga de información en la base de datos.
+
 
 
 
