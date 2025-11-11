@@ -11,8 +11,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 3. [Reglas de Negocio](#Reglas-De-Negocio)    
 4. [Arquitectura del Proyecto](#arquitectura-del-proyecto)  
 5. [Instalación y Configuración](https://github.com/JhonnFy/AngularNetAppi/blob/main/ManualDeInstalacion.md)
-6. [Tecnologías](#tecnologías)
-7. [Testing MSTest](#Testing-MSTest)  
+6. [Testing MSTest](#Testing-MSTest)  
 ---
 
 ## Interface
