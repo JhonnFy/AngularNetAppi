@@ -120,6 +120,12 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
 </p>
 
 
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/4f611fa7-75b3-4011-88d0-5b8a5133183c" />
+  <br>
+  <sub>Figura 11: Instrucción: Presione **Ctrl + F5** para ejecutar la aplicación sin depuración.</sub>
+</p>
+
 
 
 
