@@ -26,7 +26,7 @@ git clone https://github.com/JhonnFy/AngularNetAppi.git
 
 <small>➤ [Crear la base de datos]</small>
 
-Para consultar el script de la base de datos, diríjase al repositorio y localice el siguiente archivo:
+> Para consultar el script de la base de datos, diríjase al repositorio y localice el siguiente archivo:
 ```bash
 D:\AngularNetAppi\db.sql
 ```
@@ -44,6 +44,7 @@ D:\AngularNetAppi\db.sql
 
 <small>➤ [Poblar Las Tablas]</small>
 > Para consultar el script que contiene las sentencias INSERT, diríjase al repositorio y localice el siguiente archivo:
+
 
 
 
