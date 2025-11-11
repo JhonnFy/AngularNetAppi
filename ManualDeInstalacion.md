@@ -66,6 +66,28 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Estudiante.xlsx
 
 
 
+<small>➤ [Poblar la tabla Profesor]</small>
+> Para consultar el script que contiene las sentencias INSERT, diríjase al repositorio y localice el siguiente archivo:
+```bash
+D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Profesor.xlsx
+```
+
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/1d99c92b-abe6-47bb-8441-4c0ca9b9ca8b" />
+  <br>
+  <sub>Figura 5: Instrucción: Copie el script [Profesor] y ejecútelo en su motor de base de datos</sub>
+</p>
+
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/120c8c6c-b6fc-4ace-aea5-adb0b40996f9" />
+  <br>
+  <sub>Figura 6: Instrucción: Copie el script [Sin FK] y ejecútelo en su motor de base de datos</sub>
+</p>
+
+> La hoja Estudiante permite la creación de registros que posteriormente serán asociados a la tabla Notas. Estos registros no podrán ser eliminados.
+
+> La hoja Sin FK permite crear registros independientes, los cuales pueden eliminarse al no estar asociados a ninguna nota.
+
 
 
 
