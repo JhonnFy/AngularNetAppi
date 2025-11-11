@@ -111,4 +111,8 @@ Ejecutar el insert
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/878daa15-a360-4d46-85b8-00621be05b83" />
 </figure>
 
+5-Poblar la tabla nota:
+Consulte el archivo Profesor, en el repo la direccion es: D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
+
+
 
