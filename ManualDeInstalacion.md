@@ -148,10 +148,9 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
   <sub>Figura 15: ✔️ Respuesta HTTP con los datos de Notas</sub>
 </p>
 
-<small>➤ [Front: Preparar el entorno]</small>
-> En este apartado del manual, le guiaremos en las pruebas del Front.
 
-> Para abrir el frontend del proyecto, abra una terminal y navegue hasta la carpeta del frontend:
+<small>➤ [Front: Preparar el entorno]</small>
+> Para consultar el script, diríjase al repositorio y localice el siguiente archivo:
 ```bash
 D:\AngularNetAppi\FrontAngularNetAppi
 ```
@@ -162,6 +161,7 @@ D:\AngularNetAppi\FrontAngularNetAppi
   <br>
   <sub>Figura 16: ✔️ Respuesta Code</sub>
 </p>
+
 
 
 
