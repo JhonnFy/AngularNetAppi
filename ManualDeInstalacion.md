@@ -131,9 +131,15 @@ D:\AngularNetAppi\OrigenDatos\Generar Nombres\InsertInto\Nota.xlsx
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/5dff234e-30bd-4d44-9741-664b73953031" />
   <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/6e90a96a-63a5-48ff-9a21-609c75d8684a" />
   <br>
-  <sub>Figura 13: ✔️ Respuesta HTTP con los datos del estudiante..</sub>
+  <sub>Figura 13: ✔️ Respuesta HTTP con los datos del Estudiante</sub>
 </p>
 
+<p align="center">
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/9018bfed-d945-427a-ae8f-ce9ca6c1d235" />
+  <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/7b2754b4-1157-4ce0-8374-bfd8f31be583" />
+  <br>
+  <sub>Figura 14: ✔️ Respuesta HTTP con los datos del Profesor</sub>
+</p>
 
 
 
